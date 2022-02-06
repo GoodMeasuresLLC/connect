@@ -1,0 +1,442 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "e6ae7658-e376-4abf-b90d-ee30faef6bb0",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 20,
+      "y": 40
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "660576cf-3f30-4f70-af1c-b71bc52e9058": {
+        "position": {
+          "x": 2160,
+          "y": 660
+        },
+        "useDynamic": false
+      },
+      "f1d4feb0-45a1-49d4-8f5d-a2040947d33a": {
+        "position": {
+          "x": 1920,
+          "y": 800
+        },
+        "useDynamic": false
+      },
+      "59608dba-edfd-4d9d-a166-41c4af74e16c": {
+        "position": {
+          "x": 920,
+          "y": 300
+        },
+        "useDynamic": false
+      },
+      "2d6f0473-6e65-49c4-840b-cc665efc7409": {
+        "position": {
+          "x": 1160,
+          "y": 300
+        },
+        "useDynamic": false
+      },
+      "e389210c-4265-44ed-92cc-af56218b8b50": {
+        "position": {
+          "x": 1660,
+          "y": 280
+        },
+        "useDynamic": false
+      },
+      "e6ae7658-e376-4abf-b90d-ee30faef6bb0": {
+        "position": {
+          "x": 900,
+          "y": 80
+        }
+      },
+      "e8ce476e-572c-4061-810d-084e60c7d821": {
+        "position": {
+          "x": 2400,
+          "y": 760
+        }
+      },
+      "460f9fc3-4dca-444d-b8e3-00ec7fce0ea2": {
+        "position": {
+          "x": 1900,
+          "y": 520
+        }
+      },
+      "885ff210-c068-49f0-9ab6-2bbe795ec5ed": {
+        "position": {
+          "x": 2160,
+          "y": 420
+        },
+        "useDynamic": false
+      },
+      "d098995e-e36b-4074-b9ec-d6c13fef1310": {
+        "position": {
+          "x": 1680,
+          "y": 500
+        },
+        "promptName": "Beep.wav",
+        "conditionMetadata": [
+
+        ],
+        "useDynamic": false
+      },
+      "e2857cb1-3340-42d7-92dc-c740184b4b6b": {
+        "position": {
+          "x": 1640,
+          "y": 60
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "17e63053-195d-4145-af99-775eefab95ef": {
+        "position": {
+          "x": 1143,
+          "y": 80
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "f212afb7-52e7-460f-9544-364ea02571fe": {
+        "position": {
+          "x": 1180,
+          "y": 480
+        }
+      },
+      "20c0b048-286d-412a-a203-443ed19fa7c0": {
+        "position": {
+          "x": 1406,
+          "y": 525
+        },
+        "useDynamic": false
+      },
+      "791e46b3-071e-4820-8879-31a0255a054f": {
+        "position": {
+          "x": 1380,
+          "y": 80
+        }
+      },
+      "b35a6654-c873-4ef6-a916-f6be1b707dc7": {
+        "position": {
+          "x": 1410,
+          "y": 306
+        },
+        "useDynamic": false
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "660576cf-3f30-4f70-af1c-b71bc52e9058",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, Thank you. Error code: 602"
+      },
+      "Transitions": {
+        "NextAction": "e8ce476e-572c-4061-810d-084e60c7d821",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "f1d4feb0-45a1-49d4-8f5d-a2040947d33a",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, Thank you. Error code: 551"
+      },
+      "Transitions": {
+        "NextAction": "e8ce476e-572c-4061-810d-084e60c7d821",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "59608dba-edfd-4d9d-a166-41c4af74e16c",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, Thank you. Error code: 242"
+      },
+      "Transitions": {
+        "NextAction": "f212afb7-52e7-460f-9544-364ea02571fe",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "2d6f0473-6e65-49c4-840b-cc665efc7409",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, Thank you. Error code: 141"
+      },
+      "Transitions": {
+        "NextAction": "f212afb7-52e7-460f-9544-364ea02571fe",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "e389210c-4265-44ed-92cc-af56218b8b50",
+      "Parameters": {
+        "Text": "Lambda trigger invocation has failed."
+      },
+      "Transitions": {
+        "NextAction": "f212afb7-52e7-460f-9544-364ea02571fe",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "e6ae7658-e376-4abf-b90d-ee30faef6bb0",
+      "Parameters": {
+        "Attributes": {
+          "CallCategory": "voicemail",
+          "saveCallRecording": "true",
+          "languageCode": "en-US",
+          "transcribeCall": "true"
+        }
+      },
+      "Transitions": {
+        "NextAction": "17e63053-195d-4145-af99-775eefab95ef",
+        "Errors": [
+          {
+            "NextAction": "59608dba-edfd-4d9d-a166-41c4af74e16c",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "e8ce476e-572c-4061-810d-084e60c7d821",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "460f9fc3-4dca-444d-b8e3-00ec7fce0ea2",
+      "Parameters": {
+        "MediaStreamingState": "Disabled",
+        "MediaStreamType": "Audio",
+        "Participants": [
+          {
+            "ParticipantType": "Customer",
+            "MediaDirections": [
+              "To",
+              "From"
+            ]
+          }
+        ]
+      },
+      "Transitions": {
+        "NextAction": "885ff210-c068-49f0-9ab6-2bbe795ec5ed",
+        "Errors": [
+          {
+            "NextAction": "660576cf-3f30-4f70-af1c-b71bc52e9058",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactMediaStreamingBehavior"
+    },
+    {
+      "Identifier": "885ff210-c068-49f0-9ab6-2bbe795ec5ed",
+      "Parameters": {
+        "Text": "You have reached the voicemail maximum of five minutes. Thank you, goodbye"
+      },
+      "Transitions": {
+        "NextAction": "e8ce476e-572c-4061-810d-084e60c7d821",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "d098995e-e36b-4074-b9ec-d6c13fef1310",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/cf1aa316-1c81-4aa7-88bb-e618230dee46",
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "300"
+      },
+      "Transitions": {
+        "NextAction": "460f9fc3-4dca-444d-b8e3-00ec7fce0ea2",
+        "Errors": [
+          {
+            "NextAction": "f1d4feb0-45a1-49d4-8f5d-a2040947d33a",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "460f9fc3-4dca-444d-b8e3-00ec7fce0ea2",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "460f9fc3-4dca-444d-b8e3-00ec7fce0ea2",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "e2857cb1-3340-42d7-92dc-c740184b4b6b",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptTranscription-Trigger",
+        "InvocationTimeLimitSeconds": "8"
+      },
+      "Transitions": {
+        "NextAction": "d098995e-e36b-4074-b9ec-d6c13fef1310",
+        "Errors": [
+          {
+            "NextAction": "e389210c-4265-44ed-92cc-af56218b8b50",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "17e63053-195d-4145-af99-775eefab95ef",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptCreate-Transcription-Table-Item",
+        "InvocationTimeLimitSeconds": "8"
+      },
+      "Transitions": {
+        "NextAction": "791e46b3-071e-4820-8879-31a0255a054f",
+        "Errors": [
+          {
+            "NextAction": "2d6f0473-6e65-49c4-840b-cc665efc7409",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "f212afb7-52e7-460f-9544-364ea02571fe",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "20c0b048-286d-412a-a203-443ed19fa7c0",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, Thank you. Error code: 601"
+      },
+      "Transitions": {
+        "NextAction": "f212afb7-52e7-460f-9544-364ea02571fe",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "791e46b3-071e-4820-8879-31a0255a054f",
+      "Parameters": {
+        "MediaStreamingState": "Enabled",
+        "MediaStreamType": "Audio",
+        "Participants": [
+          {
+            "ParticipantType": "Customer",
+            "MediaDirections": [
+              "To",
+              "From"
+            ]
+          }
+        ]
+      },
+      "Transitions": {
+        "NextAction": "e2857cb1-3340-42d7-92dc-c740184b4b6b",
+        "Errors": [
+          {
+            "NextAction": "b35a6654-c873-4ef6-a916-f6be1b707dc7",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactMediaStreamingBehavior"
+    },
+    {
+      "Identifier": "b35a6654-c873-4ef6-a916-f6be1b707dc7",
+      "Parameters": {
+        "LoopCount": "5"
+      },
+      "Transitions": {
+        "NextAction": "20c0b048-286d-412a-a203-443ed19fa7c0",
+        "Errors": [
+
+        ],
+        "Conditions": [
+          {
+            "NextAction": "20c0b048-286d-412a-a203-443ed19fa7c0",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "791e46b3-071e-4820-8879-31a0255a054f",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Loop"
+    }
+  ]
+}

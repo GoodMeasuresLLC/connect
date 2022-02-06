@@ -1,0 +1,24 @@
+{
+  "id": "25f1422a-63a3-49e6-ac8f-c0cdccee8e81",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/agent/25f1422a-63a3-49e6-ac8f-c0cdccee8e81",
+  "username": "CJohnson",
+  "identity_info": {
+    "first_name": "Cassandra",
+    "last_name": "Johnson",
+    "email": "cassandra.johnson@goodmeasures.com"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 120,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "6673d25d-0952-403a-93f8-5c72bc349e71",
+  "security_profile_ids": [
+    "2fb87a7d-0c64-49ad-9d6f-18094aa69ed1",
+    "2e972232-fd5f-4b3f-adcd-24f56a2bae83"
+  ],
+  "routing_profile_id": "9e078d19-a289-46e6-9084-0a40ffa0b4d9",
+  "tags": {
+  }
+}

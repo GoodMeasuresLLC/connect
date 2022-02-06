@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "Ahead + All Routing Profile",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/49bb5afe-c0de-4542-b30e-c1db4bc734aa",
+  "routing_profile_id": "49bb5afe-c0de-4542-b30e-c1db4bc734aa",
+  "description": "AllRouting Profile + Ahead Study",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "26c3013e-50df-42f2-9622-062de5b0395c",
+  "tags": {
+  }
+}

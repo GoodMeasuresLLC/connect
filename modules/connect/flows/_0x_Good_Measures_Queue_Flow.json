@@ -1,0 +1,676 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "bf127765-15dc-4f5c-b1ff-70361bc33d40",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 512,
+      "y": 520
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "e5972b3e-49d0-4b7a-af63-a42274731ff8": {
+        "position": {
+          "x": 2418,
+          "y": 1271
+        }
+      },
+      "6294bad2-d638-4296-8891-5afa07da31e6": {
+        "position": {
+          "x": 4105,
+          "y": 1118
+        }
+      },
+      "0d92e788-742c-463f-a003-7ede7b6ce9d3": {
+        "position": {
+          "x": 4404,
+          "y": 1130
+        },
+        "useDynamic": false
+      },
+      "d901dbe0-ef2c-4c1b-b82b-177af91fe260": {
+        "position": {
+          "x": 3783,
+          "y": 1373
+        },
+        "useDynamic": false
+      },
+      "57432108-79ba-4069-b71b-c778b089b5a1": {
+        "position": {
+          "x": 4100,
+          "y": 1332
+        },
+        "useDynamic": false
+      },
+      "1c60df1a-bee4-4c5b-b205-7a9c6e047806": {
+        "position": {
+          "x": 4399,
+          "y": 1333
+        }
+      },
+      "f2ef66cc-63cf-4ef5-8a66-cee9e45f566a": {
+        "position": {
+          "x": 2430,
+          "y": 1058
+        },
+        "useDynamic": false
+      },
+      "b1b7617c-f3bc-4c06-87f9-7afb3a7c417a": {
+        "position": {
+          "x": 2133,
+          "y": 1066
+        },
+        "useDynamic": false
+      },
+      "bc161d43-45e3-4493-b080-dca262c6e4c9": {
+        "position": {
+          "x": 2427,
+          "y": 845
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "4eb42f8b-1098-4317-81d3-31b1f3aaa8bc": {
+        "position": {
+          "x": 2932,
+          "y": 842
+        },
+        "useDynamic": false,
+        "queue": {
+          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/e95345da-9b32-4714-9a91-b3507e4f4fc6",
+          "text": "Voicemail Queue"
+        }
+      },
+      "1fc3cab9-b6d6-4615-b8bf-762948428f8b": {
+        "position": {
+          "x": 3215,
+          "y": 1093
+        },
+        "useDynamic": false
+      },
+      "4992a977-748c-4b62-9ef5-46ec70951dd4": {
+        "position": {
+          "x": 3216,
+          "y": 1299
+        }
+      },
+      "b0af4b3d-59f1-4344-a70d-2b3fa6ed85b8": {
+        "position": {
+          "x": 2946,
+          "y": 1092
+        },
+        "useDynamic": false
+      },
+      "595d4d67-bcc2-47e3-aa42-bd79530457d1": {
+        "position": {
+          "x": 2679,
+          "y": 846
+        },
+        "fromCustomer": true,
+        "toCustomer": false
+      },
+      "14c8870f-d12d-4e38-8d7d-438f4fc9dfc8": {
+        "position": {
+          "x": 2673.754638671875,
+          "y": 1075.0556640625
+        },
+        "useDynamic": false
+      },
+      "feffb9a6-651f-4732-bed7-30741a365eda": {
+        "position": {
+          "x": 1389,
+          "y": 962
+        },
+        "promptName": "Flow - Contact Center - On Hold.wav",
+        "conditionMetadata": [
+          {
+            "id": "0c1ec301-66f6-4585-9542-506421d3d45a",
+            "value": "#"
+          }
+        ],
+        "useDynamic": false
+      },
+      "4b1eb718-60d8-4529-b414-54a88f5b57a6": {
+        "position": {
+          "x": 1667,
+          "y": 1097
+        }
+      },
+      "cf1363ee-e048-4fb5-885a-ff4d524f1789": {
+        "position": {
+          "x": 3781,
+          "y": 1117
+        },
+        "promptName": "SFX - Beep.wav",
+        "conditionMetadata": [
+
+        ],
+        "useDynamic": false
+      },
+      "cd8b7533-194d-4d37-bff4-7be7bdeaca79": {
+        "position": {
+          "x": 3215,
+          "y": 848
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "5ff496e0-0542-431f-b2ac-ed9bd854b220": {
+        "position": {
+          "x": 3512,
+          "y": 952
+        },
+        "useDynamic": false,
+        "promptName": "Leave Message Prompt Version 2.wav"
+      },
+      "bf127765-15dc-4f5c-b1ff-70361bc33d40": {
+        "position": {
+          "x": 708,
+          "y": 466
+        },
+        "audio": [
+          {
+            "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/9788388a-f974-45c0-b4ad-89ee3e685b4c",
+            "text": "Silent1sec.wav",
+            "type": "Prompt"
+          }
+        ],
+        "timeoutUnit": {
+          "display": "Seconds",
+          "value": "sec"
+        }
+      },
+      "18b3d8b0-cc9a-4f00-a813-2add38d795ce": {
+        "position": {
+          "x": 957,
+          "y": 601
+        },
+        "promptName": "Music - Jazz - 20Sec Cutoff.wav",
+        "conditionMetadata": [
+          {
+            "id": "999f5d1b-e551-4176-941b-dfaa29b73879",
+            "value": "#"
+          }
+        ],
+        "useDynamic": false
+      },
+      "64f42bf0-cc1f-44e6-9327-99bdaaec0572": {
+        "position": {
+          "x": 2137,
+          "y": 847
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "e5972b3e-49d0-4b7a-af63-a42274731ff8",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "6294bad2-d638-4296-8891-5afa07da31e6",
+      "Parameters": {
+        "MediaStreamingState": "Disabled",
+        "MediaStreamType": "Audio",
+        "Participants": [
+          {
+            "ParticipantType": "Customer",
+            "MediaDirections": [
+              "From",
+              "To"
+            ]
+          }
+        ]
+      },
+      "Transitions": {
+        "NextAction": "0d92e788-742c-463f-a003-7ede7b6ce9d3",
+        "Errors": [
+          {
+            "NextAction": "57432108-79ba-4069-b71b-c778b089b5a1",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactMediaStreamingBehavior"
+    },
+    {
+      "Identifier": "0d92e788-742c-463f-a003-7ede7b6ce9d3",
+      "Parameters": {
+        "Text": "You have reached the voicemail maximum five minutes. Thank you, goodbye"
+      },
+      "Transitions": {
+        "NextAction": "1c60df1a-bee4-4c5b-b205-7a9c6e047806",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "d901dbe0-ef2c-4c1b-b82b-177af91fe260",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an error while getting customer input. Error code: 250"
+      },
+      "Transitions": {
+        "NextAction": "1c60df1a-bee4-4c5b-b205-7a9c6e047806",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "57432108-79ba-4069-b71b-c778b089b5a1",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal error. Error code: 251"
+      },
+      "Transitions": {
+        "NextAction": "1c60df1a-bee4-4c5b-b205-7a9c6e047806",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "1c60df1a-bee4-4c5b-b205-7a9c6e047806",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "f2ef66cc-63cf-4ef5-8a66-cee9e45f566a",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal error. Error code: 246"
+      },
+      "Transitions": {
+        "NextAction": "e5972b3e-49d0-4b7a-af63-a42274731ff8",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "b1b7617c-f3bc-4c06-87f9-7afb3a7c417a",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an error setting contact attributes. Error code: 245"
+      },
+      "Transitions": {
+        "NextAction": "e5972b3e-49d0-4b7a-af63-a42274731ff8",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "bc161d43-45e3-4493-b080-dca262c6e4c9",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptCreate-Transcription-Table-Item",
+        "InvocationTimeLimitSeconds": "3"
+      },
+      "Transitions": {
+        "NextAction": "595d4d67-bcc2-47e3-aa42-bd79530457d1",
+        "Errors": [
+          {
+            "NextAction": "f2ef66cc-63cf-4ef5-8a66-cee9e45f566a",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "4eb42f8b-1098-4317-81d3-31b1f3aaa8bc",
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/e95345da-9b32-4714-9a91-b3507e4f4fc6"
+      },
+      "Transitions": {
+        "NextAction": "cd8b7533-194d-4d37-bff4-7be7bdeaca79",
+        "Errors": [
+          {
+            "NextAction": "cd8b7533-194d-4d37-bff4-7be7bdeaca79",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "cd8b7533-194d-4d37-bff4-7be7bdeaca79",
+            "ErrorType": "QueueAtCapacity"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "DequeueContactAndTransferToQueue"
+    },
+    {
+      "Identifier": "1fc3cab9-b6d6-4615-b8bf-762948428f8b",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal error. Error code: 248"
+      },
+      "Transitions": {
+        "NextAction": "4992a977-748c-4b62-9ef5-46ec70951dd4",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "4992a977-748c-4b62-9ef5-46ec70951dd4",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "b0af4b3d-59f1-4344-a70d-2b3fa6ed85b8",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal error. Error code: 247"
+      },
+      "Transitions": {
+        "NextAction": "4992a977-748c-4b62-9ef5-46ec70951dd4",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "595d4d67-bcc2-47e3-aa42-bd79530457d1",
+      "Parameters": {
+        "MediaStreamingState": "Enabled",
+        "MediaStreamType": "Audio",
+        "Participants": [
+          {
+            "ParticipantType": "Customer",
+            "MediaDirections": [
+              "From"
+            ]
+          }
+        ]
+      },
+      "Transitions": {
+        "NextAction": "4eb42f8b-1098-4317-81d3-31b1f3aaa8bc",
+        "Errors": [
+          {
+            "NextAction": "14c8870f-d12d-4e38-8d7d-438f4fc9dfc8",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactMediaStreamingBehavior"
+    },
+    {
+      "Identifier": "14c8870f-d12d-4e38-8d7d-438f4fc9dfc8",
+      "Parameters": {
+        "LoopCount": "5"
+      },
+      "Transitions": {
+        "NextAction": "b0af4b3d-59f1-4344-a70d-2b3fa6ed85b8",
+        "Errors": [
+
+        ],
+        "Conditions": [
+          {
+            "NextAction": "b0af4b3d-59f1-4344-a70d-2b3fa6ed85b8",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "595d4d67-bcc2-47e3-aa42-bd79530457d1",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Loop"
+    },
+    {
+      "Identifier": "feffb9a6-651f-4732-bed7-30741a365eda",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/37bc0f11-521d-40e6-8610-ff08164526d0",
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "1"
+      },
+      "Transitions": {
+        "NextAction": "4b1eb718-60d8-4529-b414-54a88f5b57a6",
+        "Errors": [
+          {
+            "NextAction": "4b1eb718-60d8-4529-b414-54a88f5b57a6",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "4b1eb718-60d8-4529-b414-54a88f5b57a6",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "4b1eb718-60d8-4529-b414-54a88f5b57a6",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "#"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "4b1eb718-60d8-4529-b414-54a88f5b57a6",
+      "Parameters": {
+      },
+      "Transitions": {
+      },
+      "Type": "EndFlowExecution"
+    },
+    {
+      "Identifier": "cf1363ee-e048-4fb5-885a-ff4d524f1789",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/cf1aa316-1c81-4aa7-88bb-e618230dee46",
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "300"
+      },
+      "Transitions": {
+        "NextAction": "6294bad2-d638-4296-8891-5afa07da31e6",
+        "Errors": [
+          {
+            "NextAction": "d901dbe0-ef2c-4c1b-b82b-177af91fe260",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "6294bad2-d638-4296-8891-5afa07da31e6",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "6294bad2-d638-4296-8891-5afa07da31e6",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "cd8b7533-194d-4d37-bff4-7be7bdeaca79",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptTranscription-Trigger",
+        "InvocationTimeLimitSeconds": "3"
+      },
+      "Transitions": {
+        "NextAction": "5ff496e0-0542-431f-b2ac-ed9bd854b220",
+        "Errors": [
+          {
+            "NextAction": "1fc3cab9-b6d6-4615-b8bf-762948428f8b",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "5ff496e0-0542-431f-b2ac-ed9bd854b220",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/0224bf91-1c95-4a85-9e91-aec1ee6f4afc"
+      },
+      "Transitions": {
+        "NextAction": "cf1363ee-e048-4fb5-885a-ff4d524f1789",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "bf127765-15dc-4f5c-b1ff-70361bc33d40",
+      "Parameters": {
+        "InterruptFrequencySeconds": "1",
+        "Messages": [
+          {
+            "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/9788388a-f974-45c0-b4ad-89ee3e685b4c"
+          }
+        ]
+      },
+      "Transitions": {
+        "Errors": [
+
+        ],
+        "Conditions": [
+          {
+            "NextAction": "18b3d8b0-cc9a-4f00-a813-2add38d795ce",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "MessagesInterrupted"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "MessageParticipantIteratively"
+    },
+    {
+      "Identifier": "18b3d8b0-cc9a-4f00-a813-2add38d795ce",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/b9f98339-12e3-4e96-9fb4-7dea3c099e25",
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "1"
+      },
+      "Transitions": {
+        "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+        "Errors": [
+          {
+            "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "#"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "64f42bf0-cc1f-44e6-9327-99bdaaec0572",
+      "Parameters": {
+        "Attributes": {
+          "CallCategory": "voicemail",
+          "saveCallRecording": "true",
+          "languageCode": "en-US",
+          "transcribeCall": "true"
+        }
+      },
+      "Transitions": {
+        "NextAction": "bc161d43-45e3-4493-b080-dca262c6e4c9",
+        "Errors": [
+          {
+            "NextAction": "b1b7617c-f3bc-4c06-87f9-7afb3a7c417a",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "Manager - Low Call Answer Priority",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/5225dc80-28ae-408a-81ba-4c88172fb16d",
+  "routing_profile_id": "5225dc80-28ae-408a-81ba-4c88172fb16d",
+  "description": "For Managers. There is a 60 sec queue delay (no BioTel Care)",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "cd2ef33b-c538-477b-ae72-c494d0fc3943",
+  "tags": {
+  }
+}

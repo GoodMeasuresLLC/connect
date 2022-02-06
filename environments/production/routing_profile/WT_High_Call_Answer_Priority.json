@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "WT High Call Answer Priority",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/2c68944b-d584-46cd-a304-a814483ac436",
+  "routing_profile_id": "2c68944b-d584-46cd-a304-a814483ac436",
+  "description": "All Patient Numbers  (not Corp or VVIP) No Delay (no BioTel Care)",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "cd2ef33b-c538-477b-ae72-c494d0fc3943",
+  "tags": {
+  }
+}

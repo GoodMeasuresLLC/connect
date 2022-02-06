@@ -1,0 +1,23 @@
+{
+  "id": "cf8009e9-101f-405c-9f3e-3ffe19b88c65",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/agent/cf8009e9-101f-405c-9f3e-3ffe19b88c65",
+  "username": "TGlance",
+  "identity_info": {
+    "first_name": "Tiana",
+    "last_name": "Glance",
+    "email": "tiana.glance@goodmeasures.com"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 120,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "83899e9c-f591-463e-80ec-cefe3f4b296b",
+  "security_profile_ids": [
+    "2e972232-fd5f-4b3f-adcd-24f56a2bae83"
+  ],
+  "routing_profile_id": "49bb5afe-c0de-4542-b30e-c1db4bc734aa",
+  "tags": {
+  }
+}

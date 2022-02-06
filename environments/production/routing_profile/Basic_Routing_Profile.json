@@ -1,0 +1,20 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "Basic Routing Profile",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/a9f0f2d1-a619-4515-9cac-9df390adcca4",
+  "routing_profile_id": "a9f0f2d1-a619-4515-9cac-9df390adcca4",
+  "description": "A simple routing profile.",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "5260ccff-a57e-40f1-a87f-e11b127661e8",
+  "tags": {
+  }
+}

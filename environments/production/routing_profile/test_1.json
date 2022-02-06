@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "test-1",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/228374cb-9739-43c8-b56f-d67f2a557fe9",
+  "routing_profile_id": "228374cb-9739-43c8-b56f-d67f2a557fe9",
+  "description": "test",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "01599373-9c61-4755-9b33-326d01ed915c",
+  "tags": {
+  }
+}

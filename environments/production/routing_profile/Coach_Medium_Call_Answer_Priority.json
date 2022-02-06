@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "Coach - Medium Call Answer Priority",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/b6f50c9b-c645-47df-a2d9-2741f9bd1611",
+  "routing_profile_id": "b6f50c9b-c645-47df-a2d9-2741f9bd1611",
+  "description": "For Coaches. There is a 20 second delay (no BioTel Care).",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "cd2ef33b-c538-477b-ae72-c494d0fc3943",
+  "tags": {
+  }
+}

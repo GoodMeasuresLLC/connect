@@ -1,0 +1,20 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "TestOnduo",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/45974dc0-cd33-4f88-b9e0-207c347dabad",
+  "routing_profile_id": "45974dc0-cd33-4f88-b9e0-207c347dabad",
+  "description": "Test Onduo calls only",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "cd2ef33b-c538-477b-ae72-c494d0fc3943",
+  "tags": {
+  }
+}

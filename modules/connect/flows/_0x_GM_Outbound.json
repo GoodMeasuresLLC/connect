@@ -1,0 +1,342 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "b6e14559-c7a5-482f-b8ce-ee6e4b080103",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 75,
+      "y": 20
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "b6e14559-c7a5-482f-b8ce-ee6e4b080103": {
+        "position": {
+          "x": 93,
+          "y": 207
+        }
+      },
+      "0e1012f3-0b85-477f-a487-e5213059be02": {
+        "position": {
+          "x": 92,
+          "y": 445
+        }
+      },
+      "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b": {
+        "position": {
+          "x": 1274,
+          "y": 284
+        }
+      },
+      "70b32344-0bf2-4b35-9734-8ce236cf662c": {
+        "position": {
+          "x": 940,
+          "y": 348
+        }
+      },
+      "04b4650d-7c50-42fe-9da2-228308ca269e": {
+        "position": {
+          "x": 1267,
+          "y": 636
+        }
+      },
+      "9caa3ecb-2172-4248-81ba-18983db11176": {
+        "position": {
+          "x": 384,
+          "y": 542
+        },
+        "useDynamic": false
+      },
+      "ed36a6fb-5b11-4bb0-8929-a005ff538ce7": {
+        "position": {
+          "x": 937,
+          "y": 125
+        }
+      },
+      "3e99877f-caaf-48a8-9a71-5b979a62070a": {
+        "position": {
+          "x": 649,
+          "y": 375
+        },
+        "conditionMetadata": [
+          {
+            "id": "04c7ac14-490d-449d-8bfb-36dc51f85f81",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Non-recorded Outbound Queue"
+          }
+        ]
+      },
+      "0d660ff3-0aa6-4f73-b296-ca06f9924612": {
+        "position": {
+          "x": 651,
+          "y": 127
+        },
+        "conditionMetadata": [
+          {
+            "id": "7af46842-01f9-49b0-a4ff-5796d8d5f511",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Do Not Record"
+          }
+        ]
+      },
+      "79331a34-80d1-46a0-9a5f-46a98d4482bf": {
+        "position": {
+          "x": 369,
+          "y": 140
+        },
+        "setOptionalCallerId": true,
+        "callerIdSource": "dynamic",
+        "namespace": "External",
+        "value": "caller_id"
+      },
+      "5ee62862-710c-47c4-b030-d590b5e09f40": {
+        "position": {
+          "x": 107,
+          "y": 629
+        },
+        "dynamicMetadata": {
+          "instance": false,
+          "default": false
+        },
+        "useDynamic": false
+      },
+      "9383abde-3dba-4ad3-809c-92541421b000": {
+        "position": {
+          "x": 376,
+          "y": 318
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "b6e14559-c7a5-482f-b8ce-ee6e4b080103",
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Transitions": {
+        "NextAction": "0e1012f3-0b85-477f-a487-e5213059be02",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateFlowLoggingBehavior"
+    },
+    {
+      "Identifier": "0e1012f3-0b85-477f-a487-e5213059be02",
+      "Parameters": {
+        "TextToSpeechVoice": "Joanna"
+      },
+      "Transitions": {
+        "NextAction": "5ee62862-710c-47c4-b030-d590b5e09f40",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactTextToSpeechVoice"
+    },
+    {
+      "Identifier": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+      "Parameters": {
+      },
+      "Transitions": {
+      },
+      "Type": "EndFlowExecution"
+    },
+    {
+      "Identifier": "70b32344-0bf2-4b35-9734-8ce236cf662c",
+      "Parameters": {
+        "RecordingBehavior": {
+          "RecordedParticipants": [
+            "Agent",
+            "Customer"
+          ]
+        }
+      },
+      "Transitions": {
+        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactRecordingBehavior"
+    },
+    {
+      "Identifier": "04b4650d-7c50-42fe-9da2-228308ca269e",
+      "Parameters": {
+      },
+      "Transitions": {
+      },
+      "Type": "EndFlowExecution"
+    },
+    {
+      "Identifier": "9caa3ecb-2172-4248-81ba-18983db11176",
+      "Parameters": {
+        "Text": "Caller Id failed, try again"
+      },
+      "Transitions": {
+        "NextAction": "04b4650d-7c50-42fe-9da2-228308ca269e",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "ed36a6fb-5b11-4bb0-8929-a005ff538ce7",
+      "Parameters": {
+        "RecordingBehavior": {
+          "RecordedParticipants": [
+
+          ]
+        }
+      },
+      "Transitions": {
+        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactRecordingBehavior"
+    },
+    {
+      "Identifier": "3e99877f-caaf-48a8-9a71-5b979a62070a",
+      "Parameters": {
+        "ComparisonValue": "$.Queue.Name"
+      },
+      "Transitions": {
+        "NextAction": "70b32344-0bf2-4b35-9734-8ce236cf662c",
+        "Errors": [
+          {
+            "NextAction": "70b32344-0bf2-4b35-9734-8ce236cf662c",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "ed36a6fb-5b11-4bb0-8929-a005ff538ce7",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Non-recorded Outbound Queue"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "0d660ff3-0aa6-4f73-b296-ca06f9924612",
+      "Parameters": {
+        "ComparisonValue": "$.External.recording_preference"
+      },
+      "Transitions": {
+        "NextAction": "3e99877f-caaf-48a8-9a71-5b979a62070a",
+        "Errors": [
+          {
+            "NextAction": "3e99877f-caaf-48a8-9a71-5b979a62070a",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "ed36a6fb-5b11-4bb0-8929-a005ff538ce7",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Do Not Record"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "79331a34-80d1-46a0-9a5f-46a98d4482bf",
+      "Parameters": {
+        "CallerId": {
+          "Number": "$.External.caller_id"
+        }
+      },
+      "Transitions": {
+        "NextAction": "0d660ff3-0aa6-4f73-b296-ca06f9924612",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "CompleteOutboundCall"
+    },
+    {
+      "Identifier": "5ee62862-710c-47c4-b030-d590b5e09f40",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:retrieve_contact_information",
+        "InvocationTimeLimitSeconds": "3",
+        "LambdaInvocationAttributes": {
+          "default": "+18883201776",
+          "instance": "gm-code-cct"
+        }
+      },
+      "Transitions": {
+        "NextAction": "9383abde-3dba-4ad3-809c-92541421b000",
+        "Errors": [
+          {
+            "NextAction": "9caa3ecb-2172-4248-81ba-18983db11176",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "9383abde-3dba-4ad3-809c-92541421b000",
+      "Parameters": {
+        "Attributes": {
+          "RecordingPreference": "$.External.recording_preference",
+          "SupportNumber": "$.External.caller_id"
+        }
+      },
+      "Transitions": {
+        "NextAction": "79331a34-80d1-46a0-9a5f-46a98d4482bf",
+        "Errors": [
+          {
+            "NextAction": "79331a34-80d1-46a0-9a5f-46a98d4482bf",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    }
+  ]
+}

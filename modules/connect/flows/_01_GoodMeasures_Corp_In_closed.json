@@ -1,0 +1,288 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 126,
+      "y": 37
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "f703502f-7f65-422a-8a09-b9343ca3cf9b": {
+        "position": {
+          "x": 1159,
+          "y": 23
+        }
+      },
+      "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff": {
+        "position": {
+          "x": 1871,
+          "y": 295
+        }
+      },
+      "58b818af-b8b0-4ccd-9e7a-6d05ddab644e": {
+        "position": {
+          "x": 1380,
+          "y": 32
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${aws_connect_contact_flow._0x_Voicemail_Flow.id}",
+          "text": "${}"
+        }
+      },
+      "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c": {
+        "position": {
+          "x": 1618,
+          "y": 292
+        },
+        "useDynamic": false
+      },
+      "0ffb5c2e-be01-4d4b-b144-abe3082c10b2": {
+        "position": {
+          "x": 958,
+          "y": 631
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${aws_connect_contact_flow._0x_Dial_Extension.id}",
+          "text": "${}"
+        }
+      },
+      "30ad4c0d-95a7-4118-b262-62046ff26928": {
+        "position": {
+          "x": 956,
+          "y": 412
+        }
+      },
+      "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7": {
+        "position": {
+          "x": 693,
+          "y": 15
+        },
+        "conditionMetadata": [
+          {
+            "id": "4c712218-5d20-4537-b198-83b83ea9027e",
+            "operator": {
+              "name": "Contains",
+              "value": "Contains",
+              "shortDisplay": "contains"
+            },
+            "value": "#"
+          },
+          {
+            "id": "4b64b3ee-04f3-428d-a94b-2750cd6f9488",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Timeout"
+          }
+        ]
+      },
+      "2c70a088-b6bf-4d6e-a0a4-534ab2708886": {
+        "position": {
+          "x": 931,
+          "y": 25
+        },
+        "useDynamic": false,
+        "promptName": "Leave Message Prompt Version 2.wav"
+      },
+      "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0": {
+        "position": {
+          "x": 381,
+          "y": 34
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "Flow - Corporate Greeting - After Hours.wav",
+        "countryCodePrefix": "+1"
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "f703502f-7f65-422a-8a09-b9343ca3cf9b",
+      "Parameters": {
+        "Attributes": {
+          "VMSource": "Corporate General"
+        }
+      },
+      "Transitions": {
+        "NextAction": "58b818af-b8b0-4ccd-9e7a-6d05ddab644e",
+        "Errors": [
+          {
+            "NextAction": "58b818af-b8b0-4ccd-9e7a-6d05ddab644e",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "58b818af-b8b0-4ccd-9e7a-6d05ddab644e",
+      "Parameters": {
+        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/dcdd9ae8-8914-4728-85f0-9711b212776a"
+      },
+      "Transitions": {
+        "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+        "Errors": [
+          {
+            "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+      "Parameters": {
+        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/ccaa74b8-af4b-4e5d-a5a5-82fb37959bbc"
+      },
+      "Transitions": {
+        "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+        "Errors": [
+          {
+            "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "30ad4c0d-95a7-4118-b262-62046ff26928",
+      "Parameters": {
+        "Attributes": {
+          "ExtFailurePath": "Voicemail"
+        }
+      },
+      "Transitions": {
+        "NextAction": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+        "Errors": [
+          {
+            "NextAction": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7",
+      "Parameters": {
+        "ComparisonValue": "$.StoredCustomerInput"
+      },
+      "Transitions": {
+        "NextAction": "30ad4c0d-95a7-4118-b262-62046ff26928",
+        "Errors": [
+          {
+            "NextAction": "30ad4c0d-95a7-4118-b262-62046ff26928",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "2c70a088-b6bf-4d6e-a0a4-534ab2708886",
+            "Condition": {
+              "Operator": "TextContains",
+              "Operands": [
+                "#"
+              ]
+            }
+          },
+          {
+            "NextAction": "2c70a088-b6bf-4d6e-a0a4-534ab2708886",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Timeout"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "2c70a088-b6bf-4d6e-a0a4-534ab2708886",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/0224bf91-1c95-4a85-9e91-aec1ee6f4afc"
+      },
+      "Transitions": {
+        "NextAction": "f703502f-7f65-422a-8a09-b9343ca3cf9b",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/3eece442-4a48-497c-929b-dde86c51d4b1",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7",
+        "Errors": [
+          {
+            "NextAction": "2c70a088-b6bf-4d6e-a0a4-534ab2708886",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "VVIP Priority, all other Queues Lower Priority",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/9e078d19-a289-46e6-9084-0a40ffa0b4d9",
+  "routing_profile_id": "9e078d19-a289-46e6-9084-0a40ffa0b4d9",
+  "description": "VVIP 1, all others lower priority",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "TASK",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "cd2ef33b-c538-477b-ae72-c494d0fc3943",
+  "tags": {
+  }
+}

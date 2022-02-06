@@ -1,0 +1,172 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "c5c80bbd-475f-446a-8bba-9fd755851fea",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 105,
+      "y": 189
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "13a7c780-4774-4c2b-8456-cfde09e9b381": {
+        "position": {
+          "x": 834,
+          "y": 138
+        },
+        "useDynamic": false
+      },
+      "c5c80bbd-475f-446a-8bba-9fd755851fea": {
+        "position": {
+          "x": 571,
+          "y": 143
+        },
+        "useDynamic": false
+      },
+      "43d8d328-864f-4a36-9337-70c443b8d950": {
+        "position": {
+          "x": 592,
+          "y": 353
+        },
+        "useDynamic": false
+      },
+      "be9e11d8-30dd-48ec-ae39-42d01f20bbb7": {
+        "position": {
+          "x": 1124,
+          "y": 248
+        }
+      },
+      "9bc715ee-d315-47f8-b213-cc779e49528d": {
+        "position": {
+          "x": 352,
+          "y": 573
+        },
+        "useDynamic": false,
+        "queue": {
+          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/9d1b092e-90d9-47ba-b607-4cc7fd6c503a",
+          "text": "Z - Default (Error) Queue"
+        }
+      },
+      "8d59b203-3dc8-4893-8f96-b627de61bb0e": {
+        "position": {
+          "x": 893,
+          "y": 555
+        },
+        "useDynamic": false
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "13a7c780-4774-4c2b-8456-cfde09e9b381",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 345."
+      },
+      "Transitions": {
+        "NextAction": "be9e11d8-30dd-48ec-ae39-42d01f20bbb7",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "c5c80bbd-475f-446a-8bba-9fd755851fea",
+      "Transitions": {
+        "NextAction": "43d8d328-864f-4a36-9337-70c443b8d950",
+        "Errors": [
+          {
+            "NextAction": "43d8d328-864f-4a36-9337-70c443b8d950",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "13a7c780-4774-4c2b-8456-cfde09e9b381",
+            "ErrorType": "QueueAtCapacity"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferContactToQueue"
+    },
+    {
+      "Identifier": "43d8d328-864f-4a36-9337-70c443b8d950",
+      "Parameters": {
+        "LoopCount": "1"
+      },
+      "Transitions": {
+        "NextAction": "13a7c780-4774-4c2b-8456-cfde09e9b381",
+        "Errors": [
+
+        ],
+        "Conditions": [
+          {
+            "NextAction": "13a7c780-4774-4c2b-8456-cfde09e9b381",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "9bc715ee-d315-47f8-b213-cc779e49528d",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Loop"
+    },
+    {
+      "Identifier": "be9e11d8-30dd-48ec-ae39-42d01f20bbb7",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "9bc715ee-d315-47f8-b213-cc779e49528d",
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/9d1b092e-90d9-47ba-b607-4cc7fd6c503a"
+      },
+      "Transitions": {
+        "NextAction": "c5c80bbd-475f-446a-8bba-9fd755851fea",
+        "Errors": [
+          {
+            "NextAction": "8d59b203-3dc8-4893-8f96-b627de61bb0e",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactTargetQueue"
+    },
+    {
+      "Identifier": "8d59b203-3dc8-4893-8f96-b627de61bb0e",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 441."
+      },
+      "Transitions": {
+        "NextAction": "be9e11d8-30dd-48ec-ae39-42d01f20bbb7",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "c2a77b6b-1579-4870-abf1-bf45f7fa6197",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 75,
+      "y": 20
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b": {
+        "position": {
+          "x": 658,
+          "y": 131
+        }
+      },
+      "c2a77b6b-1579-4870-abf1-bf45f7fa6197": {
+        "position": {
+          "x": 224,
+          "y": 56
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+      "Parameters": {
+      },
+      "Transitions": {
+      },
+      "Type": "EndFlowExecution"
+    },
+    {
+      "Identifier": "c2a77b6b-1579-4870-abf1-bf45f7fa6197",
+      "Parameters": {
+        "RecordingBehavior": {
+          "RecordedParticipants": [
+
+          ]
+        }
+      },
+      "Transitions": {
+        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactRecordingBehavior"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "instance_id": "03103f71-db62-4f61-9432-4bfae356b3e3",
+  "name": "Receptionist Routing Profile",
+  "routing_profile_arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/routing-profile/27d19bd7-1e29-4f68-b51f-57b23c059903",
+  "routing_profile_id": "27d19bd7-1e29-4f68-b51f-57b23c059903",
+  "description": "For Corporate Receptionists",
+  "media_concurrencies": [
+    {
+      "channel": "CHAT",
+      "concurrency": 0
+    },
+    {
+      "channel": "VOICE",
+      "concurrency": 1
+    }
+  ],
+  "default_outbound_queue_id": "f489cd2a-c80e-481e-b144-79b5c32dc0a4",
+  "tags": {
+  }
+}

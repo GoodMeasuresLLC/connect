@@ -1,0 +1,26 @@
+{
+  "id": "aa518ef2-7481-4fe9-bf29-4bc207c7d3a8",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/agent/aa518ef2-7481-4fe9-bf29-4bc207c7d3a8",
+  "username": "JGoodspeed",
+  "identity_info": {
+    "first_name": "Jill",
+    "last_name": "Goodspeed",
+    "email": "jill.goodspeed@goodmeasures.com"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "a2663909-8b09-4388-b25c-bd52c30f5744",
+  "security_profile_ids": [
+    "2fb87a7d-0c64-49ad-9d6f-18094aa69ed1",
+    "2e972232-fd5f-4b3f-adcd-24f56a2bae83",
+    "469ac895-3473-4bdc-b6c7-7c6e77da44f4",
+    "47ec151a-7d76-4dac-975f-d8fe5fb38a21"
+  ],
+  "routing_profile_id": "ee06698d-b007-48a2-9c8b-fe7a2f078686",
+  "tags": {
+  }
+}
