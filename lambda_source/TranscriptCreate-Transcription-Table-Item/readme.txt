@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file package.yaml --stack-name <STACK_NAME> --capabilities CAPABILITY_IAM
