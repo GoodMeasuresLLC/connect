@@ -1,0 +1,11 @@
+docker-compose.override.yml
+lerna-debug.log
+node_modules
+compiled
+.DS_Store
+
+# terraform artifacts
+terraform.tfstate.backup
+.terraform
+
+lp-diagnostics/*
