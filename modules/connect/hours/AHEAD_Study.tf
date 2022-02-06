@@ -1,9 +1,8 @@
 
 resource "aws_connect_hours_of_operation" "AHEAD_Study" {
-  instance_id  = "${aws_connect_instance.connect.id}"
+  instance_id  = var.connect_instance_id
   name         = "AHEAD Study"
-  description  = ""
-  time_zone     = ""
+   time_zone     = ""
   config {
     day = "THURSDAY"
 
@@ -69,5 +68,6 @@ resource "aws_connect_hours_of_operation" "AHEAD_Study" {
       minutes = 0
     }
   }
-  tags = local.tags
+  tags = var.tags
 }
+

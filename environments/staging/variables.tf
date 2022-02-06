@@ -3,10 +3,12 @@
 ##########################################################################
 variable "environment" {
   description = "Name for this environment (eg development)"
+  default = "staging"
 }
 
 variable "instance_alias" {
   description = "Name for this instance"
+  default = "gm-code-staging-cct"
 }
 variable "account_id" {
   description = "organization account id"

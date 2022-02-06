@@ -1,9 +1,8 @@
 
 resource "aws_connect_hours_of_operation" "Basic_Hours" {
-  instance_id  = "${aws_connect_instance.connect.id}"
+  instance_id  = var.connect_instance_id
   name         = "Basic Hours"
-  description  = ""
-  time_zone     = ""
+   time_zone     = ""
   config {
     day = "TUESDAY"
 
@@ -95,5 +94,5 @@ resource "aws_connect_hours_of_operation" "Basic_Hours" {
       minutes = 0
     }
   }
-  tags = local.tags
+  tags = var.tags
 }

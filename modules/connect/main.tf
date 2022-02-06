@@ -8,13 +8,6 @@ terraform {
   required_version = ">= 0.14.9"
 }
 
-locals {
-  tags = {
-    environment = var.environment,
-    project = "connect"
-  }
-}
-
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
@@ -28,5 +21,4 @@ resource "aws_connect_instance" "connect" {
   auto_resolve_best_voices_enabled = false
   contact_flow_logs_enabled = true
   early_media_enabled = false
-  tags = local.tags
 }

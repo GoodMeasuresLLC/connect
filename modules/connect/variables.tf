@@ -23,8 +23,9 @@ variable "vpc_endpoint_id" {
 variable "lambda_role_arn" {
   description = "arn for the default lambda function role"
 }
+
 variable "instance_alias" {
-  description = "Name for this instance"
+  description = "instance_alias"
 }
 
 ##########################################################################

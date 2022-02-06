@@ -1,9 +1,8 @@
 
 resource "aws_connect_hours_of_operation" "Onduo_Walgreens" {
-  instance_id  = "${aws_connect_instance.connect.id}"
+  instance_id  = var.connect_instance_id
   name         = "Onduo Walgreens"
-  description  = ""
-  time_zone     = ""
+   time_zone     = ""
   config {
     day = "MONDAY"
 
@@ -95,5 +94,5 @@ resource "aws_connect_hours_of_operation" "Onduo_Walgreens" {
       minutes = 0
     }
   }
-  tags = local.tags
+  tags = var.tags
 }
