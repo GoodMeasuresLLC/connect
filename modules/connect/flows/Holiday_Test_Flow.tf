@@ -1,8 +1,9 @@
-resource "aws_connect_contact_flow" "Holiday_Test_Flow" {
-  instance_id  = var.connect_instance_id
+resource "aws_connect_contact_flow" "holiday_test_flow" {
+  instance_id  = "${var.connect_instance_id}"
   name         = "Holiday Test Flow"
   type         = "CONTACT_FLOW"
-   filename     = "Holiday_Test_Flow.json"
-  content_hash = filebase64sha256("Holiday_Test_Flow.json")
+  description  = ""
+  filename     = "holiday_test_flow.json"
+  content_hash = filebase64sha256("holiday_test_flow.json")
   tags = var.tags
 }

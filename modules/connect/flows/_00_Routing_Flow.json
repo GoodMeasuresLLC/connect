@@ -79,7 +79,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._01_GoodMeasures_Corp_In_open.id}",
+          "id": "${var.flows_map[_01_goodmeasures_corp_in_open]}",
           "text": "${}"
         }
       },
@@ -90,7 +90,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._00_MainPatient_Flow_In_Open.id}",
+          "id": "${var.flows_map[_00_mainpatient_flow_in_open]}",
           "text": "${}"
         }
       },
@@ -119,7 +119,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._02_GM_VVIP_In_open_closed.id}",
+          "id": "${var.flows_map[_02_gm_vvip_in_open_closed]}",
           "text": "${}"
         }
       },
@@ -137,7 +137,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._03_AHEAD_Patient_Flow_In_Open.id}",
+          "id": "${var.flows_map[_03_ahead_patient_flow_in_open]}",
           "text": "${}"
         }
       },

@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "GoodMeasures_Connect_PhoneNumberByExtensionFunction"{
+resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunction"{
   function_name="GoodMeasures_Connect_PhoneNumberByExtensionFunction"
   description  = ""
   tags         =local.tags
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "GoodMeasures_Connect_PhoneNumberByExtensionFunct
   memory_size  = 128
   package_type ="Zip"
   layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/GoodMeasures_Connect_PhoneNumberByExtensionFunction.zip"
-  source_code_hash = filebase64sha256("../../compiled/GoodMeasures_Connect_PhoneNumberByExtensionFunction.zip")
+  filename     = "../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip"
+  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip")
 }
 
   depends_on = [aws_cloudwatch_log_group.log_group]

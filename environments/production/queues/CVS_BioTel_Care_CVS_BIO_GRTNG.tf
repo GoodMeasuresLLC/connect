@@ -1,12 +1,12 @@
-          resource "aws_connect_queue" "CVS_BioTel_Care_CVS_BIO_GRTNG" {
+          resource "aws_connect_queue" "cvs_biotel_care_cvs_bio_grtng" {
             description  = "CVS-BioTel Care (CVS-BIO GRTNG)"
-            hours_of_operation_id = "${aws_connect_hours_of_operation.BioTel_Care.id}"
-            instance_id  = "${${instance.terraform_id}"
+            hours_of_operation_id = var.hours_of_operations_map[biotel_care]
+            instance_id  = var.connect_instance_id
             name         = "CVS-BioTel Care (CVS-BIO GRTNG)"
 outbound_caller_config {
 outbound_caller_id_name=GM-CVS-BioTel Care
 outbound_caller_id_number_id=bbbf26e1-c527-4104-917b-9f88d90fbd34
-outbound_flow_id=${aws_connect_contact_flow._0x_GM_Outbound.id}
+outbound_flow_id=${var.flows_map[_0x_gm_outbound]}
 }            }
             tags = local.tags
           }

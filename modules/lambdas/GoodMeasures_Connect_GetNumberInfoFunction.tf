@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "GoodMeasures_Connect_GetNumberInfoFunction"{
+resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
   function_name="GoodMeasures_Connect_GetNumberInfoFunction"
   description  = ""
   tags         =local.tags
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "GoodMeasures_Connect_GetNumberInfoFunction"{
   memory_size  = 128
   package_type ="Zip"
   layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/GoodMeasures_Connect_GetNumberInfoFunction.zip"
-  source_code_hash = filebase64sha256("../../compiled/GoodMeasures_Connect_GetNumberInfoFunction.zip")
+  filename     = "../../compiled/goodmeasures_connect_getnumberinfofunction.zip"
+  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_getnumberinfofunction.zip")
 }
 
   depends_on = [aws_cloudwatch_log_group.log_group]

@@ -26,19 +26,35 @@ module "connect_instance" {
 # module "connect_flows" {
 #   source = "./modules/connect/flows"
 # }
-
+# module "connect_flows" {
+#   source = "./modules/connect/flows"
+#   connect_instance_id = module.connect_instance.connect_instance_id
+#   hours_of_operations_map = local.connect_hours.hours_of_operations_map
+#   security_profiles_map = local.security_profiles.security_profiles_map
+#   lambda_functions_map = module.lambdas.lambda_functions_map
+#   tags= local.tags
+# }
 module "connect_hours" {
   source = "./modules/connect/hours"
   connect_instance_id = module.connect_instance.connect_instance_id
-  tags= local.tags
+  tags = local.tags
 }
-locals {
-  fred = module.connect_hours.hours_of_operation_map
+
+module "security_profiles" {
+  source = "./modules/connect/security_profile"
+  connect_instance_id = module.connect_instance.connect_instance_id
+  tags = local.tags
 }
+
+
 # module "lambda_associations" {
 #   source = "./modules/connect/lambda_associations"
+#   connect_instance_id = module.connect_instance.connect_instance_id
+#   lambda_functions_map = module.lambdas.lambda_functions_map
+#   tags = local.tags
 # }
 
 # module "lambdas" {
 #   source = "./modules/lambdas"
+#   tags = local.tags
 # }

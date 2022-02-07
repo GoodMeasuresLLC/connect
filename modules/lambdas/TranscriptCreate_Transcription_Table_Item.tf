@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "TranscriptCreate_Transcription_Table_Item"{
+resource "aws_lambda_function" "transcriptcreate_transcription_table_item"{
   function_name="TranscriptCreate-Transcription-Table-Item"
   description  = ""
   tags         =local.tags
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "TranscriptCreate_Transcription_Table_Item"{
   memory_size  = 128
   package_type ="Zip"
   layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/TranscriptCreate_Transcription_Table_Item.zip"
-  source_code_hash = filebase64sha256("../../compiled/TranscriptCreate_Transcription_Table_Item.zip")
+  filename     = "../../compiled/transcriptcreate_transcription_table_item.zip"
+  source_code_hash = filebase64sha256("../../compiled/transcriptcreate_transcription_table_item.zip")
 }
 
   depends_on = [aws_cloudwatch_log_group.log_group]

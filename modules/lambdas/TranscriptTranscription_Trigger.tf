@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "TranscriptTranscription_Trigger"{
+resource "aws_lambda_function" "transcripttranscription_trigger"{
   function_name="TranscriptTranscription-Trigger"
   description  = ""
   tags         =local.tags
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "TranscriptTranscription_Trigger"{
   memory_size  = 128
   package_type ="Zip"
   layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/TranscriptTranscription_Trigger.zip"
-  source_code_hash = filebase64sha256("../../compiled/TranscriptTranscription_Trigger.zip")
+  filename     = "../../compiled/transcripttranscription_trigger.zip"
+  source_code_hash = filebase64sha256("../../compiled/transcripttranscription_trigger.zip")
 }
 
   depends_on = [aws_cloudwatch_log_group.log_group]

@@ -1,12 +1,12 @@
-          resource "aws_connect_queue" "BioTel_Care_BIO_GRTNG" {
+          resource "aws_connect_queue" "biotel_care_bio_grtng" {
             description  = "BioTel Care (BIO GRTNG)"
-            hours_of_operation_id = "${aws_connect_hours_of_operation.BioTel_Care.id}"
-            instance_id  = "${${instance.terraform_id}"
+            hours_of_operation_id = var.hours_of_operations_map[biotel_care]
+            instance_id  = var.connect_instance_id
             name         = "BioTel Care (BIO GRTNG)"
 outbound_caller_config {
 outbound_caller_id_name=GM-BioTel
 outbound_caller_id_number_id=86d67803-45cf-4cb6-ba2c-80676681da91
-outbound_flow_id=${aws_connect_contact_flow._0x_GM_Outbound.id}
+outbound_flow_id=${var.flows_map[_0x_gm_outbound]}
 }            }
             tags = local.tags
           }

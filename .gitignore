@@ -2,6 +2,7 @@ docker-compose.override.yml
 lerna-debug.log
 node_modules
 compiled
+vendor
 .DS_Store
 
 # terraform artifacts

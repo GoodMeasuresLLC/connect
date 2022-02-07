@@ -1,8 +1,7 @@
-
-resource "aws_connect_hours_of_operation" "BioTel_Care" {
-  instance_id  = var.connect_instance_id
+resource "aws_connect_hours_of_operation" "biotel_care" {
+  instance_id  = "${var.connect_instance_id}"
   name         = "BioTel Care"
-   time_zone     = ""
+  time_zone  = "America/New_York"
   config {
     day = "FRIDAY"
 

@@ -1,9 +1,9 @@
-resource "aws_connect_contact_flow" "_03_AHEAD_Voicemail_Flow_Spanish" {
-  instance_id  = var.connect_instance_id
+resource "aws_connect_contact_flow" "_03_ahead_voicemail_flow_spanish" {
+  instance_id  = "${var.connect_instance_id}"
   name         = "03 AHEAD Voicemail Flow Spanish"
   type         = "CONTACT_FLOW"
   description  = "Logic for when customer has elected to leave a voicemail"
-  filename     = "_03_AHEAD_Voicemail_Flow_Spanish.json"
-  content_hash = filebase64sha256("_03_AHEAD_Voicemail_Flow_Spanish.json")
+  filename     = "_03_ahead_voicemail_flow_spanish.json"
+  content_hash = filebase64sha256("_03_ahead_voicemail_flow_spanish.json")
   tags = var.tags
 }

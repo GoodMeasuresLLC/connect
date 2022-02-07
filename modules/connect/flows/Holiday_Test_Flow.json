@@ -27,7 +27,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._0x_Inbound_to_Agent.id}",
+          "id": "${var.flows_map[_0x_inbound_to_agent]}",
           "text": "${}"
         }
       },
@@ -38,7 +38,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._0x_Dial_Extension.id}",
+          "id": "${var.flows_map[_0x_dial_extension]}",
           "text": "${}"
         }
       },
@@ -56,7 +56,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._0x_Voicemail_Flow.id}",
+          "id": "${var.flows_map[_0x_voicemail_flow]}",
           "text": "${}"
         }
       },
@@ -266,7 +266,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${aws_connect_contact_flow._00_MainPatient_Flow_In_Closed.id}",
+          "id": "${var.flows_map[_00_mainpatient_flow_in_closed]}",
           "text": "${}"
         }
       },

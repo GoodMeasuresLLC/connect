@@ -1,12 +1,12 @@
-          resource "aws_connect_queue" "Wellcare_New_Jersey_Local" {
+          resource "aws_connect_queue" "wellcare_new_jersey_local" {
             description  = "Wellcare New Jersey Local"
-            hours_of_operation_id = "${aws_connect_hours_of_operation.Good_Measures.id}"
-            instance_id  = "${${instance.terraform_id}"
+            hours_of_operation_id = var.hours_of_operations_map[good_measures]
+            instance_id  = var.connect_instance_id
             name         = "Wellcare New Jersey Local"
 outbound_caller_config {
 outbound_caller_id_name=WellCare of NJ
 outbound_caller_id_number_id=d111231e-6bcb-4c7a-9a4a-2487ad491cac
-outbound_flow_id=${aws_connect_contact_flow._0x_GM_Outbound.id}
+outbound_flow_id=${var.flows_map[_0x_gm_outbound]}
 }            }
             tags = local.tags
           }

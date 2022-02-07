@@ -1,4 +1,4 @@
-resource "aws_lambda_function" "CheckHoliday"{
+resource "aws_lambda_function" "checkholiday"{
   function_name="CheckHoliday"
   description  = ""
   tags         =local.tags
@@ -9,8 +9,8 @@ resource "aws_lambda_function" "CheckHoliday"{
   memory_size  = 128
   package_type ="Zip"
   layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/CheckHoliday.zip"
-  source_code_hash = filebase64sha256("../../compiled/CheckHoliday.zip")
+  filename     = "../../compiled/checkholiday.zip"
+  source_code_hash = filebase64sha256("../../compiled/checkholiday.zip")
 }
 
   depends_on = [aws_cloudwatch_log_group.log_group]

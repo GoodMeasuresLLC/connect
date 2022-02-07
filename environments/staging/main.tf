@@ -26,6 +26,24 @@ module "connect" {
   environment = var.environment
 }
 
+# add later:
+# module "queue_quick_connects" {
+#   source = "./queue_quick_connects"
+#   connect_instance_id = module.connect_instance.connect_instance_id
+#   queues_map = module.queues.queues_map
+#   users_map = module.users.users_map
+#   flows_map = module.connect_instance.flows_map
+#   tags = {}
+# }
+
+# module "queues" {
+#   source = "./queues"
+#   connect_instance_id = module.connect_instance.connect_instance_id
+#   hours_of_operations_map = module.connect_instance.hours_of_operations_map
+#   flows_map = module.connect_instance.flows_map
+#   users_map = module.users.users_map
+#   tags = {}
+# }
 # module "connect_queues" {
 #   source = "./queues"
 #   connect_instance_id = module.connect.connect_instance_id
