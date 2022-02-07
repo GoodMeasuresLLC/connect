@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "_0x_receptionist_queue_flow" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "0x Receptionist Queue Flow"
   type         = "CUSTOMER_QUEUE"
   description  = ""

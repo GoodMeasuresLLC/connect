@@ -88,7 +88,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_03_ahead_voicemail_flow_spanish]}",
+          "id": "${var.flows_map[\"_03_ahead_voicemail_flow_spanish\"]}",
           "text": "${}"
         }
       },
@@ -160,7 +160,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_03_ahead_voicemail_flow_english]}",
+          "id": "${var.flows_map[\"_03_ahead_voicemail_flow_english\"]}",
           "text": "${}"
         }
       },
@@ -171,7 +171,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_03_ahead_after_hours_spanish]}",
+          "id": "${var.flows_map[\"_03_ahead_after_hours_spanish\"]}",
           "text": "${}"
         }
       },
@@ -215,7 +215,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_03_ahead_after_hours_english]}",
+          "id": "${var.flows_map[\"_03_ahead_after_hours_english\"]}",
           "text": "${}"
         }
       }

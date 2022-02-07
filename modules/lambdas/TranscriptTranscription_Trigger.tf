@@ -1,10 +1,10 @@
 resource "aws_lambda_function" "transcripttranscription_trigger"{
   function_name="TranscriptTranscription-Trigger"
   description  = ""
-  tags         =local.tags
+  tags         = var.tags
   runtime      ="nodejs8.10"
   role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
-  handler      ="${attributes[:handler]}"
+  handler      ="index.handler"
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"

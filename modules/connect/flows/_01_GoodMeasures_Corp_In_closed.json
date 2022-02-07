@@ -27,7 +27,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_0x_voicemail_flow]}",
+          "id": "${var.flows_map[\"_0x_voicemail_flow\"]}",
           "text": "${}"
         }
       },
@@ -45,7 +45,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_0x_dial_extension]}",
+          "id": "${var.flows_map[\"_0x_dial_extension\"]}",
           "text": "${}"
         }
       },

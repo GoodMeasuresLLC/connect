@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "default_outbound" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Default outbound"
   type         = "OUTBOUND_WHISPER"
   description  = "Default flow for outbound calls."

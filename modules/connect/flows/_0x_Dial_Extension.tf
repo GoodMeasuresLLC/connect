@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "_0x_dial_extension" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "0x Dial Extension"
   type         = "CONTACT_FLOW"
   description  = ""

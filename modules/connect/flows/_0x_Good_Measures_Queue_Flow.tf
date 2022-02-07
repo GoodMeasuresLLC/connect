@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "_0x_good_measures_queue_flow" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "0x Good Measures Queue Flow"
   type         = "CUSTOMER_QUEUE"
   description  = ""

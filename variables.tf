@@ -33,3 +33,6 @@ variable "instance_alias" {
 variable "environment" {
   description = "Name for this environment (eg development)"
 }
+
+variable "queues_map" {
+}

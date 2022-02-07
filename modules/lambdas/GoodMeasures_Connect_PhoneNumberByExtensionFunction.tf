@@ -1,10 +1,10 @@
 resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunction"{
   function_name="GoodMeasures_Connect_PhoneNumberByExtensionFunction"
   description  = ""
-  tags         =local.tags
+  tags         = var.tags
   runtime      ="python3.7"
   role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
-  handler      ="${attributes[:handler]}"
+  handler      ="lambda_function.lambda_handler"
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"

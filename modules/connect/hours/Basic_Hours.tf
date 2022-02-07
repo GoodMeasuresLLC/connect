@@ -1,7 +1,7 @@
 resource "aws_connect_hours_of_operation" "basic_hours" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Basic Hours"
-  time_zone  = "America/New_York"
+time_zone  = "America/New_York"
   config {
     day = "TUESDAY"
 

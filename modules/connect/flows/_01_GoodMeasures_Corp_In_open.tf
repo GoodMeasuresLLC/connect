@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "_01_goodmeasures_corp_in_open" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "01 GoodMeasures Corp - In (open)"
   type         = "CONTACT_FLOW"
   description  = ""

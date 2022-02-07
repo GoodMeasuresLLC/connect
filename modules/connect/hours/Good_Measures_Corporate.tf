@@ -1,7 +1,7 @@
 resource "aws_connect_hours_of_operation" "good_measures_corporate" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Good Measures Corporate"
-  time_zone  = "America/New_York"
+time_zone  = "America/New_York"
   config {
     day = "TUESDAY"
 

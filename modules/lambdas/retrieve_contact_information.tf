@@ -1,10 +1,10 @@
 resource "aws_lambda_function" "retrieve_contact_information"{
   function_name="retrieve_contact_information"
   description  = ""
-  tags         =local.tags
+  tags         = var.tags
   runtime      ="ruby2.5"
   role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
-  handler      ="${attributes[:handler]}"
+  handler      ="get_contact.GetContact.process"
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"

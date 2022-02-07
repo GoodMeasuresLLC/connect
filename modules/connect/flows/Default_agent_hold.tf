@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "default_agent_hold" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Default agent hold"
   type         = "AGENT_HOLD"
   description  = "Audio played for the agent when on hold"

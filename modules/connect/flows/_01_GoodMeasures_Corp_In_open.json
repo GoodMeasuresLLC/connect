@@ -34,7 +34,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_0x_inbound_to_agent]}",
+          "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
           "text": "${}"
         }
       },
@@ -57,7 +57,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_0x_dial_extension]}",
+          "id": "${var.flows_map[\"_0x_dial_extension\"]}",
           "text": "${}"
         }
       },
@@ -75,7 +75,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_0x_inbound_to_agent]}",
+          "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
           "text": "${}"
         }
       },
@@ -113,7 +113,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.flows_map[_01_goodmeasures_corp_in_closed]}",
+          "id": "${var.flows_map[\"_01_goodmeasures_corp_in_closed\"]}",
           "text": "${}"
         }
       },

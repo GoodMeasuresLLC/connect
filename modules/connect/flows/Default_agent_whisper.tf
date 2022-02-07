@@ -1,5 +1,5 @@
 resource "aws_connect_contact_flow" "default_agent_whisper" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Default agent whisper"
   type         = "AGENT_WHISPER"
   description  = "Default whisper played to the agent."

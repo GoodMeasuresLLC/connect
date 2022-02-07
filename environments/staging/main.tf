@@ -24,6 +24,7 @@ module "connect" {
   instance_alias = var.instance_alias
   # items specific to this environment
   environment = var.environment
+  queues_map = module.connect_queues.queues_map
 }
 
 # add later:

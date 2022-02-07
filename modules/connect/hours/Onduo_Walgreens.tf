@@ -1,7 +1,7 @@
 resource "aws_connect_hours_of_operation" "onduo_walgreens" {
-  instance_id  = "${var.connect_instance_id}"
+  instance_id  = var.connect_instance_id
   name         = "Onduo Walgreens"
-  time_zone  = "America/New_York"
+time_zone  = "America/New_York"
   config {
     day = "MONDAY"
 
