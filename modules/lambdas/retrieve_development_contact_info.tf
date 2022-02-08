@@ -14,7 +14,7 @@ resource "aws_lambda_function" "retrieve_development_contact_info"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-retrieve_development_contact_info" {
-  name = "/aws/lambda/retrieve_development_contact_info"
+  name = "/aws/lambda/retrieve_development_contact_info-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

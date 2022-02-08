@@ -14,7 +14,7 @@ resource "aws_lambda_function" "retrieve_contact_information"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-retrieve_contact_information" {
-  name = "/aws/lambda/retrieve_contact_information"
+  name = "/aws/lambda/retrieve_contact_information-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

@@ -14,7 +14,7 @@ resource "aws_lambda_function" "transcriptcreate_transcription_table_item"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-transcriptcreate_transcription_table_item" {
-  name = "/aws/lambda/TranscriptCreate-Transcription-Table-Item"
+  name = "/aws/lambda/TranscriptCreate-Transcription-Table-Item-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

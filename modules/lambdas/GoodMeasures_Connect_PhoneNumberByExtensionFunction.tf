@@ -14,7 +14,7 @@ resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunct
 }
 
 resource "aws_cloudwatch_log_group" "log_group-goodmeasures_connect_phonenumberbyextensionfunction" {
-  name = "/aws/lambda/GoodMeasures_Connect_PhoneNumberByExtensionFunction"
+  name = "/aws/lambda/GoodMeasures_Connect_PhoneNumberByExtensionFunction-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

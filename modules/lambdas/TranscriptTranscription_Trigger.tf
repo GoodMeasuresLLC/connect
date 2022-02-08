@@ -2,7 +2,7 @@ resource "aws_lambda_function" "transcripttranscription_trigger"{
   function_name="TranscriptTranscription-Trigger-${var.tags["environment"]}"
   description  = ""
   tags         = var.tags
-  runtime      ="nodejs8.10"
+  runtime      ="nodejs14.x"
   role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
   handler      ="index.handler"
   timeout      = 3
@@ -14,7 +14,7 @@ resource "aws_lambda_function" "transcripttranscription_trigger"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-transcripttranscription_trigger" {
-  name = "/aws/lambda/TranscriptTranscription-Trigger"
+  name = "/aws/lambda/TranscriptTranscription-Trigger-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

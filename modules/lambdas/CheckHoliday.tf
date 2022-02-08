@@ -14,7 +14,7 @@ resource "aws_lambda_function" "checkholiday"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-checkholiday" {
-  name = "/aws/lambda/CheckHoliday"
+  name = "/aws/lambda/CheckHoliday-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 

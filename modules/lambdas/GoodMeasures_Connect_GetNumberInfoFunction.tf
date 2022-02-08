@@ -14,7 +14,7 @@ resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
 }
 
 resource "aws_cloudwatch_log_group" "log_group-goodmeasures_connect_getnumberinfofunction" {
-  name = "/aws/lambda/GoodMeasures_Connect_GetNumberInfoFunction"
+  name = "/aws/lambda/GoodMeasures_Connect_GetNumberInfoFunction-${var.tags["environment"]}"
   retention_in_days = var.log_retention_days
 }
 
