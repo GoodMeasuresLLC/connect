@@ -8,8 +8,8 @@ resource "aws_lambda_function" "checkholiday"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  filename     = "../../../compiled/checkholiday.zip"
-  source_code_hash = filebase64sha256("../../../compiled/checkholiday.zip")
+  filename     = "../../compiled/checkholiday.zip"
+  source_code_hash = filebase64sha256("../../compiled/checkholiday.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-checkholiday]
 }
 

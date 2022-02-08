@@ -8,8 +8,8 @@ resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunct
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  filename     = "../../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip"
-  source_code_hash = filebase64sha256("../../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip")
+  filename     = "../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip"
+  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-goodmeasures_connect_phonenumberbyextensionfunction]
 }
 

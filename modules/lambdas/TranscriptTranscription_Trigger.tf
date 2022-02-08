@@ -8,8 +8,8 @@ resource "aws_lambda_function" "transcripttranscription_trigger"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  filename     = "../../../compiled/transcripttranscription_trigger.zip"
-  source_code_hash = filebase64sha256("../../../compiled/transcripttranscription_trigger.zip")
+  filename     = "../../compiled/transcripttranscription_trigger.zip"
+  source_code_hash = filebase64sha256("../../compiled/transcripttranscription_trigger.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-transcripttranscription_trigger]
 }
 

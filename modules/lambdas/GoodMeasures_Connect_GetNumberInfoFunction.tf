@@ -8,8 +8,8 @@ resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  filename     = "../../../compiled/goodmeasures_connect_getnumberinfofunction.zip"
-  source_code_hash = filebase64sha256("../../../compiled/goodmeasures_connect_getnumberinfofunction.zip")
+  filename     = "../../compiled/goodmeasures_connect_getnumberinfofunction.zip"
+  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_getnumberinfofunction.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-goodmeasures_connect_getnumberinfofunction]
 }
 

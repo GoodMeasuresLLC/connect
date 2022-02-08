@@ -4,4 +4,4 @@ rm -rf vendor
 bundle config set --local path 'vendor/bundle'
 bundle install
 cd ..
-zip -r ../../compiled/retrieve_contact_information retrieve_contact_information
+zip -r ../compiled/retrieve_contact_information retrieve_contact_information

@@ -1,2 +1,2 @@
 #!/bin/bash
-zip -r ../../compiled/checkholiday checkholiday
+zip -r ../compiled/checkholiday checkholiday

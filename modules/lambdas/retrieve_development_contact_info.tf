@@ -8,8 +8,8 @@ resource "aws_lambda_function" "retrieve_development_contact_info"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  filename     = "../../../compiled/retrieve_development_contact_info.zip"
-  source_code_hash = filebase64sha256("../../../compiled/retrieve_development_contact_info.zip")
+  filename     = "../../compiled/retrieve_development_contact_info.zip"
+  source_code_hash = filebase64sha256("../../compiled/retrieve_development_contact_info.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-retrieve_development_contact_info]
 }
 
