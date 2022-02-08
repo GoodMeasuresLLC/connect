@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunction"{
-  function_name="GoodMeasures_Connect_PhoneNumberByExtensionFunction"
+  function_name="GoodMeasures_Connect_PhoneNumberByExtensionFunction-${var.tags["environment"]}"
   description  = ""
   tags         = var.tags
   runtime      ="python3.7"
@@ -8,15 +8,12 @@ resource "aws_lambda_function" "goodmeasures_connect_phonenumberbyextensionfunct
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip"
-  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip")
+  filename     = "../../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip"
+  source_code_hash = filebase64sha256("../../../compiled/goodmeasures_connect_phonenumberbyextensionfunction.zip")
+  depends_on = [aws_cloudwatch_log_group.log_group-goodmeasures_connect_phonenumberbyextensionfunction]
 }
 
-  depends_on = [aws_cloudwatch_log_group.log_group]
-}
-
-resource "aws_cloudwatch_log_group" "log_group" {
+resource "aws_cloudwatch_log_group" "log_group-goodmeasures_connect_phonenumberbyextensionfunction" {
   name = "/aws/lambda/GoodMeasures_Connect_PhoneNumberByExtensionFunction"
   retention_in_days = var.log_retention_days
 }

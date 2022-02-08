@@ -14,7 +14,6 @@ locals {
 
 module "connect_instance" {
   source = "./modules/connect"
-  region = var.region
   instance_alias = var.instance_alias
 }
 
@@ -50,4 +49,5 @@ module "security_profiles" {
 module "lambdas" {
   source = "./modules/lambdas"
   tags = local.tags
+  log_retention_days = 7
 }

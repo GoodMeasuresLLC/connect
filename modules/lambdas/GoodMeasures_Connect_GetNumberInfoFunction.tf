@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
-  function_name="GoodMeasures_Connect_GetNumberInfoFunction"
+  function_name="GoodMeasures_Connect_GetNumberInfoFunction-${var.tags["environment"]}"
   description  = ""
   tags         = var.tags
   runtime      ="python3.7"
@@ -8,15 +8,12 @@ resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/goodmeasures_connect_getnumberinfofunction.zip"
-  source_code_hash = filebase64sha256("../../compiled/goodmeasures_connect_getnumberinfofunction.zip")
+  filename     = "../../../compiled/goodmeasures_connect_getnumberinfofunction.zip"
+  source_code_hash = filebase64sha256("../../../compiled/goodmeasures_connect_getnumberinfofunction.zip")
+  depends_on = [aws_cloudwatch_log_group.log_group-goodmeasures_connect_getnumberinfofunction]
 }
 
-  depends_on = [aws_cloudwatch_log_group.log_group]
-}
-
-resource "aws_cloudwatch_log_group" "log_group" {
+resource "aws_cloudwatch_log_group" "log_group-goodmeasures_connect_getnumberinfofunction" {
   name = "/aws/lambda/GoodMeasures_Connect_GetNumberInfoFunction"
   retention_in_days = var.log_retention_days
 }

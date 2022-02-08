@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "checkholiday"{
-  function_name="CheckHoliday"
+  function_name="CheckHoliday-${var.tags["environment"]}"
   description  = ""
   tags         = var.tags
   runtime      ="python3.7"
@@ -8,15 +8,12 @@ resource "aws_lambda_function" "checkholiday"{
   timeout      = 3
   memory_size  = 128
   package_type ="Zip"
-  layers = [aws_lambda_layer_version.layers.arn]
-  filename     = "../../compiled/checkholiday.zip"
-  source_code_hash = filebase64sha256("../../compiled/checkholiday.zip")
+  filename     = "../../../compiled/checkholiday.zip"
+  source_code_hash = filebase64sha256("../../../compiled/checkholiday.zip")
+  depends_on = [aws_cloudwatch_log_group.log_group-checkholiday]
 }
 
-  depends_on = [aws_cloudwatch_log_group.log_group]
-}
-
-resource "aws_cloudwatch_log_group" "log_group" {
+resource "aws_cloudwatch_log_group" "log_group-checkholiday" {
   name = "/aws/lambda/CheckHoliday"
   retention_in_days = var.log_retention_days
 }

@@ -3,7 +3,7 @@ output "connect_instance_id" {
 }
 
 output "hours_map" {
-  value = module.connect_hours.hours_map
+  value = module.connect_hours.hours_of_operations_map
 }
 
 output "security_profiles_map" {
