@@ -213,7 +213,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
-          "text": "${}"
+          "text": "0x Inbound to Agent"
         }
       },
       "d7871af6-f47c-41f5-ba84-b48ac0ba4dae": {
@@ -224,7 +224,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_voicemail_flow\"]}",
-          "text": "${}"
+          "text": "0x Voicemail Flow"
         }
       },
       "59423146-a3c7-403c-a93d-30688f40fb29": {
@@ -242,7 +242,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_voicemail_flow\"]}",
-          "text": "${}"
+          "text": "0x Voicemail Flow"
         }
       },
       "9b3e2803-213d-4403-bcfb-fdbc19e131df": {
@@ -345,7 +345,7 @@
     {
       "Identifier": "fc531042-22e3-4a5b-8268-0c99a8235a02",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:GoodMeasures_Connect_PhoneNumberByExtensionFunction",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"goodmeasures_connect_phonenumberbyextensionfunction\"]}",
         "InvocationTimeLimitSeconds": "8"
       },
       "Transitions": {
@@ -723,7 +723,7 @@
     {
       "Identifier": "2f19a501-7d30-406e-a858-030c71ea7301",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/fc7e607a-a89f-45b9-8346-0d9a497d03b1"
+        "ContactFlowId": "${var.flows_map[\"_0x_inbound_to_agent\"]}"
       },
       "Transitions": {
         "NextAction": "59423146-a3c7-403c-a93d-30688f40fb29",
@@ -742,7 +742,7 @@
     {
       "Identifier": "d7871af6-f47c-41f5-ba84-b48ac0ba4dae",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/dcdd9ae8-8914-4728-85f0-9711b212776a"
+        "ContactFlowId": "${var.flows_map[\"_0x_voicemail_flow\"]}"
       },
       "Transitions": {
         "NextAction": "59423146-a3c7-403c-a93d-30688f40fb29",
@@ -777,7 +777,7 @@
     {
       "Identifier": "affdf81a-d488-4b6d-a0e4-356da9b19cdb",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/dcdd9ae8-8914-4728-85f0-9711b212776a"
+        "ContactFlowId": "${var.flows_map[\"_0x_voicemail_flow\"]}"
       },
       "Transitions": {
         "NextAction": "59423146-a3c7-403c-a93d-30688f40fb29",

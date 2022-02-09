@@ -28,7 +28,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_voicemail_flow\"]}",
-          "text": "${}"
+          "text": "0x Voicemail Flow"
         }
       },
       "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c": {
@@ -46,7 +46,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_dial_extension\"]}",
-          "text": "${}"
+          "text": "0x Dial Extension"
         }
       },
       "30ad4c0d-95a7-4118-b262-62046ff26928": {
@@ -134,7 +134,7 @@
     {
       "Identifier": "58b818af-b8b0-4ccd-9e7a-6d05ddab644e",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/dcdd9ae8-8914-4728-85f0-9711b212776a"
+        "ContactFlowId": "${var.flows_map[\"_0x_voicemail_flow\"]}"
       },
       "Transitions": {
         "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
@@ -169,7 +169,7 @@
     {
       "Identifier": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/ccaa74b8-af4b-4e5d-a5a5-82fb37959bbc"
+        "ContactFlowId": "${var.flows_map[\"_0x_dial_extension\"]}"
       },
       "Transitions": {
         "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",

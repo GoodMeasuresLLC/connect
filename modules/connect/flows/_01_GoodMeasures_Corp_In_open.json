@@ -35,7 +35,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
-          "text": "${}"
+          "text": "0x Inbound to Agent"
         }
       },
       "c6fbc214-fbbc-4bed-9b90-b1db3d938004": {
@@ -58,7 +58,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_dial_extension\"]}",
-          "text": "${}"
+          "text": "0x Dial Extension"
         }
       },
       "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c": {
@@ -76,7 +76,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
-          "text": "${}"
+          "text": "0x Inbound to Agent"
         }
       },
       "64fb8bbe-4784-447d-8d3c-4a4f13b88fe5": {
@@ -114,7 +114,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_01_goodmeasures_corp_in_closed\"]}",
-          "text": "${}"
+          "text": "01 GoodMeasures Corp - In (closed)"
         }
       },
       "e2de2c31-f8b1-49d2-bbd1-5a02c7f00d78": {
@@ -184,7 +184,7 @@
           "y": 526
         },
         "contactFlow": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/c389bd55-db17-4078-af82-5c4a40085325",
+          "id": "${var.flows_map[\"_0x_receptionist_queue_flow\"]}",
           "text": "0x Receptionist Queue Flow"
         },
         "customerOrAgent": false
@@ -281,7 +281,7 @@
     {
       "Identifier": "f765db1d-d0a6-4061-a801-e3b771baa77f",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/fc7e607a-a89f-45b9-8346-0d9a497d03b1"
+        "ContactFlowId": "${var.flows_map[\"_0x_inbound_to_agent\"]}"
       },
       "Transitions": {
         "NextAction": "d8b1b36d-ba7f-4b14-aeab-db235e1815f6",
@@ -329,7 +329,7 @@
     {
       "Identifier": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/ccaa74b8-af4b-4e5d-a5a5-82fb37959bbc"
+        "ContactFlowId": "${var.flows_map[\"_0x_dial_extension\"]}"
       },
       "Transitions": {
         "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
@@ -364,7 +364,7 @@
     {
       "Identifier": "5b8fd9d1-5655-40b8-86ed-e2da8cee3491",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/fc7e607a-a89f-45b9-8346-0d9a497d03b1"
+        "ContactFlowId": "${var.flows_map[\"_0x_inbound_to_agent\"]}"
       },
       "Transitions": {
         "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
@@ -444,7 +444,7 @@
     {
       "Identifier": "e48dcee6-652f-468a-ad36-4b271dbb88b2",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/25c8d642-9a8a-43e5-8e71-0d8ecdecd164"
+        "ContactFlowId": "${var.flows_map[\"_01_goodmeasures_corp_in_closed\"]}"
       },
       "Transitions": {
         "NextAction": "8d9260d1-fbec-47eb-a32e-17c7b1acaf0f",
@@ -550,7 +550,7 @@
     {
       "Identifier": "e126c00e-7764-49f4-a0ee-2ef9ee427246",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:CheckHoliday",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"checkholiday\"]}",
         "InvocationTimeLimitSeconds": "3"
       },
       "Transitions": {

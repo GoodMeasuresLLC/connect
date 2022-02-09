@@ -32,8 +32,8 @@
           "y": 705
         },
         "contactFlow": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/97168dc1-5b37-4c9f-a4d2-520f703b56bb",
-          "text": "10 Whisper Flow"
+          "id": "${var.flows_map[\"_0x_whisper_flow\"]}",
+          "text": "0x Whisper Flow"
         },
         "customerOrAgent": false
       },
@@ -64,7 +64,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_02_gm_vvip_in_open_closed\"]}",
-          "text": "${}"
+          "text": "02 GM VVIP - In (open+closed)"
         }
       },
       "7b947b01-5614-4f77-9735-7f8d680eda4c": {
@@ -75,7 +75,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_01_goodmeasures_corp_in_open\"]}",
-          "text": "${}"
+          "text": "01 GoodMeasures Corp - In (open)"
         }
       },
       "37452ef0-0d70-483f-ad81-be82ac39b429": {
@@ -141,7 +141,7 @@
           "y": 883
         },
         "contactFlow": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/4daea79b-9a59-47d8-88b9-f99da96397b9",
+          "id": "${var.flows_map[\"_0x_good_measures_queue_flow\"]}",
           "text": "0x Good Measures Queue Flow"
         },
         "customerOrAgent": false
@@ -232,7 +232,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"holiday_test_flow\"]}",
-          "text": "${}"
+          "text": "Holiday Test Flow"
         }
       }
     }
@@ -347,7 +347,7 @@
     {
       "Identifier": "cd026d06-e972-4801-b243-9490344e3e49",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/058c4b81-4869-49e1-afdc-7ca835c1a937"
+        "ContactFlowId": "${var.flows_map[\"_02_gm_vvip_in_open_closed\"]}"
       },
       "Transitions": {
         "NextAction": "7349db0d-508c-46dc-bf6e-6449d43c9161",
@@ -366,7 +366,7 @@
     {
       "Identifier": "7b947b01-5614-4f77-9735-7f8d680eda4c",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/6b9ceb1b-fac9-4723-8910-23fb2f0816a6"
+        "ContactFlowId": "${var.flows_map[\"_01_goodmeasures_corp_in_open\"]}"
       },
       "Transitions": {
         "NextAction": "7349db0d-508c-46dc-bf6e-6449d43c9161",
@@ -550,7 +550,7 @@
     {
       "Identifier": "bf40c5a3-95a7-468a-b9df-9fda43ad0cc9",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:GoodMeasures_Connect_GetNumberInfoFunction",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"goodmeasures_connect_getnumberinfofunction\"]}",
         "InvocationTimeLimitSeconds": "8"
       },
       "Transitions": {
@@ -658,7 +658,7 @@
     {
       "Identifier": "5b2e1a97-1757-403e-aa6e-b0da69743c6d",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/42995dd4-c693-4cc4-a666-f8a89d13fa88"
+        "ContactFlowId": "${var.flows_map[\"holiday_test_flow\"]}"
       },
       "Transitions": {
         "NextAction": "7349db0d-508c-46dc-bf6e-6449d43c9161",

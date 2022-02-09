@@ -35,7 +35,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_dial_extension\"]}",
-          "text": "${}"
+          "text": "0x Dial Extension"
         }
       },
       "b36a0323-0164-4742-bb02-917ce36a96f5": {
@@ -53,7 +53,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_voicemail_flow\"]}",
-          "text": "${}"
+          "text": "0x Voicemail Flow"
         }
       },
       "f4b9977a-4633-4a60-a8db-6981786812bc": {
@@ -72,7 +72,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_0x_inbound_to_agent\"]}",
-          "text": "${}"
+          "text": "0x Inbound to Agent"
         }
       },
       "d5fd8eed-513f-4791-ba80-4390af68eb1f": {
@@ -105,7 +105,7 @@
         "useDynamic": false,
         "ContactFlow": {
           "id": "${var.flows_map[\"_00_mainpatient_flow_in_closed\"]}",
-          "text": "${}"
+          "text": "00 MainPatient Flow - In (Closed)"
         }
       },
       "e05e8fe8-5be4-48ea-86d7-25fdc04165f9": {
@@ -342,7 +342,7 @@
     {
       "Identifier": "50ae888f-22ba-460d-8461-c7e69cbacfb1",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/ccaa74b8-af4b-4e5d-a5a5-82fb37959bbc"
+        "ContactFlowId": "${var.flows_map[\"_0x_dial_extension\"]}"
       },
       "Transitions": {
         "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
@@ -377,7 +377,7 @@
     {
       "Identifier": "47959141-56cc-4c7d-9cbf-5bbc9d63f950",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/dcdd9ae8-8914-4728-85f0-9711b212776a"
+        "ContactFlowId": "${var.flows_map[\"_0x_voicemail_flow\"]}"
       },
       "Transitions": {
         "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
@@ -412,7 +412,7 @@
     {
       "Identifier": "84634c50-5a1f-43a7-a02b-9e146efdc789",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/fc7e607a-a89f-45b9-8346-0d9a497d03b1"
+        "ContactFlowId": "${var.flows_map[\"_0x_inbound_to_agent\"]}"
       },
       "Transitions": {
         "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
@@ -455,7 +455,7 @@
     {
       "Identifier": "ee77fbf0-4248-4691-8b74-e63381a24852",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:CheckHoliday",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"checkholiday\"]}",
         "InvocationTimeLimitSeconds": "3"
       },
       "Transitions": {
@@ -475,7 +475,7 @@
     {
       "Identifier": "6f3917a2-61ca-4f51-9bf8-f5e5a483b715",
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/741ef393-5186-443e-be08-f5af7f48b2e2"
+        "ContactFlowId": "${var.flows_map[\"_00_mainpatient_flow_in_closed\"]}"
       },
       "Transitions": {
         "NextAction": "61029f55-7182-40ae-ba9d-375c64590836",

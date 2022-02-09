@@ -1,7 +1,7 @@
 resource "aws_connect_hours_of_operation" "ahead_study" {
   instance_id  = var.connect_instance_id
   name         = "AHEAD Study"
-time_zone  = "America/New_York"
+  time_zone  = "America/New_York"
   config {
     day = "THURSDAY"
 

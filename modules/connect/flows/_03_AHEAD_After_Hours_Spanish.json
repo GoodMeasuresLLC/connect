@@ -305,7 +305,7 @@
     {
       "Identifier": "e2857cb1-3340-42d7-92dc-c740184b4b6b",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptTranscription-Trigger",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"transcripttranscription_trigger\"]}",
         "InvocationTimeLimitSeconds": "8"
       },
       "Transitions": {
@@ -325,7 +325,7 @@
     {
       "Identifier": "17e63053-195d-4145-af99-775eefab95ef",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:201706955376:function:TranscriptCreate-Transcription-Table-Item",
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"transcriptcreate_transcription_table_item\"]}",
         "InvocationTimeLimitSeconds": "8"
       },
       "Transitions": {
