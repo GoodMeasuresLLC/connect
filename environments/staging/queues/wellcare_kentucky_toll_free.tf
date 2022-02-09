@@ -6,5 +6,6 @@ resource "aws_connect_queue" "wellcare_kentucky_toll_free" {
   name         = "Wellcare Kentucky Toll Free"
   outbound_caller_config {
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_6_university_of_michigan" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="feaa84dd-058f-4df7-88b0-cc2b01c57ebd"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

@@ -3,5 +3,6 @@ resource "aws_connect_queue" "basicqueue" {
   hours_of_operation_id = var.hours_of_operations_map["basic_hours"]
   instance_id  = var.connect_instance_id
   name         = "BasicQueue"
-            tags = var.tags
-          }
+
+  tags = var.tags
+}

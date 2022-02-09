@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_389_ralph_h_johnson_med_center" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="4fcd29fe-5181-4046-9c55-b9f90123b676"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_22_university_of_pennsylvania" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="53b9ee7d-2ba1-4577-9c8f-96986d0544fe"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

@@ -4,6 +4,8 @@ resource "aws_connect_queue" "_41_yale_university" {
   instance_id  = var.connect_instance_id
   name         = "41 Yale University"
   outbound_caller_config {
+    outbound_caller_id_name="AHEAD Study"
     outbound_flow_id=var.flows_map["default_customer_hold"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

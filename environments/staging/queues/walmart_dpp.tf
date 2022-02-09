@@ -4,6 +4,8 @@ resource "aws_connect_queue" "walmart_dpp" {
   instance_id  = var.connect_instance_id
   name         = "WalMart - DPP"
   outbound_caller_config {
+    outbound_caller_id_name="GM-Walmart DPP"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

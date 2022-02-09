@@ -4,6 +4,8 @@ resource "aws_connect_queue" "a_d_a_connect_the_dots_pilot" {
   instance_id  = var.connect_instance_id
   name         = "A D A Connect the Dots Pilot"
   outbound_caller_config {
+    outbound_caller_id_name="ADA Connect the Dots"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

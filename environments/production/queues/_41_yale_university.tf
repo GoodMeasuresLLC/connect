@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_41_yale_university" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="491b38f2-180f-4636-b20c-9162fd7af771"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

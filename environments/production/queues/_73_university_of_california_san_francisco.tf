@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_73_university_of_california_san_francisco" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="f7fb65e8-dee4-4d8d-92ad-53dcb2739cc5"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

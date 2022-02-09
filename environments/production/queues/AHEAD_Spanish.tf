@@ -7,5 +7,6 @@ resource "aws_connect_queue" "ahead_spanish" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="4af113ca-7e6f-4eb2-afe2-96d5e4bb63fd"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

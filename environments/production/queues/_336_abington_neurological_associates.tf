@@ -7,5 +7,6 @@ resource "aws_connect_queue" "_336_abington_neurological_associates" {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="c3689e81-4705-436f-b5e3-952b7afc1231"
     outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

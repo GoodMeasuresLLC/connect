@@ -7,5 +7,6 @@ resource "aws_connect_queue" "ada" {
     outbound_caller_id_name="GM-ADA"
     outbound_caller_id_number_id="67c97e8d-a8e6-48cb-ae23-2556e587870d"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

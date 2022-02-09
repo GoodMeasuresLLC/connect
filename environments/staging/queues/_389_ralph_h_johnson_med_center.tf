@@ -4,6 +4,8 @@ resource "aws_connect_queue" "_389_ralph_h_johnson_med_center" {
   instance_id  = var.connect_instance_id
   name         = "389 Ralph H. Johnson Med Center"
   outbound_caller_config {
+    outbound_caller_id_name="AHEAD Study"
     outbound_flow_id=var.flows_map["default_customer_hold"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

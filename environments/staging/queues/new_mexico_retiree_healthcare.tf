@@ -4,6 +4,8 @@ resource "aws_connect_queue" "new_mexico_retiree_healthcare" {
   instance_id  = var.connect_instance_id
   name         = "New Mexico Retiree Healthcare"
   outbound_caller_config {
+    outbound_caller_id_name="GM-NMRHCA"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

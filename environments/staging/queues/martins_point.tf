@@ -4,6 +4,8 @@ resource "aws_connect_queue" "martins_point" {
   instance_id  = var.connect_instance_id
   name         = "Martins Point"
   outbound_caller_config {
+    outbound_caller_id_name="GM-Martins Point"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

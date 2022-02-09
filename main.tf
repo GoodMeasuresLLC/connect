@@ -17,15 +17,15 @@ module "connect_instance" {
   instance_alias = var.instance_alias
 }
 
-# module "connect_flows" {
-#   source = "./modules/connect/flows"
-#   connect_instance_id = module.connect_instance.connect_instance_id
-#   hours_of_operations_map = module.connect_hours.hours_of_operations_map
-#   security_profiles_map = module.security_profiles.security_profiles_map
-#   lambda_functions_map = module.lambdas.lambda_functions_map
-#   queue_map = var.lambda_functions_map
-#   tags= local.tags
-# }
+module "connect_flows" {
+  source = "./modules/connect/flows"
+  connect_instance_id = module.connect_instance.connect_instance_id
+  hours_of_operations_map = module.connect_hours.hours_of_operations_map
+  security_profiles_map = module.security_profiles.security_profiles_map
+  lambda_functions_map = module.lambdas.lambda_functions_map
+  queues_map = var.queues_map
+  tags= local.tags
+}
 module "connect_hours" {
   source = "./modules/connect/hours"
   connect_instance_id = module.connect_instance.connect_instance_id

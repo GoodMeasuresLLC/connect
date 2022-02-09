@@ -25,8 +25,7 @@ module "connect" {
   # items specific to this environment
   environment = var.environment
   # later, when you have queues in here
-  # queues_map = module.connect_queues.queues_map
-  queues_map = {}
+  queues_map = module.connect_queues.queues_map
 }
 
 # add later:
@@ -39,14 +38,14 @@ module "connect" {
 #   tags = {}
 # }
 
-# module "queues" {
-#   source = "./queues"
-#   connect_instance_id = module.connect_instance.connect_instance_id
-#   hours_of_operations_map = module.connect_instance.hours_of_operations_map
-#   flows_map = module.connect_instance.flows_map
-#   users_map = module.users.users_map
-#   tags = {}
-# }
+module "queues" {
+  source = "./queues"
+  connect_instance_id = module.connect_instance.connect_instance_id
+  hours_of_operations_map = module.connect_instance.hours_of_operations_map
+  flows_map = module.connect_instance.flows_map
+  tags = {}
+}
+
 # module "connect_queues" {
 #   source = "./queues"
 #   connect_instance_id = module.connect.connect_instance_id

@@ -4,6 +4,8 @@ resource "aws_connect_queue" "_141_rhode_island_hospital" {
   instance_id  = var.connect_instance_id
   name         = "141 Rhode Island Hospital"
   outbound_caller_config {
+    outbound_caller_id_name="AHEAD Study"
     outbound_flow_id=var.flows_map["default_customer_hold"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}

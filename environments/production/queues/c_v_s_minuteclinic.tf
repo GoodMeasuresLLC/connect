@@ -7,5 +7,6 @@ resource "aws_connect_queue" "c_v_s_minuteclinic" {
     outbound_caller_id_name="GM-CVS-MinuteClinic"
     outbound_caller_id_number_id="38c6e707-a64f-4f67-a2c3-706a8960fb28"
     outbound_flow_id=var.flows_map["_0x_gm_outbound"]
-  }            tags = var.tags
-          }
+  }
+  tags = var.tags
+}
