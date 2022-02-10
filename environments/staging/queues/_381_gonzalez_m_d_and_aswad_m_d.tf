@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_381_gonzalez_m_d_and_aswad_m_d" {
   name         = "381 Gonzalez M D and Aswad M D"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="54be0aae-1127-40c5-a769-1284b972427f"
   }
   tags = var.tags
 }

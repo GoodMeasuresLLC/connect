@@ -5,7 +5,6 @@ resource "aws_connect_queue" "ahead_distance_ineligible" {
   name         = "AHEAD-Distance Ineligible"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="18005758-a70a-436d-9e72-3dbef17e7afd"
   }
   tags = var.tags
 }

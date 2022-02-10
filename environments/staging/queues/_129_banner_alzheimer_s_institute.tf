@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_129_banner_alzheimer_s_institute" {
   name         = "129 Banner Alzheimer's Institute"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="57573f07-5cc3-45ad-8697-edabdd281e9d"
   }
   tags = var.tags
 }

@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_388_eastern_virginia_medical_school" {
   name         = "388 Eastern Virginia Medical School"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="1caf9f37-ac08-44c8-86f4-32c10591f2b4"
   }
   tags = var.tags
 }

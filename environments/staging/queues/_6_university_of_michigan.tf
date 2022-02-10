@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_6_university_of_michigan" {
   name         = "6 University of Michigan"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="feaa84dd-058f-4df7-88b0-cc2b01c57ebd"
   }
   tags = var.tags
 }

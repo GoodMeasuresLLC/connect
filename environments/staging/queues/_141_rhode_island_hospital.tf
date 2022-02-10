@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_141_rhode_island_hospital" {
   name         = "141 Rhode Island Hospital"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="d07ff8ef-40ce-4b3e-9325-37b736893fe5"
   }
   tags = var.tags
 }

@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_9_baylor_college_of_medicine" {
   name         = "9 Baylor College of Medicine"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="4b2e04dd-2a07-47e7-a348-d2d6056a250b"
   }
   tags = var.tags
 }

@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_356_ahead_a_m_c_research" {
   name         = "356 AHEAD A M C Research"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="a2548080-8ae7-4085-b8c3-9d99aa3e3daf"
   }
   tags = var.tags
 }

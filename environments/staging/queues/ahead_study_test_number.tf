@@ -5,7 +5,6 @@ resource "aws_connect_queue" "ahead_study_test_number" {
   name         = "AHEAD Study Test Number"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="1d3a43d8-0fdc-4538-8d22-364a365e7bca"
   }
   tags = var.tags
 }

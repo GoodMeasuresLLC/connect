@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_7_mayo_clinic_rochester" {
   name         = "7 Mayo Clinic Rochester"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="aac671d5-336f-44b8-808e-4e3f6d863e70"
   }
   tags = var.tags
 }

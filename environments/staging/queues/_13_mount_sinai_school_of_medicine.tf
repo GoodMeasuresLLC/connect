@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_13_mount_sinai_school_of_medicine" {
   name         = "13 Mount Sinai School of Medicine"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="75c74e9d-990a-4833-91b2-185ca3e83dca"
   }
   tags = var.tags
 }

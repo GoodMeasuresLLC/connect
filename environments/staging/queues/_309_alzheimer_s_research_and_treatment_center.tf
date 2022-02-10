@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_309_alzheimer_s_research_and_treatment_center" {
   name         = "309 Alzheimer's Research and Treatment Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="50199930-79ca-4f93-bc60-222363ae5784"
   }
   tags = var.tags
 }

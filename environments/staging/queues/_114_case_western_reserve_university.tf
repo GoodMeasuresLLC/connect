@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_114_case_western_reserve_university" {
   name         = "114 Case Western Reserve University"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="2d0cf70b-df5b-4c18-a220-741630dcfda1"
   }
   tags = var.tags
 }

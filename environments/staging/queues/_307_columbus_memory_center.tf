@@ -5,7 +5,6 @@ resource "aws_connect_queue" "_307_columbus_memory_center" {
   name         = "307 Columbus Memory Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_caller_id_number_id="4e4ee3b4-86fd-4d55-bb5b-73db90c583ee"
   }
   tags = var.tags
 }
