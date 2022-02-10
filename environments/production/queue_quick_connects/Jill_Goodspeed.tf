@@ -1,5 +1,5 @@
-resource "aws_connect_quick_connect" "Jill_Goodspeed" {
-	instance_id  = "${aws_connect_instance.connect.id}"
+resource "aws_connect_quick_connect" "jill_goodspeed" {
+	instance_id  = var.connect_instance_id
 	name         = "Jill Goodspeed"
 	quick_connect_config {
 	  quick_connect_type = "PHONE_NUMBER"
@@ -8,5 +8,5 @@ resource "aws_connect_quick_connect" "Jill_Goodspeed" {
           phone_number = "+18577030325"
         }
 	}
-	tags = local.tags
+	tags = var.tags
 }

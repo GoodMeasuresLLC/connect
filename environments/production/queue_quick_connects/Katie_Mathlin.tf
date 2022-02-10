@@ -1,13 +1,13 @@
-resource "aws_connect_quick_connect" "Katie_Mathlin" {
-	instance_id  = "${aws_connect_instance.connect.id}"
+resource "aws_connect_quick_connect" "katie_mathlin" {
+	instance_id  = var.connect_instance_id
 	name         = "Katie Mathlin"
 	quick_connect_config {
 	  quick_connect_type = "USER"
 
         user_config {
-          contact_flow_id = "${aws_connect_contact_flow.Default_agent_transfer.id}"
+          contact_flow_id = "${var.flows_map["default_agent_transfer"]}"
             user_id = "76b09f85-ab63-4e9c-8ff4-d1aef95cd7a1"
         }
 	}
-	tags = local.tags
+	tags = var.tags
 }

@@ -1,5 +1,5 @@
-resource "aws_connect_quick_connect" "WC_NC_Medicaid_Member_Svc" {
-	instance_id  = "${aws_connect_instance.connect.id}"
+resource "aws_connect_quick_connect" "wc_nc_medicaid_member_svc" {
+	instance_id  = var.connect_instance_id
 	name         = "WC NC Medicaid Member Svc"
 	quick_connect_config {
 	  quick_connect_type = "PHONE_NUMBER"
@@ -8,5 +8,5 @@ resource "aws_connect_quick_connect" "WC_NC_Medicaid_Member_Svc" {
           phone_number = "+18667995318"
         }
 	}
-	tags = local.tags
+	tags = var.tags
 }

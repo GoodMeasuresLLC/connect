@@ -1,5 +1,5 @@
-resource "aws_connect_quick_connect" "Martin_s_Point_Member_Services" {
-	instance_id  = "${aws_connect_instance.connect.id}"
+resource "aws_connect_quick_connect" "martin_s_point_member_services" {
+	instance_id  = var.connect_instance_id
 	name         = "Martin's Point Member Services"
 	quick_connect_config {
 	  quick_connect_type = "PHONE_NUMBER"
@@ -8,5 +8,5 @@ resource "aws_connect_quick_connect" "Martin_s_Point_Member_Services" {
           phone_number = "+18665447504"
         }
 	}
-	tags = local.tags
+	tags = var.tags
 }
