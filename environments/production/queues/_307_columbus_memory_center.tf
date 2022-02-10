@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_307_columbus_memory_center" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="4e4ee3b4-86fd-4d55-bb5b-73db90c583ee"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

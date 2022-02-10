@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_94_brigham_and_women" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="29caad6c-92ee-451b-9951-8c8e578f5134"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

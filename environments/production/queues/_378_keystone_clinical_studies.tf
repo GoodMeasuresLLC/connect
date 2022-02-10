@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_378_keystone_clinical_studies" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="3756dc16-c30f-4b0e-8d10-bccaf4483010"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

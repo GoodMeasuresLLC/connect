@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_305_vanderbilt_university" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="20c583cd-db59-46d1-a853-752a17582daf"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

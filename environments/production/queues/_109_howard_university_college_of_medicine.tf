@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_109_howard_university_college_of_medicine" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="d3e04d4a-45af-462c-95c8-f2ac78501b4b"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

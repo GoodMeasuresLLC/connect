@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_36_mayo_clinic_jacksonville" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="5ac6e2f9-65e8-4eca-bbe9-30b3e93bea63"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

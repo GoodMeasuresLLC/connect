@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_309_alzheimer_s_research_and_treatment_center" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="50199930-79ca-4f93-bc60-222363ae5784"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

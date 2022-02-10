@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_9_baylor_college_of_medicine" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="4b2e04dd-2a07-47e7-a348-d2d6056a250b"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

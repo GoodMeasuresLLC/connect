@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_37_indiana_university_school_of_medicine" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="93eb3e1d-243f-43b9-ad8b-0fdf44822d45"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

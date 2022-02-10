@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_319_renstar_medical_research" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="2bf4a79b-68dc-4acb-b6eb-df6e0c9016b2"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

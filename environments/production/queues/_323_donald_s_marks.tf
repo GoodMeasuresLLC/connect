@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_323_donald_s_marks" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="b73431ad-4398-4804-8218-44ab6f0dc4da"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

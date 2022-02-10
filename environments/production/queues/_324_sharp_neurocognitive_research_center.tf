@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_324_sharp_neurocognitive_research_center" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="e085b3af-3d2e-4b54-9a26-c85d8824e608"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

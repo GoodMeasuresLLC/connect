@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_155_duke_health_center" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="8da2b7ea-96a7-48f8-8320-0abf9c382c64"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }

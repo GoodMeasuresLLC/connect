@@ -6,7 +6,6 @@ resource "aws_connect_queue" "_13_mount_sinai_school_of_medicine" {
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
     outbound_caller_id_number_id="75c74e9d-990a-4833-91b2-185ca3e83dca"
-    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
   }
   tags = var.tags
 }
