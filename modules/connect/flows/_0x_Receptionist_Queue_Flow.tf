@@ -3,7 +3,7 @@ resource "aws_connect_contact_flow" "_0x_receptionist_queue_flow" {
   name         = "0x Receptionist Queue Flow"
   type         = "CUSTOMER_QUEUE"
   description  = ""
-  filename     = "_0x_receptionist_queue_flow.json"
-  content_hash = filebase64sha256("_0x_receptionist_queue_flow.json")
+  filename     = "${path.module}/_0x_receptionist_queue_flow.json"
+  content_hash = filebase64sha256("${path.module}/_0x_receptionist_queue_flow.json")
   tags = var.tags
 }

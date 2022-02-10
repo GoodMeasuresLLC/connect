@@ -3,7 +3,7 @@ resource "aws_connect_contact_flow" "holiday_routing_test" {
   name         = "Holiday Routing Test"
   type         = "CONTACT_FLOW"
   description  = "DO NOT CHANGE - All flows route to their intended destination"
-  filename     = "holiday_routing_test.json"
-  content_hash = filebase64sha256("holiday_routing_test.json")
+  filename     = "${path.module}/holiday_routing_test.json"
+  content_hash = filebase64sha256("${path.module}/holiday_routing_test.json")
   tags = var.tags
 }

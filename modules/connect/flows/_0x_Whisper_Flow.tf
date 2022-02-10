@@ -3,7 +3,7 @@ resource "aws_connect_contact_flow" "_0x_whisper_flow" {
   name         = "0x Whisper Flow"
   type         = "AGENT_WHISPER"
   description  = ""
-  filename     = "_0x_whisper_flow.json"
-  content_hash = filebase64sha256("_0x_whisper_flow.json")
+  filename     = "${path.module}/_0x_whisper_flow.json"
+  content_hash = filebase64sha256("${path.module}/_0x_whisper_flow.json")
   tags = var.tags
 }

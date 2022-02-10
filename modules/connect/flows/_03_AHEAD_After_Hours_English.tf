@@ -3,7 +3,7 @@ resource "aws_connect_contact_flow" "_03_ahead_after_hours_english" {
   name         = "03 AHEAD After Hours - English"
   type         = "CONTACT_FLOW"
   description  = "Off Hours AHEAD Prompt"
-  filename     = "_03_ahead_after_hours_english.json"
-  content_hash = filebase64sha256("_03_ahead_after_hours_english.json")
+  filename     = "${path.module}/_03_ahead_after_hours_english.json"
+  content_hash = filebase64sha256("${path.module}/_03_ahead_after_hours_english.json")
   tags = var.tags
 }
