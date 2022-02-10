@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_370_advanced_memory_research_institute_of_new_jer
   name         = "370 Advanced Memory Research Institute of New Jersey"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="0ba2c287-e3cb-4b54-8386-6eaa9ec59aa1"
   }
   tags = var.tags
 }

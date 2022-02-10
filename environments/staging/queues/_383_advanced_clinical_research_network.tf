@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_383_advanced_clinical_research_network" {
   name         = "383 Advanced Clinical Research Network"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="a039b93b-1dc2-401d-9bbe-9548e11600ca"
   }
   tags = var.tags
 }

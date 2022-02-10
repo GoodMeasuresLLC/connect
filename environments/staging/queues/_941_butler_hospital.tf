@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_941_butler_hospital" {
   name         = "941 Butler Hospital"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="93fee474-3d26-4a27-b3d3-999a0259ee8f"
   }
   tags = var.tags
 }

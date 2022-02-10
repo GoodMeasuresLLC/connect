@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_334_university_of_north_texas" {
   name         = "334 University of North Texas"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="74e40ca8-0a8e-4671-8197-6bff162d9025"
   }
   tags = var.tags
 }

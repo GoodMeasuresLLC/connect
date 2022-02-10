@@ -12,6 +12,12 @@ locals {
   }
 }
 
+module "lambdas" {
+  source = "./modules/lambdas"
+  tags = local.tags
+  log_retention_days = 7
+}
+
 module "connect_instance" {
   source = "./modules/connect"
   instance_alias = var.instance_alias
@@ -43,9 +49,3 @@ module "security_profiles" {
 #   lambda_functions_map = module.lambdas.lambda_functions_map
 #   tags = local.tags
 # }
-
-module "lambdas" {
-  source = "./modules/lambdas"
-  tags = local.tags
-  log_retention_days = 7
-}

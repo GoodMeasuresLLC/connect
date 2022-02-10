@@ -31,10 +31,9 @@ module "connect" {
 # add later:
 # module "queue_quick_connects" {
 #   source = "./queue_quick_connects"
-#   connect_instance_id = module.connect_instance.connect_instance_id
-#   queues_map = module.queues.queues_map
+#   connect_instance_id = module.connect.connect_instance_id
 #   users_map = module.users.users_map
-#   flows_map = module.connect_instance.flows_map
+#   flows_map = module.connect.flows_map
 #   tags = {}
 # }
 
@@ -45,9 +44,3 @@ module "queues" {
   flows_map = module.connect.flows_map
   tags = {}
 }
-
-# module "connect_queues" {
-#   source = "./queues"
-#   connect_instance_id = module.connect.connect_instance_id
-#   tags= local.tags
-# }

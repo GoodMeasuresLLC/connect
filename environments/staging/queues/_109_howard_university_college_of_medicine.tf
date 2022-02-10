@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_109_howard_university_college_of_medicine" {
   name         = "109 Howard University College of Medicine"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="d3e04d4a-45af-462c-95c8-f2ac78501b4b"
   }
   tags = var.tags
 }

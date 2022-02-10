@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_323_donald_s_marks" {
   name         = "323 Donald S Marks"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="b73431ad-4398-4804-8218-44ab6f0dc4da"
   }
   tags = var.tags
 }

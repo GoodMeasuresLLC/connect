@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_14_rush_university_medical_center" {
   name         = "14 Rush University Medical Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="d66b79b4-4d17-47ca-950b-1298cca3111f"
   }
   tags = var.tags
 }

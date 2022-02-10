@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_12_university_of_alabama_birmingham" {
   name         = "12 University of Alabama Birmingham"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="07bc1962-b921-45a8-ad3e-fe7260683009"
   }
   tags = var.tags
 }

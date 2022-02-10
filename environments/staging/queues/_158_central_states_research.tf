@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_158_central_states_research" {
   name         = "158 Central States Research"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="5944304d-ccd8-4382-9076-2f1453b07d3a"
   }
   tags = var.tags
 }

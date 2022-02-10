@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_67_northwestern_university" {
   name         = "67 Northwestern University"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="1e63e26d-66a6-4913-bfec-f7b71844802c"
   }
   tags = var.tags
 }

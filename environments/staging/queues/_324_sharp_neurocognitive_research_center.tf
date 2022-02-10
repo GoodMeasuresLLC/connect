@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_324_sharp_neurocognitive_research_center" {
   name         = "324 Sharp Neurocognitive Research Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="e085b3af-3d2e-4b54-9a26-c85d8824e608"
   }
   tags = var.tags
 }

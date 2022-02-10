@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_27_university_of_rochester_medical_center" {
   name         = "27 University of Rochester Medical Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="6cd67875-4db7-4b3a-bdfb-603195ee40a0"
   }
   tags = var.tags
 }

@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_349_cleveland_clinic_lou_ruvo_center" {
   name         = "349 Cleveland Clinic Lou Ruvo Center"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["sample_lambda_integration"]
+    outbound_caller_id_number_id="2ebf6f3f-95eb-4ad6-b970-1e67cf7efe19"
   }
   tags = var.tags
 }
