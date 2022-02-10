@@ -5,7 +5,7 @@ resource "aws_connect_queue" "ahead_incomplete_entry" {
   name         = "AHEAD-Incomplete Entry"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

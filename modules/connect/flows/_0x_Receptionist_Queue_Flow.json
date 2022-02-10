@@ -77,8 +77,8 @@
         },
         "useDynamic": false,
         "queue": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/e95345da-9b32-4714-9a91-b3507e4f4fc6",
-          "text": "Voicemail Queue"
+          "id": "${var.queues_map[\"z_voicemail_queue\"]}",
+          "text": "Z - Voicemail Queue"
         }
       },
       "64f42bf0-cc1f-44e6-9327-99bdaaec0572": {

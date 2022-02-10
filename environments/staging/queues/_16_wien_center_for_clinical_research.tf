@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_16_wien_center_for_clinical_research" {
   name         = "16 Wien Center for Clinical Research"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

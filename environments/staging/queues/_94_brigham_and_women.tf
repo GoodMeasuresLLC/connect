@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_94_brigham_and_women" {
   name         = "94 Brigham and Women"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

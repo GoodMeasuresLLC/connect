@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_18_johns_hopkins_university" {
   name         = "18 Johns Hopkins University"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

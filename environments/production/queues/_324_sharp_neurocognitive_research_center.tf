@@ -1,0 +1,12 @@
+resource "aws_connect_queue" "_324_sharp_neurocognitive_research_center" {
+  description  = "AHEAD-Sharp Neurocognitive Research Center"
+  hours_of_operation_id = var.hours_of_operations_map["ahead_study"]
+  instance_id  = var.connect_instance_id
+  name         = "324 Sharp Neurocognitive Research Center"
+  outbound_caller_config {
+    outbound_caller_id_name="AHEAD Study"
+    outbound_caller_id_number_id="e085b3af-3d2e-4b54-9a26-c85d8824e608"
+    outbound_flow_id=var.flows_map["_00_mainpatient_flow_in_open"]
+  }
+  tags = var.tags
+}

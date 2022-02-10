@@ -42,7 +42,7 @@
         },
         "useDynamic": false,
         "queue": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/9d1b092e-90d9-47ba-b607-4cc7fd6c503a",
+          "id": "${var.queues_map[\"z_default_error_queue\"]}",
           "text": "Z - Default (Error) Queue"
         }
       },

@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_2_oregon_health_science_university" {
   name         = "2 Oregon Health & Science University"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

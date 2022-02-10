@@ -5,7 +5,7 @@ resource "aws_connect_queue" "_381_gonzalez_m_d_and_aswad_m_d" {
   name         = "381 Gonzalez M D and Aswad M D"
   outbound_caller_config {
     outbound_caller_id_name="AHEAD Study"
-    outbound_flow_id=var.flows_map["default_customer_hold"]
+    outbound_flow_id=var.flows_map["sample_lambda_integration"]
   }
   tags = var.tags
 }

@@ -239,8 +239,8 @@
         },
         "useDynamic": false,
         "queue": {
-          "id": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/f489cd2a-c80e-481e-b144-79b5c32dc0a4",
-          "text": "Receptionist Queue (Main office)"
+          "id": "${var.queues_map[\"g_m_receptionist\"]}",
+          "text": "G M Receptionist"
         }
       }
     }
