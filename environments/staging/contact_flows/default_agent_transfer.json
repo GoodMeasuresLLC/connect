@@ -1,0 +1,53 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "5e641eb0-0e27-4f78-9e3e-5d8cd35a4ac5",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 97,
+      "y": 126
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "ff15cc41-856b-4f89-9fec-20d34a4f056b": {
+        "position": {
+          "x": 531,
+          "y": 224
+        },
+        "useDynamic": false
+      },
+      "5e641eb0-0e27-4f78-9e3e-5d8cd35a4ac5": {
+        "position": {
+          "x": 272,
+          "y": 172
+        },
+        "useDynamic": false
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "ff15cc41-856b-4f89-9fec-20d34a4f056b",
+      "Parameters": {
+      },
+      "Transitions": {
+      },
+      "Type": "TransferContactToAgent"
+    },
+    {
+      "Identifier": "5e641eb0-0e27-4f78-9e3e-5d8cd35a4ac5",
+      "Parameters": {
+        "Text": "Transferring now..."
+      },
+      "Transitions": {
+        "NextAction": "ff15cc41-856b-4f89-9fec-20d34a4f056b",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    }
+  ]
+}
