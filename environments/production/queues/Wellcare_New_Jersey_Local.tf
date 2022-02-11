@@ -6,7 +6,7 @@ resource "aws_connect_queue" "wellcare_new_jersey_local" {
   outbound_caller_config {
     outbound_caller_id_name="WellCare of NJ"
     outbound_caller_id_number_id="d111231e-6bcb-4c7a-9a4a-2487ad491cac"
-    outbound_flow_id=var.flows_map["_0x_gm_outbound"]
+    outbound_flow_id=var.contact_flows_map["_0x_gm_outbound"]
   }
   tags = var.tags
 }

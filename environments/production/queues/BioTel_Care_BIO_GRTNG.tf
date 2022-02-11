@@ -6,7 +6,7 @@ resource "aws_connect_queue" "biotel_care_bio_grtng" {
   outbound_caller_config {
     outbound_caller_id_name="GM-BioTel"
     outbound_caller_id_number_id="86d67803-45cf-4cb6-ba2c-80676681da91"
-    outbound_flow_id=var.flows_map["_0x_gm_outbound"]
+    outbound_flow_id=var.contact_flows_map["_0x_gm_outbound"]
   }
   tags = var.tags
 }

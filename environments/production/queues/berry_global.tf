@@ -6,7 +6,7 @@ resource "aws_connect_queue" "berry_global" {
   outbound_caller_config {
     outbound_caller_id_name="Good Measures"
     outbound_caller_id_number_id="904986d4-4987-4306-97da-b61f682acc1d"
-    outbound_flow_id=var.flows_map["default_outbound"]
+    outbound_flow_id=var.contact_flows_map["default_outbound"]
   }
   tags = var.tags
 }
