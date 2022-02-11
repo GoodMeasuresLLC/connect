@@ -37,10 +37,18 @@ module "connect" {
 #   tags = {}
 # }
 
+module "contact_flows" {
+  source = "./contact_flows"
+  connect_instance_id = module.connect.connect_instance_id
+  lambda_functions_map = module.connect.lambda_functions_map
+  queues_map = var.queues_map
+  tags= local.tags
+}
+
 module "queues" {
   source = "./queues"
   connect_instance_id = module.connect.connect_instance_id
   hours_of_operations_map = module.connect.hours_of_operations_map
-  flows_map = module.connect.flows_map
+  contact_flows_map = module.connect.flows_map
   tags = {}
 }

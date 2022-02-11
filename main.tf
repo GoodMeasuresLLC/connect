@@ -12,8 +12,8 @@ locals {
   }
 }
 
-module "lambdas" {
-  source = "./modules/lambdas"
+module "lambda_functions" {
+  source = "./modules/lambda_functions"
   tags = local.tags
   log_retention_days = 7
 }
@@ -23,21 +23,14 @@ module "connect_instance" {
   instance_alias = var.instance_alias
 }
 
-module "flows" {
-  source = "./modules/connect/flows"
-  connect_instance_id = module.connect_instance.connect_instance_id
-  lambda_functions_map = module.lambdas.lambda_functions_map
-  queues_map = var.queues_map
-  tags= local.tags
-}
-module "connect_hours" {
-  source = "./modules/connect/hours"
+module "hours_of_operations" {
+  source = "./modules/connect/hours_of_operations"
   connect_instance_id = module.connect_instance.connect_instance_id
   tags = local.tags
 }
 
 module "security_profiles" {
-  source = "./modules/connect/security_profile"
+  source = "./modules/connect/security_profiles"
   connect_instance_id = module.connect_instance.connect_instance_id
   tags = local.tags
 }

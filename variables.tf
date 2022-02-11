@@ -36,3 +36,5 @@ variable "environment" {
 
 variable "queues_map" {
 }
+variable "contact_flows_map" {
+}
