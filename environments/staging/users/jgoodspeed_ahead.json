@@ -1,0 +1,22 @@
+{
+  "id": "8d04486d-9c0e-427e-be8d-ac57b13a14fc",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/8d04486d-9c0e-427e-be8d-ac57b13a14fc",
+  "username": "JGoodspeed-AHEAD",
+  "identity_info": {
+    "first_name": "Jill",
+    "last_name": "Goodspeed"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "7ddedc7d-4a87-4cca-98f4-f96f8ac71a68",
+  "security_profile_ids": [
+    "639d5baf-2a7a-4804-97f7-c7d925e9b400"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

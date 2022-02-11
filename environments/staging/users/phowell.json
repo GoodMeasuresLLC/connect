@@ -1,0 +1,22 @@
+{
+  "id": "ede0bb01-55e1-4250-8ba6-a9d5e659a04e",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/ede0bb01-55e1-4250-8ba6-a9d5e659a04e",
+  "username": "PHowell",
+  "identity_info": {
+    "first_name": "Phelan",
+    "last_name": "Howell"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "c1f1a3ff-9cdb-4a3f-b94e-5c183d210d06",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

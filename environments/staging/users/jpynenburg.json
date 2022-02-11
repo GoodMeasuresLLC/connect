@@ -1,0 +1,22 @@
+{
+  "id": "a0ab9632-9c82-4c72-93a4-0f8408cf3bc4",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/a0ab9632-9c82-4c72-93a4-0f8408cf3bc4",
+  "username": "JPynenburg",
+  "identity_info": {
+    "first_name": "Jennifer",
+    "last_name": "Pynenburg"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 120,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "97cbcc70-f5ca-45a4-bf7b-749eb65058cb",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

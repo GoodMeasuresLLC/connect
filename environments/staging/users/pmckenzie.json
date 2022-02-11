@@ -1,0 +1,22 @@
+{
+  "id": "9173f0e6-c7e8-4207-89fc-64625ccc9366",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/9173f0e6-c7e8-4207-89fc-64625ccc9366",
+  "username": "PMcKenzie",
+  "identity_info": {
+    "first_name": "Patti",
+    "last_name": "McKenzie"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 120,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "2a10bfef-ba69-4538-ac36-24283b22a880",
+  "security_profile_ids": [
+    "639d5baf-2a7a-4804-97f7-c7d925e9b400"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

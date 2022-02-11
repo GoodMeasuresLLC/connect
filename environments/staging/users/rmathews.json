@@ -1,0 +1,22 @@
+{
+  "id": "716dcef6-28e3-4a8c-a8c6-f4160ae43ed6",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/716dcef6-28e3-4a8c-a8c6-f4160ae43ed6",
+  "username": "RMathews",
+  "identity_info": {
+    "first_name": "Rob",
+    "last_name": "Mathews"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "da843648-848c-4ae2-9648-f18a104ddad1",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

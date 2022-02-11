@@ -1,0 +1,22 @@
+{
+  "id": "e5d6f6af-be1e-4e57-b0e5-e90d5c6bfc42",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/e5d6f6af-be1e-4e57-b0e5-e90d5c6bfc42",
+  "username": "ODow",
+  "identity_info": {
+    "first_name": "Oscar",
+    "last_name": "Dow"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "0a010837-2446-4930-aac9-8a91f8f5b779",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

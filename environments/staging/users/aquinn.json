@@ -1,0 +1,22 @@
+{
+  "id": "0782dec5-8ca6-4433-803f-c14ff0f2c1ce",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/0782dec5-8ca6-4433-803f-c14ff0f2c1ce",
+  "username": "AQuinn",
+  "identity_info": {
+    "first_name": "Adam",
+    "last_name": "Quinn"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "044cb69a-02de-41eb-8eb5-f492a2cc00bc",
+  "security_profile_ids": [
+    "2d8d5898-46cb-498e-9277-2c95f9325574"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

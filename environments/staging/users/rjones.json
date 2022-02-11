@@ -1,0 +1,22 @@
+{
+  "id": "f4f4f24b-f0e9-4516-9e3b-9bd2076d9431",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/f4f4f24b-f0e9-4516-9e3b-9bd2076d9431",
+  "username": "RJones",
+  "identity_info": {
+    "first_name": "Rene",
+    "last_name": "Jones"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "1a35481d-b682-4a60-898f-cb6d748230e9",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}

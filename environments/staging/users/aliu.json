@@ -1,0 +1,22 @@
+{
+  "id": "482b7cc7-1ba4-4b58-97a5-ca9c5d813857",
+  "arn": "arn:aws:connect:us-east-1:201706955376:instance/d1aad683-fd01-492c-95f8-6c4ab4769e78/agent/482b7cc7-1ba4-4b58-97a5-ca9c5d813857",
+  "username": "ALiu",
+  "identity_info": {
+    "first_name": "Angie",
+    "last_name": "Liu"
+  },
+  "phone_config": {
+    "phone_type": "SOFT_PHONE",
+    "auto_accept": false,
+    "after_contact_work_time_limit": 0,
+    "desk_phone_number": ""
+  },
+  "directory_user_id": "6a3b79c1-219e-4a5b-af87-b993e8d04be4",
+  "security_profile_ids": [
+    "f227331c-6fc8-44ec-ac1a-d5d0e26af5a3"
+  ],
+  "routing_profile_id": "2e32a83a-68a2-4eae-a7de-2e63c33e58f4",
+  "tags": {
+  }
+}
