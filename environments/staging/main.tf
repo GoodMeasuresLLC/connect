@@ -27,6 +27,7 @@ module "connect" {
   # later, when you have queues in here
   queues_map = module.queues.queues_map
   contact_flows_map = module.contact_flows.contact_flows_map
+  s3_deployment_bucket = var.s3_deployment_bucket
 }
 
 # add later:

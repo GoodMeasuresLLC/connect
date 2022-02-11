@@ -38,3 +38,4 @@ variable "queues_map" {
 }
 variable "contact_flows_map" {
 }
+variable "s3_deployment_bucket" {}
