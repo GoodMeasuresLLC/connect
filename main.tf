@@ -12,12 +12,6 @@ locals {
   }
 }
 
-module "lambda_functions" {
-  source = "./modules/lambda_functions"
-  tags = local.tags
-  log_retention_days = 7
-}
-
 module "connect_instance" {
   source = "./modules/connect"
   instance_alias = var.instance_alias
@@ -35,10 +29,16 @@ module "security_profiles" {
   tags = local.tags
 }
 
+module "lambda_functions" {
+  source = "./modules/lambda_functions"
+  connect_instance_id = module.connect_instance.connect_instance_id
+  tags = local.tags
+  log_retention_days = 7
+}
 
-# module "lambda_associations" {
-#   source = "./modules/connect/lambda_associations"
-#   connect_instance_id = module.connect_instance.connect_instance_id
-#   lambda_functions_map = module.lambdas.lambda_functions_map
-#   tags = local.tags
-# }
+module "lambda_function_associations" {
+  source = "./modules/connect/lambda_function_associations"
+  connect_instance_id = module.connect_instance.connect_instance_id
+  lambda_functions_map = module.lambda_functions.lambda_functions_map
+  tags = local.tags
+}

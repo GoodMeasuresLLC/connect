@@ -26,6 +26,7 @@ module "connect" {
   environment = var.environment
   # later, when you have queues in here
   queues_map = module.queues.queues_map
+  contact_flows_map = module.contact_flows.contact_flows_map
 }
 
 # add later:
@@ -41,14 +42,14 @@ module "contact_flows" {
   source = "./contact_flows"
   connect_instance_id = module.connect.connect_instance_id
   lambda_functions_map = module.connect.lambda_functions_map
-  queues_map = var.queues_map
-  tags= local.tags
+  queues_map = module.queues.queues_map
+  tags= {}
 }
 
 module "queues" {
   source = "./queues"
   connect_instance_id = module.connect.connect_instance_id
   hours_of_operations_map = module.connect.hours_of_operations_map
-  contact_flows_map = module.connect.flows_map
+  contact_flows_map = module.contact_flows.contact_flows_map
   tags = {}
 }
