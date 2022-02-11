@@ -1,0 +1,802 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "f6108353-6fae-42fa-8335-fdbef88983f6",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 33,
+      "y": 46
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "2caeac4a-53a6-4048-a237-c9b01f952b7c": {
+        "position": {
+          "x": 1226,
+          "y": 689
+        }
+      },
+      "a253e0fb-15c2-486c-ad05-3b3e357cb898": {
+        "position": {
+          "x": 2257,
+          "y": 707
+        }
+      },
+      "84634c50-5a1f-43a7-a02b-9e146efdc789": {
+        "position": {
+          "x": 1523,
+          "y": 1030
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}",
+          "text": "0x Inbound to Agent"
+        }
+      },
+      "50ae888f-22ba-460d-8461-c7e69cbacfb1": {
+        "position": {
+          "x": 1227,
+          "y": 900
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_dial_extension\"]}",
+          "text": "0x Dial Extension"
+        }
+      },
+      "b36a0323-0164-4742-bb02-917ce36a96f5": {
+        "position": {
+          "x": 1982,
+          "y": 678
+        },
+        "useDynamic": false
+      },
+      "47959141-56cc-4c7d-9cbf-5bbc9d63f950": {
+        "position": {
+          "x": 1737,
+          "y": 446
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_voicemail_flow\"]}",
+          "text": "0x Voicemail Flow"
+        }
+      },
+      "f4b9977a-4633-4a60-a8db-6981786812bc": {
+        "position": {
+          "x": 1481,
+          "y": 438
+        },
+        "useDynamic": false,
+        "promptName": "Leave Message Prompt Version 2.wav"
+      },
+      "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb": {
+        "position": {
+          "x": 1215,
+          "y": 436
+        },
+        "conditionMetadata": [
+          {
+            "id": "fd94324d-c190-486a-9150-075271c65863",
+            "operator": {
+              "name": "Contains",
+              "value": "Contains",
+              "shortDisplay": "contains"
+            },
+            "value": "#"
+          },
+          {
+            "id": "5dfadca3-9864-4f5e-9956-45736aa48d2a",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Timeout"
+          }
+        ]
+      },
+      "00ddbeea-e56c-4fa2-846f-9d7f30625a66": {
+        "position": {
+          "x": 1162,
+          "y": 1321
+        },
+        "useDynamic": false
+      },
+      "9b6148f8-d4fc-4188-ba9a-4affb0cc3fed": {
+        "position": {
+          "x": 946,
+          "y": 568
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "Flow - Onduo - Open Hours.wav",
+        "countryCodePrefix": "+1"
+      },
+      "a5e9014f-a2f3-4564-904c-094626417701": {
+        "position": {
+          "x": 892,
+          "y": 802
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "Flow - Glytec - BusinessHours.wav",
+        "countryCodePrefix": "+1"
+      },
+      "6af4fe65-efe5-4c67-a4d2-8f3a0a0a42d1": {
+        "position": {
+          "x": 924,
+          "y": 1029
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "Flow - BioTel Care Greeting - Open Hours.wav",
+        "countryCodePrefix": "+1"
+      },
+      "f610397d-385f-4a54-96db-fbcfff1ba72e": {
+        "position": {
+          "x": 948,
+          "y": 336
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "Flow - Contact Center Greeting - Open Hours.wav",
+        "countryCodePrefix": "+1"
+      },
+      "0339db8e-5976-43d5-aa91-c439ed58a6bf": {
+        "position": {
+          "x": 686,
+          "y": 396
+        },
+        "conditionMetadata": [
+          {
+            "id": "ccf615d8-1ae6-4d17-b877-edfcd2e329da",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "GM-Main"
+          },
+          {
+            "id": "7e5fd075-5316-41f2-80f8-5e391e4ebe75",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "GM-Onduo"
+          },
+          {
+            "id": "b1988047-f461-4606-94cf-dd24da27d569",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "GM-Glytec"
+          },
+          {
+            "id": "8e22651e-6005-44f6-b0ff-cf10f983479a",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "GM-BioTel"
+          }
+        ]
+      },
+      "ee261827-d781-433b-ba92-fb848f824b5e": {
+        "position": {
+          "x": 606,
+          "y": 758
+        },
+        "useDynamic": false
+      },
+      "43148a9e-7f75-4aa4-b70e-2e76ccc4d92a": {
+        "position": {
+          "x": 303,
+          "y": 151
+        },
+        "useDynamic": false
+      },
+      "f91a42af-028f-4006-8830-5630fb6fc74f": {
+        "position": {
+          "x": 532,
+          "y": 157
+        }
+      },
+      "f6108353-6fae-42fa-8335-fdbef88983f6": {
+        "position": {
+          "x": 61,
+          "y": 206
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "f90ff777-4587-4567-a89a-0e68b828bc07": {
+        "position": {
+          "x": 60,
+          "y": 687
+        },
+        "useDynamic": false
+      },
+      "559e83e1-77cc-48e6-9e08-f20c53100e95": {
+        "position": {
+          "x": 447,
+          "y": 469
+        }
+      },
+      "501ffb12-26b0-42c4-9899-62302dc1a771": {
+        "position": {
+          "x": 59,
+          "y": 430
+        },
+        "conditionMetadata": [
+          {
+            "id": "ffd350b5-e594-4710-81a2-b37c37c575fa",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "True"
+          },
+          {
+            "id": "0565024a-f2a4-49c9-bb35-994c2c8a3b76",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "False"
+          }
+        ]
+      },
+      "f84a8712-72f8-47a1-9eee-043fd97cc8a5": {
+        "position": {
+          "x": 725,
+          "y": 1146
+        }
+      },
+      "6f3917a2-61ca-4f51-9bf8-f5e5a483b715": {
+        "position": {
+          "x": 381,
+          "y": 778
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_00_mainpatient_flow_in_closed\"]}",
+          "text": "00 MainPatient Flow - In (Closed)"
+        }
+      },
+      "61029f55-7182-40ae-ba9d-375c64590836": {
+        "position": {
+          "x": 565,
+          "y": 962
+        },
+        "useDynamic": false
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "2caeac4a-53a6-4048-a237-c9b01f952b7c",
+      "Parameters": {
+        "Attributes": {
+          "ExtFailurePath": "Agent"
+        }
+      },
+      "Transitions": {
+        "NextAction": "50ae888f-22ba-460d-8461-c7e69cbacfb1",
+        "Errors": [
+          {
+            "NextAction": "50ae888f-22ba-460d-8461-c7e69cbacfb1",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "a253e0fb-15c2-486c-ad05-3b3e357cb898",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "84634c50-5a1f-43a7-a02b-9e146efdc789",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}"
+      },
+      "Transitions": {
+        "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+        "Errors": [
+          {
+            "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "50ae888f-22ba-460d-8461-c7e69cbacfb1",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_dial_extension\"]}"
+      },
+      "Transitions": {
+        "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+        "Errors": [
+          {
+            "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "b36a0323-0164-4742-bb02-917ce36a96f5",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "a253e0fb-15c2-486c-ad05-3b3e357cb898",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "47959141-56cc-4c7d-9cbf-5bbc9d63f950",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_voicemail_flow\"]}"
+      },
+      "Transitions": {
+        "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+        "Errors": [
+          {
+            "NextAction": "b36a0323-0164-4742-bb02-917ce36a96f5",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "f4b9977a-4633-4a60-a8db-6981786812bc",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/0224bf91-1c95-4a85-9e91-aec1ee6f4afc"
+      },
+      "Transitions": {
+        "NextAction": "47959141-56cc-4c7d-9cbf-5bbc9d63f950",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb",
+      "Parameters": {
+        "ComparisonValue": "$.StoredCustomerInput"
+      },
+      "Transitions": {
+        "NextAction": "2caeac4a-53a6-4048-a237-c9b01f952b7c",
+        "Errors": [
+          {
+            "NextAction": "2caeac4a-53a6-4048-a237-c9b01f952b7c",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "f4b9977a-4633-4a60-a8db-6981786812bc",
+            "Condition": {
+              "Operator": "TextContains",
+              "Operands": [
+                "#"
+              ]
+            }
+          },
+          {
+            "NextAction": "84634c50-5a1f-43a7-a02b-9e146efdc789",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Timeout"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "00ddbeea-e56c-4fa2-846f-9d7f30625a66",
+      "Parameters": {
+        "SSML": "<speak></speak>"
+      },
+      "Transitions": {
+        "NextAction": "84634c50-5a1f-43a7-a02b-9e146efdc789",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "9b6148f8-d4fc-4188-ba9a-4affb0cc3fed",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/57d63406-3f1b-4214-b9a7-0585619c77ff",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb",
+        "Errors": [
+          {
+            "NextAction": "00ddbeea-e56c-4fa2-846f-9d7f30625a66",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "a5e9014f-a2f3-4564-904c-094626417701",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/9bd6ae9e-35ce-4753-9372-9d8592e3ec7c",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb",
+        "Errors": [
+          {
+            "NextAction": "00ddbeea-e56c-4fa2-846f-9d7f30625a66",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "6af4fe65-efe5-4c67-a4d2-8f3a0a0a42d1",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/e576338c-cfe8-4186-bd53-c595ea793b21",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb",
+        "Errors": [
+          {
+            "NextAction": "00ddbeea-e56c-4fa2-846f-9d7f30625a66",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "f610397d-385f-4a54-96db-fbcfff1ba72e",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/7873674b-523f-4e76-b032-38f1e2f71307",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "8bfcf0c9-5509-4fb0-9b3f-c0377757f1fb",
+        "Errors": [
+          {
+            "NextAction": "00ddbeea-e56c-4fa2-846f-9d7f30625a66",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "0339db8e-5976-43d5-aa91-c439ed58a6bf",
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.AssignedFlow"
+      },
+      "Transitions": {
+        "NextAction": "f610397d-385f-4a54-96db-fbcfff1ba72e",
+        "Errors": [
+          {
+            "NextAction": "f610397d-385f-4a54-96db-fbcfff1ba72e",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "f610397d-385f-4a54-96db-fbcfff1ba72e",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "GM-Main"
+              ]
+            }
+          },
+          {
+            "NextAction": "9b6148f8-d4fc-4188-ba9a-4affb0cc3fed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "GM-Onduo"
+              ]
+            }
+          },
+          {
+            "NextAction": "a5e9014f-a2f3-4564-904c-094626417701",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "GM-Glytec"
+              ]
+            }
+          },
+          {
+            "NextAction": "6af4fe65-efe5-4c67-a4d2-8f3a0a0a42d1",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "GM-BioTel"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "ee261827-d781-433b-ba92-fb848f824b5e",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 702."
+      },
+      "Transitions": {
+        "NextAction": "f84a8712-72f8-47a1-9eee-043fd97cc8a5",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "43148a9e-7f75-4aa4-b70e-2e76ccc4d92a",
+      "Parameters": {
+        "Text": "You have encountered an error. Error code: 141"
+      },
+      "Transitions": {
+        "NextAction": "f91a42af-028f-4006-8830-5630fb6fc74f",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "f91a42af-028f-4006-8830-5630fb6fc74f",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "f6108353-6fae-42fa-8335-fdbef88983f6",
+      "Parameters": {
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"checkholiday\"]}",
+        "InvocationTimeLimitSeconds": "3"
+      },
+      "Transitions": {
+        "NextAction": "501ffb12-26b0-42c4-9899-62302dc1a771",
+        "Errors": [
+          {
+            "NextAction": "43148a9e-7f75-4aa4-b70e-2e76ccc4d92a",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "f90ff777-4587-4567-a89a-0e68b828bc07",
+      "Parameters": {
+        "Text": "No Match setting Contact Attribute"
+      },
+      "Transitions": {
+        "NextAction": "559e83e1-77cc-48e6-9e08-f20c53100e95",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "559e83e1-77cc-48e6-9e08-f20c53100e95",
+      "Parameters": {
+      },
+      "Transitions": {
+        "NextAction": "ee261827-d781-433b-ba92-fb848f824b5e",
+        "Errors": [
+          {
+            "NextAction": "ee261827-d781-433b-ba92-fb848f824b5e",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "0339db8e-5976-43d5-aa91-c439ed58a6bf",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "6f3917a2-61ca-4f51-9bf8-f5e5a483b715",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "CheckHoursOfOperation"
+    },
+    {
+      "Identifier": "501ffb12-26b0-42c4-9899-62302dc1a771",
+      "Parameters": {
+        "ComparisonValue": "$.External.HolidayStatus"
+      },
+      "Transitions": {
+        "NextAction": "f90ff777-4587-4567-a89a-0e68b828bc07",
+        "Errors": [
+          {
+            "NextAction": "f90ff777-4587-4567-a89a-0e68b828bc07",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "6f3917a2-61ca-4f51-9bf8-f5e5a483b715",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "559e83e1-77cc-48e6-9e08-f20c53100e95",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "f84a8712-72f8-47a1-9eee-043fd97cc8a5",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "6f3917a2-61ca-4f51-9bf8-f5e5a483b715",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_00_mainpatient_flow_in_closed\"]}"
+      },
+      "Transitions": {
+        "NextAction": "61029f55-7182-40ae-ba9d-375c64590836",
+        "Errors": [
+          {
+            "NextAction": "61029f55-7182-40ae-ba9d-375c64590836",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "61029f55-7182-40ae-ba9d-375c64590836",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "f84a8712-72f8-47a1-9eee-043fd97cc8a5",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    }
+  ]
+}

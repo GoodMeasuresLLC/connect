@@ -1,0 +1,713 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "e126c00e-7764-49f4-a0ee-2ef9ee427246",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 15,
+      "y": 14
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "5c6247c2-46f6-417c-af02-f13bcaea97df": {
+        "position": {
+          "x": 935,
+          "y": 919
+        }
+      },
+      "d8b1b36d-ba7f-4b14-aeab-db235e1815f6": {
+        "position": {
+          "x": 2121,
+          "y": 541
+        },
+        "useDynamic": false
+      },
+      "9aa3561b-9eb7-466c-b8e8-76da60a96940": {
+        "position": {
+          "x": 2346,
+          "y": 538
+        }
+      },
+      "f765db1d-d0a6-4061-a801-e3b771baa77f": {
+        "position": {
+          "x": 1882,
+          "y": 543
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}",
+          "text": "0x Inbound to Agent"
+        }
+      },
+      "c6fbc214-fbbc-4bed-9b90-b1db3d938004": {
+        "position": {
+          "x": 1422,
+          "y": 537
+        }
+      },
+      "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff": {
+        "position": {
+          "x": 1657,
+          "y": 185
+        }
+      },
+      "0ffb5c2e-be01-4d4b-b144-abe3082c10b2": {
+        "position": {
+          "x": 1202,
+          "y": 349
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_dial_extension\"]}",
+          "text": "0x Dial Extension"
+        }
+      },
+      "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c": {
+        "position": {
+          "x": 1428,
+          "y": 164
+        },
+        "useDynamic": false
+      },
+      "5b8fd9d1-5655-40b8-86ed-e2da8cee3491": {
+        "position": {
+          "x": 1194,
+          "y": 32
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}",
+          "text": "0x Inbound to Agent"
+        }
+      },
+      "64fb8bbe-4784-447d-8d3c-4a4f13b88fe5": {
+        "position": {
+          "x": 963,
+          "y": 34
+        },
+        "useDynamic": false,
+        "promptName": "Flow - Your Call May Be Recorded.wav"
+      },
+      "5a15d872-6236-42fa-b442-db7880977495": {
+        "position": {
+          "x": 948,
+          "y": 290
+        }
+      },
+      "64986b5f-d10c-4d90-897a-a2656b8b5f31": {
+        "position": {
+          "x": 684,
+          "y": 798
+        }
+      },
+      "8d9260d1-fbec-47eb-a32e-17c7b1acaf0f": {
+        "position": {
+          "x": 406,
+          "y": 793
+        },
+        "useDynamic": false
+      },
+      "e48dcee6-652f-468a-ad36-4b271dbb88b2": {
+        "position": {
+          "x": 414,
+          "y": 623
+        },
+        "useDynamic": false,
+        "ContactFlow": {
+          "id": "${var.contact_flows_map[\"_01_goodmeasures_corp_in_closed\"]}",
+          "text": "01 GoodMeasures Corp - In (closed)"
+        }
+      },
+      "e2de2c31-f8b1-49d2-bbd1-5a02c7f00d78": {
+        "position": {
+          "x": 683,
+          "y": 592
+        },
+        "useDynamic": false
+      },
+      "ead97173-b104-442b-8066-f29c543e28a6": {
+        "position": {
+          "x": 231,
+          "y": 333
+        },
+        "conditionMetadata": [
+          {
+            "id": "6fbd493b-cf42-46dd-80cc-2b92c62be25d",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "True"
+          },
+          {
+            "id": "ee5824ba-e981-4c13-bb09-5a9b0b9fd7f6",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "False"
+          }
+        ]
+      },
+      "4c086929-d68a-4e98-94f4-ffea0e9582c3": {
+        "position": {
+          "x": 462,
+          "y": 310
+        }
+      },
+      "e126c00e-7764-49f4-a0ee-2ef9ee427246": {
+        "position": {
+          "x": 25,
+          "y": 156
+        },
+        "dynamicMetadata": {
+        },
+        "useDynamic": false
+      },
+      "6cab2d1a-9003-47c3-81cf-0f7f65b1f362": {
+        "position": {
+          "x": 39,
+          "y": 605
+        },
+        "useDynamic": false
+      },
+      "4f850707-2009-4c81-8c95-596997a28859": {
+        "position": {
+          "x": 38,
+          "y": 775
+        }
+      },
+      "2452482c-7526-4039-9c44-1b22280a11de": {
+        "position": {
+          "x": 1197,
+          "y": 526
+        },
+        "contactFlow": {
+          "id": "${var.contact_flows_map[\"_0x_receptionist_queue_flow\"]}",
+          "text": "0x Receptionist Queue Flow"
+        },
+        "customerOrAgent": false
+      },
+      "c8fd188b-3d6d-42e8-a919-17e4316350d7": {
+        "position": {
+          "x": 942,
+          "y": 744
+        },
+        "useDynamic": false
+      },
+      "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7": {
+        "position": {
+          "x": 736,
+          "y": 21
+        },
+        "conditionMetadata": [
+          {
+            "id": "dd7414f6-a2be-472d-87a7-308aa440c656",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Timeout"
+          },
+          {
+            "id": "d09356bc-77ec-4ee9-93b2-fb8489139e4d",
+            "operator": {
+              "name": "Contains",
+              "value": "Contains",
+              "shortDisplay": "contains"
+            },
+            "value": "#"
+          }
+        ]
+      },
+      "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0": {
+        "position": {
+          "x": 515,
+          "y": 25
+        },
+        "useDynamic": false,
+        "useDynamicForEncryptionKeys": true,
+        "promptName": "617 Corporate Greeting - Open Hours.wav",
+        "countryCodePrefix": "+1"
+      },
+      "947e8f15-1b56-45c2-afdd-5ba8f5ce982b": {
+        "position": {
+          "x": 912,
+          "y": 502
+        },
+        "useDynamic": false,
+        "queue": {
+          "id": "${var.queues_map[\"g_m_receptionist\"]}",
+          "text": "G M Receptionist"
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "5c6247c2-46f6-417c-af02-f13bcaea97df",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "d8b1b36d-ba7f-4b14-aeab-db235e1815f6",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "9aa3561b-9eb7-466c-b8e8-76da60a96940",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "9aa3561b-9eb7-466c-b8e8-76da60a96940",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "f765db1d-d0a6-4061-a801-e3b771baa77f",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}"
+      },
+      "Transitions": {
+        "NextAction": "d8b1b36d-ba7f-4b14-aeab-db235e1815f6",
+        "Errors": [
+          {
+            "NextAction": "d8b1b36d-ba7f-4b14-aeab-db235e1815f6",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "c6fbc214-fbbc-4bed-9b90-b1db3d938004",
+      "Parameters": {
+        "Attributes": {
+          "VMSource": "Corporate General"
+        }
+      },
+      "Transitions": {
+        "NextAction": "f765db1d-d0a6-4061-a801-e3b771baa77f",
+        "Errors": [
+          {
+            "NextAction": "f765db1d-d0a6-4061-a801-e3b771baa77f",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_dial_extension\"]}"
+      },
+      "Transitions": {
+        "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+        "Errors": [
+          {
+            "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "f2e8af90-6f7d-4b8f-95f3-f0c0dd48f3ff",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "5b8fd9d1-5655-40b8-86ed-e2da8cee3491",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_0x_inbound_to_agent\"]}"
+      },
+      "Transitions": {
+        "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+        "Errors": [
+          {
+            "NextAction": "2fc1fd79-a3f6-4d2b-bef6-128587f9b02c",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "64fb8bbe-4784-447d-8d3c-4a4f13b88fe5",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/3bda6f15-686a-43bf-bd9d-1dce242394fb"
+      },
+      "Transitions": {
+        "NextAction": "5b8fd9d1-5655-40b8-86ed-e2da8cee3491",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "5a15d872-6236-42fa-b442-db7880977495",
+      "Parameters": {
+        "Attributes": {
+          "ExtFailurePath": "Voicemail"
+        }
+      },
+      "Transitions": {
+        "NextAction": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+        "Errors": [
+          {
+            "NextAction": "0ffb5c2e-be01-4d4b-b144-abe3082c10b2",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactAttributes"
+    },
+    {
+      "Identifier": "64986b5f-d10c-4d90-897a-a2656b8b5f31",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "8d9260d1-fbec-47eb-a32e-17c7b1acaf0f",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 703."
+      },
+      "Transitions": {
+        "NextAction": "64986b5f-d10c-4d90-897a-a2656b8b5f31",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "e48dcee6-652f-468a-ad36-4b271dbb88b2",
+      "Parameters": {
+        "ContactFlowId": "${var.contact_flows_map[\"_01_goodmeasures_corp_in_closed\"]}"
+      },
+      "Transitions": {
+        "NextAction": "8d9260d1-fbec-47eb-a32e-17c7b1acaf0f",
+        "Errors": [
+          {
+            "NextAction": "8d9260d1-fbec-47eb-a32e-17c7b1acaf0f",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferToFlow"
+    },
+    {
+      "Identifier": "e2de2c31-f8b1-49d2-bbd1-5a02c7f00d78",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 702."
+      },
+      "Transitions": {
+        "NextAction": "64986b5f-d10c-4d90-897a-a2656b8b5f31",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "ead97173-b104-442b-8066-f29c543e28a6",
+      "Parameters": {
+        "ComparisonValue": "$.External.HolidayStatus"
+      },
+      "Transitions": {
+        "NextAction": "4c086929-d68a-4e98-94f4-ffea0e9582c3",
+        "Errors": [
+          {
+            "NextAction": "4c086929-d68a-4e98-94f4-ffea0e9582c3",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "e48dcee6-652f-468a-ad36-4b271dbb88b2",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "4c086929-d68a-4e98-94f4-ffea0e9582c3",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "4c086929-d68a-4e98-94f4-ffea0e9582c3",
+      "Parameters": {
+      },
+      "Transitions": {
+        "NextAction": "e2de2c31-f8b1-49d2-bbd1-5a02c7f00d78",
+        "Errors": [
+          {
+            "NextAction": "e2de2c31-f8b1-49d2-bbd1-5a02c7f00d78",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "e48dcee6-652f-468a-ad36-4b271dbb88b2",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "CheckHoursOfOperation"
+    },
+    {
+      "Identifier": "e126c00e-7764-49f4-a0ee-2ef9ee427246",
+      "Parameters": {
+        "LambdaFunctionARN": "${var.lambda_functions_map[\"checkholiday\"]}",
+        "InvocationTimeLimitSeconds": "3"
+      },
+      "Transitions": {
+        "NextAction": "ead97173-b104-442b-8066-f29c543e28a6",
+        "Errors": [
+          {
+            "NextAction": "6cab2d1a-9003-47c3-81cf-0f7f65b1f362",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "InvokeLambdaFunction"
+    },
+    {
+      "Identifier": "6cab2d1a-9003-47c3-81cf-0f7f65b1f362",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an error. Error code: 141"
+      },
+      "Transitions": {
+        "NextAction": "4f850707-2009-4c81-8c95-596997a28859",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "4f850707-2009-4c81-8c95-596997a28859",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "2452482c-7526-4039-9c44-1b22280a11de",
+      "Parameters": {
+        "EventHooks": {
+          "CustomerQueue": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/contact-flow/c389bd55-db17-4078-af82-5c4a40085325"
+        }
+      },
+      "Transitions": {
+        "NextAction": "c6fbc214-fbbc-4bed-9b90-b1db3d938004",
+        "Errors": [
+          {
+            "NextAction": "c6fbc214-fbbc-4bed-9b90-b1db3d938004",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactEventHooks"
+    },
+    {
+      "Identifier": "c8fd188b-3d6d-42e8-a919-17e4316350d7",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 441."
+      },
+      "Transitions": {
+        "NextAction": "5c6247c2-46f6-417c-af02-f13bcaea97df",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7",
+      "Parameters": {
+        "ComparisonValue": "$.StoredCustomerInput"
+      },
+      "Transitions": {
+        "NextAction": "5a15d872-6236-42fa-b442-db7880977495",
+        "Errors": [
+          {
+            "NextAction": "5a15d872-6236-42fa-b442-db7880977495",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "947e8f15-1b56-45c2-afdd-5ba8f5ce982b",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Timeout"
+              ]
+            }
+          },
+          {
+            "NextAction": "64fb8bbe-4784-447d-8d3c-4a4f13b88fe5",
+            "Condition": {
+              "Operator": "TextContains",
+              "Operands": [
+                "#"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Compare"
+    },
+    {
+      "Identifier": "31fa64bf-d9ae-41e9-9f11-ee40f5753fe0",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/b5080bd5-2bbd-4410-b8a1-f73751c3b132",
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Transitions": {
+        "NextAction": "15f153d7-c9de-45e8-a18d-2bda0a0f3fe7",
+        "Errors": [
+          {
+            "NextAction": "947e8f15-1b56-45c2-afdd-5ba8f5ce982b",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "GetParticipantInput"
+    },
+    {
+      "Identifier": "947e8f15-1b56-45c2-afdd-5ba8f5ce982b",
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/queue/f489cd2a-c80e-481e-b144-79b5c32dc0a4"
+      },
+      "Transitions": {
+        "NextAction": "2452482c-7526-4039-9c44-1b22280a11de",
+        "Errors": [
+          {
+            "NextAction": "c8fd188b-3d6d-42e8-a919-17e4316350d7",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactTargetQueue"
+    }
+  ]
+}

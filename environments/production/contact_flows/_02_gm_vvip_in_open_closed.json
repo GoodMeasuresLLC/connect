@@ -1,0 +1,191 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "5d9c28fe-1772-404f-baca-a8546b349eff",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 95,
+      "y": 301
+    },
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "b4a84f6f-9805-4ac0-9085-e7938102c7ef": {
+        "position": {
+          "x": 1275,
+          "y": 443
+        }
+      },
+      "5f9f3151-d126-490d-82ce-85902f0d34cd": {
+        "position": {
+          "x": 1038,
+          "y": 653
+        },
+        "useDynamic": false
+      },
+      "5d9c28fe-1772-404f-baca-a8546b349eff": {
+        "position": {
+          "x": 223,
+          "y": 469
+        }
+      },
+      "da11f76b-347c-4c5f-a3ee-f397ccd6f280": {
+        "position": {
+          "x": 997,
+          "y": 335
+        },
+        "useDynamic": false
+      },
+      "3501802c-abdd-41c4-9a72-e1bfbf5c78fc": {
+        "position": {
+          "x": 710,
+          "y": 336
+        },
+        "CountryCode": "us"
+      },
+      "45ea6afd-0df5-473f-a0d4-4b81d6c07692": {
+        "position": {
+          "x": 221,
+          "y": 657
+        }
+      },
+      "5fa657c4-b9e6-4d4c-9dae-09910b34779d": {
+        "position": {
+          "x": 454,
+          "y": 311
+        },
+        "useDynamic": false,
+        "promptName": "GM VVIP - Open Hours.wav"
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "b4a84f6f-9805-4ac0-9085-e7938102c7ef",
+      "Type": "DisconnectParticipant",
+      "Parameters": {
+      },
+      "Transitions": {
+      }
+    },
+    {
+      "Identifier": "5f9f3151-d126-490d-82ce-85902f0d34cd",
+      "Parameters": {
+        "Text": "Sorry, you have encountered an internal system error. Please try again, or contact us via our website at good measures dot com. Thank you. Error code: 704."
+      },
+      "Transitions": {
+        "NextAction": "b4a84f6f-9805-4ac0-9085-e7938102c7ef",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    },
+    {
+      "Identifier": "5d9c28fe-1772-404f-baca-a8546b349eff",
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Transitions": {
+        "NextAction": "45ea6afd-0df5-473f-a0d4-4b81d6c07692",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateFlowLoggingBehavior"
+    },
+    {
+      "Identifier": "da11f76b-347c-4c5f-a3ee-f397ccd6f280",
+      "Parameters": {
+        "LoopCount": "1"
+      },
+      "Transitions": {
+        "NextAction": "5f9f3151-d126-490d-82ce-85902f0d34cd",
+        "Errors": [
+
+        ],
+        "Conditions": [
+          {
+            "NextAction": "5f9f3151-d126-490d-82ce-85902f0d34cd",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "3501802c-abdd-41c4-9a72-e1bfbf5c78fc",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          }
+        ]
+      },
+      "Type": "Loop"
+    },
+    {
+      "Identifier": "3501802c-abdd-41c4-9a72-e1bfbf5c78fc",
+      "Parameters": {
+        "ThirdPartyPhoneNumber": "+18577020337",
+        "ThirdPartyConnectionTimeLimitSeconds": "60",
+        "ContinueFlowExecution": "False",
+        "CallerId": {
+          "Name": "Goodmeasures VVIP"
+        }
+      },
+      "Transitions": {
+        "NextAction": "da11f76b-347c-4c5f-a3ee-f397ccd6f280",
+        "Errors": [
+          {
+            "NextAction": "da11f76b-347c-4c5f-a3ee-f397ccd6f280",
+            "ErrorType": "NoMatchingError"
+          }
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "TransferParticipantToThirdParty"
+    },
+    {
+      "Identifier": "45ea6afd-0df5-473f-a0d4-4b81d6c07692",
+      "Parameters": {
+        "TextToSpeechVoice": "Joanna"
+      },
+      "Transitions": {
+        "NextAction": "5fa657c4-b9e6-4d4c-9dae-09910b34779d",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "UpdateContactTextToSpeechVoice"
+    },
+    {
+      "Identifier": "5fa657c4-b9e6-4d4c-9dae-09910b34779d",
+      "Parameters": {
+        "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/03103f71-db62-4f61-9432-4bfae356b3e3/prompt/8be03a6f-eab1-43da-a865-550ec64c0671"
+      },
+      "Transitions": {
+        "NextAction": "3501802c-abdd-41c4-9a72-e1bfbf5c78fc",
+        "Errors": [
+
+        ],
+        "Conditions": [
+
+        ]
+      },
+      "Type": "MessageParticipant"
+    }
+  ]
+}
