@@ -5,7 +5,7 @@ resource "aws_connect_quick_connect" "jennifer_pynenburg" {
 	  quick_connect_type = "USER"
 
         user_config {
-          contact_flow_id = "${var.flows_map["default_agent_transfer"]}"
+          contact_flow_id = "${var.contact_flows_map["default_agent_transfer"]}"
             user_id = "5a9e7cb1-48f5-4967-82b0-f89abe085ed7"
         }
 	}
