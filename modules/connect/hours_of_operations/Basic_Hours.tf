@@ -93,5 +93,4 @@ resource "aws_connect_hours_of_operation" "basic_hours" {
       minutes = 0
     }
   }
-  tags = var.tags
 }
