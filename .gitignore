@@ -8,5 +8,6 @@ vendor
 # terraform artifacts
 terraform.tfstate.backup
 .terraform
+terraform.tfvars
 
 lp-diagnostics/*
