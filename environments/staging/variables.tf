@@ -31,3 +31,8 @@ variable "lambda_role_arn" {
 variable "s3_deployment_bucket" {
   description = "S3 bucket where the .ZIP file for the Amelia integration resides"
 }
+
+variable "amelia_lambda_environment" {
+  type = map(string)
+  description = "parameters provided by ipsoft"
+}

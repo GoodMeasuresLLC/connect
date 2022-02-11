@@ -28,6 +28,7 @@ module "connect" {
   queues_map = module.queues.queues_map
   contact_flows_map = module.contact_flows.contact_flows_map
   s3_deployment_bucket = var.s3_deployment_bucket
+  amelia_lambda_environment = var.amelia_lambda_environment
 }
 
 # add later:

@@ -30,11 +30,13 @@ module "security_profiles" {
 }
 
 module "lambda_functions" {
-  source = "./modules/lambda_functions"
-  connect_instance_id = module.connect_instance.connect_instance_id
-  s3_deployment_bucket = var.s3_deployment_bucket
-  tags = local.tags
-  log_retention_days = 7
+  source                   = "./modules/lambda_functions"
+  connect_instance_id      = module.connect_instance.connect_instance_id
+  s3_deployment_bucket     = var.s3_deployment_bucket
+  tags                     = local.tags
+  log_retention_days       = 7
+  amelia_lambda_environment = var.amelia_lambda_environment
+
 }
 
 module "lambda_function_associations" {
