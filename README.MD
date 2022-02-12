@@ -27,7 +27,9 @@ followed by `terraform apply` after reviewing changes
 # How does it work?
 
 - each directory is independent. It doesn't automatically include subdirectories
-- each directory is typically contains either resource or modules
+- each directory has a unique terraform name, which is determined by the module declaration that included it
+- each directory typically contains either resource or more modules, or a mixture of both.
+- Note that only resources actually create resources on AWS. All of the modules are just organizational units.
 - each directory accepts variables (listed in variables.tf).
 - variables are used to configure how the directory works
 - on creation of the resources in the directory, other parts of that configuration typically need those ids that were generated.
@@ -60,9 +62,11 @@ Contains source code that can be built into .zip archives in the compiled direct
 - Not checked into git
 ## modules
 ### connect
-Contains connect and all connect modules
+Contains connect and all connect modules, such as lambda_function_associations.
 ### lambda_functions
-Contains all lambda_functions used by connect call flows
+Contains all lambda_functions used by connect call flows. 
+Exports a variable called "module.lambda_functions.lambda_functions_map", which is a map of all the function arns for use in call flows, etc.
+This is a typical pattern in this project - each module exports a map of all the ids it creates.
 ### lex
 Contains all lex bot definitions used by connect call flows
 ## environment
