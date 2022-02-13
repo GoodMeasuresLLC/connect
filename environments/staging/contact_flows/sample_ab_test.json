@@ -86,7 +86,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_inbound_flow_first_contact_experience\"]}",
+          "id": "${aws_connect_contact_flow.sample_inbound_flow_first_contact_experience.contact_flow_id}"
           "text": "Sample inbound flow (first contact experience)"
         }
       },
@@ -509,7 +509,7 @@
     {
       "Identifier": "be80759a-bfdb-4332-bbac-63ddd9ad4dea",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_inbound_flow_first_contact_experience\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_inbound_flow_first_contact_experience.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "bdc8e490-d2e1-4e45-9c5f-34612f60a846",

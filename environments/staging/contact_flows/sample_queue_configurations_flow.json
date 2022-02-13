@@ -19,7 +19,7 @@
           "y": 53.41892501396316
         },
         "contactFlow": {
-          "id": "${var.contact_flows_map[\"default_customer_queue\"]}",
+          "id": "${aws_connect_contact_flow.default_customer_queue.contact_flow_id}",
           "text": "Default customer queue"
         },
         "customerOrAgent": true,
@@ -325,7 +325,7 @@
           "y": 877.4189250139632
         },
         "contactFlow": {
-          "id": "${var.contact_flows_map[\"sample_interruptible_queue_flow_with_callback\"]}",
+          "id": "${aws_connect_contact_flow.sample_interruptible_queue_flow_with_callback.contact_flow_id}",
           "text": "Sample interruptible queue flow with callback"
         },
         "customerOrAgent": true,

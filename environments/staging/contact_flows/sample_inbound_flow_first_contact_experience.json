@@ -66,7 +66,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_secure_input_with_no_agent\"]}",
+          "id": "${aws_connect_contact_flow.sample_secure_input_with_no_agent.contact_flow_id}",
           "text": "Sample secure input with no agent"
         }
       },
@@ -77,7 +77,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_lambda_integration\"]}",
+          "id": "${aws_connect_contact_flow.sample_lambda_integration.contact_flow_id}",
           "text": "Sample Lambda integration"
         }
       },
@@ -88,7 +88,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_note_for_screenpop\"]}",
+          "id": "${aws_connect_contact_flow.sample_note_for_screenpop.contact_flow_id}",
           "text": "Sample note for screenpop"
         }
       },
@@ -99,7 +99,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_ab_test\"]}",
+          "id": "${aws_connect_contact_flow.sample_ab_test.contact_flow_id}",
           "text": "Sample AB test"
         }
       },
@@ -110,7 +110,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_queue_configurations_flow\"]}",
+          "id": "${aws_connect_contact_flow.sample_queue_configurations_flow.contact_flow_id}",
           "text": "Sample queue configurations flow"
         }
       },
@@ -121,7 +121,7 @@
         },
         "useDynamic": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_recording_behavior\"]}",
+          "id": "${aws_connect_contact_flow.sample_recording_behavior.contact_flow_id}",
           "text": "Sample recording behavior"
         }
       },
@@ -208,7 +208,7 @@
         },
         "useDynamicContactFlow": false,
         "ContactFlow": {
-          "id": "${var.contact_flows_map[\"sample_inbound_flow_first_contact_experience\"]}",
+          "id": "${aws_connect_contact_flow.sample_inbound_flow_first_contact_experience.contact_flow_id}",
           "text": "Sample inbound flow (first contact experience)"
         }
       }
@@ -312,7 +312,7 @@
     {
       "Identifier": "f9d359f6-ab58-416a-8d69-d721cf49a2df",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_secure_input_with_no_agent\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_secure_input_with_no_agent.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -331,7 +331,7 @@
     {
       "Identifier": "4c568499-9a87-46d1-87e2-213ebaf81c4e",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_lambda_integration\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_lambda_integration.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -350,7 +350,7 @@
     {
       "Identifier": "6d68b65b-787d-4359-a58b-23959a0c18d7",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_note_for_screenpop\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_note_for_screenpop.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -369,7 +369,7 @@
     {
       "Identifier": "f7ee6062-55b6-4bcf-9b06-35e5735fbad7",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_ab_test\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_ab_test.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -388,7 +388,7 @@
     {
       "Identifier": "ae54d6c1-507d-4d6e-886e-e212cbbcf976",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_queue_configurations_flow\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_queue_configurations_flow.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -407,7 +407,7 @@
     {
       "Identifier": "3b843a8a-19c1-4f34-b874-c28a8550a352",
       "Parameters": {
-        "ContactFlowId": "${var.contact_flows_map[\"sample_recording_behavior\"]}"
+        "ContactFlowId": "${aws_connect_contact_flow.sample_recording_behavior.contact_flow_id}"
       },
       "Transitions": {
         "NextAction": "7c0a92c0-3a0d-4941-9d0e-2ae0e16ce58b",
@@ -589,7 +589,7 @@
           "CustomerPhoneNumber": "$.CustomerEndpoint.Address",
           "Type": "inbound"
         },
-        "ContactFlowId": "${var.contact_flows_map[\"sample_inbound_flow_first_contact_experience\"]}",
+        "ContactFlowId": "${aws_connect_contact_flow.sample_inbound_flow_first_contact_experience.contact_flow_id}",
         "Description": "Example of an agent task to investigate customer issue from sample inbound flow."
       },
       "Transitions": {
