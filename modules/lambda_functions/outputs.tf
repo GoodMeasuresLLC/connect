@@ -1,5 +1,6 @@
 output "lambda_functions_map" {
   value = {
+    "AmeliaGatewayAmazonLex" = aws_lambda_function.AmeliaGatewayAmazonLex.arn,
     "checkholiday" = aws_lambda_function.checkholiday.arn,
     "goodmeasures_connect_getnumberinfofunction" = aws_lambda_function.goodmeasures_connect_getnumberinfofunction.arn,
     "goodmeasures_connect_phonenumberbyextensionfunction" = aws_lambda_function.goodmeasures_connect_phonenumberbyextensionfunction.arn,
