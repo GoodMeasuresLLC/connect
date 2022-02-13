@@ -3,7 +3,7 @@ resource "aws_lambda_function" "AmeliaGatewayAmazonLex"{
   description  = ""
   tags         = var.tags
   runtime      ="java11"
-  role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
+  role         = var.lambda_role_arn
   handler      ="net.ipsoft.amelia.gateway.aws.lambda.lex.AmeliaGatewayApiLambdaLex::handleRequest"
   timeout      = 3
   memory_size  = 128

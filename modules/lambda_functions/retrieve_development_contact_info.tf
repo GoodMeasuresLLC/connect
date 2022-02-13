@@ -3,7 +3,7 @@ resource "aws_lambda_function" "retrieve_development_contact_info"{
   description  = ""
   tags         = var.tags
   runtime      ="ruby2.7"
-  role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
+  role         = var.lambda_role_arn
   handler      ="get_contact.GetContact.process"
   timeout      = 3
   memory_size  = 128

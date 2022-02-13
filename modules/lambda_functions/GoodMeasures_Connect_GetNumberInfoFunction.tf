@@ -3,7 +3,7 @@ resource "aws_lambda_function" "goodmeasures_connect_getnumberinfofunction"{
   description  = ""
   tags         = var.tags
   runtime      ="python3.7"
-  role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
+  role         = var.lambda_role_arn
   handler      ="lambda_function.lambda_handler"
   timeout      = 3
   memory_size  = 128

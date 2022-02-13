@@ -20,8 +20,8 @@ variable "vpc_endpoint_id" {
   description = "Instance id of the vpc endpoint used by this application.  Acquired from outputs of common environment."
 }
 
-variable "lambda_role_arn" {
-  description = "arn for the default lambda function role"
+variable "lambda_role_name" {
+  description = "name of default lambda function role"
 }
 variable "instance_alias" {
   description = "Name for this instance"

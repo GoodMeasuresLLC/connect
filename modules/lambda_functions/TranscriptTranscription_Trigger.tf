@@ -3,7 +3,7 @@ resource "aws_lambda_function" "transcripttranscription_trigger"{
   description  = ""
   tags         = var.tags
   runtime      ="nodejs14.x"
-  role         ="arn:aws:iam::201706955376:role/lambda_basic_execution"
+  role         = var.lambda_role_arn
   handler      ="index.handler"
   timeout      = 3
   memory_size  = 128

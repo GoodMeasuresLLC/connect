@@ -27,10 +27,17 @@ module "lambda_functions" {
   tags                     = local.tags
   log_retention_days       = 7
   amelia_lambda_environment = var.amelia_lambda_environment
+  lambda_role_arn          = module.roles.lambda_role_arn
 }
 
 module "lex" {
   source                   = "./modules/lex"
   lambda_functions_map     = module.lambda_functions.lambda_functions_map
+  tags                     = local.tags
+}
+
+module "roles" {
+  source                   = "./modules/roles"
+  lambda_role_name         = var.lambda_role_name
   tags                     = local.tags
 }
