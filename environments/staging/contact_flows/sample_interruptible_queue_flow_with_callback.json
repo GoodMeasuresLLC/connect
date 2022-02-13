@@ -20,7 +20,7 @@
         },
         "audio": [
           {
-            "id": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/prompt/41b6c9d7-3cdd-4138-bc1b-6f2f7ebb9eea",
+            "id": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/prompt/447ba773-4150-4167-a8ab-18ac3911d058",
             "text": "CustomerQueue.wav",
             "type": "Prompt"
           }
@@ -111,7 +111,7 @@
         "InterruptFrequencySeconds": "30",
         "Messages": [
           {
-            "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/prompt/41b6c9d7-3cdd-4138-bc1b-6f2f7ebb9eea"
+            "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/prompt/447ba773-4150-4167-a8ab-18ac3911d058"
           }
         ]
       },

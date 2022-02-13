@@ -240,7 +240,7 @@
       "Identifier": "6e53ccd1-94bf-4f4e-a6c7-69d1f2b9cc20",
       "Parameters": {
         "EventHooks": {
-          "CustomerRemaining": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/contact-flow/794a7beb-2949-4e19-a8d9-57d1fdaef814"
+          "CustomerRemaining": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/contact-flow/fc3cd663-0dd7-4096-95cb-3ede80cb4652"
         }
       },
       "Transitions": {

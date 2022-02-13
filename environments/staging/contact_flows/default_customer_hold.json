@@ -17,7 +17,7 @@
           {
             "type": "Prompt",
             "prompt": {
-              "id": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/prompt/f2133a73-41c1-49ab-ad4a-bf472f2a2264",
+              "id": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/prompt/029795d7-1220-4c9f-b24a-e1b65b46d7aa",
               "text": "Music_Jazz_MyTimetoFly_Inst.wav"
             },
             "$$hashKey": "01G"
@@ -36,7 +36,7 @@
       "Parameters": {
         "Messages": [
           {
-            "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/prompt/f2133a73-41c1-49ab-ad4a-bf472f2a2264"
+            "PromptId": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/prompt/029795d7-1220-4c9f-b24a-e1b65b46d7aa"
           }
         ]
       },

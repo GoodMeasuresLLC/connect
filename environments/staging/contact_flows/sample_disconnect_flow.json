@@ -526,7 +526,7 @@
     {
       "Identifier": "afa3794a-72f6-479f-8f16-b48b343e126d",
       "Parameters": {
-        "QueueId": "arn:aws:connect:us-east-1:201706955376:instance/1be1f972-2ec2-47db-b57a-8152c0098abe/queue/2f7ac433-3e0c-40de-9c73-9e83265dac0e"
+        "QueueId": "arn:aws:connect:us-east-1:201706955376:instance/658aa90c-6c92-4798-a30d-dc8941d65d27/queue/4c826a3b-85d0-4e02-8926-8dea0b1729e8"
       },
       "Transitions": {
         "NextAction": "0a1b8531-08c2-400e-a30a-c60d8cf15123",
