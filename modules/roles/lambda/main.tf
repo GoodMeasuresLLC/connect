@@ -12,8 +12,7 @@ resource "aws_iam_role" "lambda_role" {
           "lambda.amazonaws.com",
           "apigateway.amazonaws.com",
           "es.amazonaws.com",
-          "lex.amazonaws.com",
-          "connect.amazonaws.com"
+          "lex.amazonaws.com"
         ]
       },
       "Effect": "Allow",
@@ -112,3 +111,4 @@ resource "aws_iam_role_policy_attachment" "lambda_network" {
   role = aws_iam_role.lambda_role.name
   policy_arn = aws_iam_policy.lambda_network.arn
 }
+

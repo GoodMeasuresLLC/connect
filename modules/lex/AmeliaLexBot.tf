@@ -26,12 +26,12 @@ resource "aws_lex_bot" "amelia_lex_bot" {
 
   intent {
     intent_name    = aws_lex_intent.welcome_intent.name
-    intent_version = "1"
+    intent_version = "$LATEST"
   }
 
   intent {
     intent_name    = aws_lex_intent.catchall_intent.name
-    intent_version = "1"
+    intent_version = "$LATEST"
   }
 
 

@@ -20,7 +20,6 @@ module "connect" {
   lex_bots_map =  module.lex.lex_bots_map
 }
 
-
 module "lambda_functions" {
   source                   = "./modules/lambda_functions"
   s3_deployment_bucket     = var.s3_deployment_bucket

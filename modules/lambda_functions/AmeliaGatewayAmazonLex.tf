@@ -21,3 +21,10 @@ resource "aws_cloudwatch_log_group" "log_group-AmeliaGatewayAmazonLex" {
   retention_in_days = var.log_retention_days
 }
 
+resource "aws_lambda_permission" "AmeliaGatewayAmazonLex" {
+  statement_id  = "AllowExecutionFromLex-${var.tags["environment"]}"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.AmeliaGatewayAmazonLex.function_name
+  principal     = "lex.amazonaws.com"
+}
+
