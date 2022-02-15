@@ -11,6 +11,12 @@ resource "aws_lambda_function" "transcripttranscription_trigger"{
   filename     = "../../compiled/transcripttranscription_trigger.zip"
   source_code_hash = filebase64sha256("../../compiled/transcripttranscription_trigger.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-transcripttranscription_trigger]
+  environment {
+    variables = {
+      REGION = var.region
+      TRANSCRIPTION_FUNCTION_ARN = aws_lambda_function.transcriptionsystem_transcriptionsysdumpstreamtos3.arn
+    }
+  }
 }
 
 resource "aws_cloudwatch_log_group" "log_group-transcripttranscription_trigger" {

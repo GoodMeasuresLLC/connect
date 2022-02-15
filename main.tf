@@ -27,6 +27,7 @@ module "lambda_functions" {
   log_retention_days       = 7
   amelia_lambda_environment = var.amelia_lambda_environment
   lambda_role_arn          = module.roles.lambda_role_arn
+  region                   = var.region
 }
 
 module "lex" {
