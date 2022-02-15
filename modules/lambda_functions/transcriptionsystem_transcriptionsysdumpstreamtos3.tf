@@ -10,6 +10,16 @@ resource "aws_lambda_function" "transcriptionsystem_transcriptionsysdumpstreamto
   s3_bucket    =var.s3_deployment_bucket
   s3_key       ="transcriptionsystem_transcriptionsysdumpstreamtos3.zip"
   depends_on = [aws_cloudwatch_log_group.log_group-transcriptionsystem_transcriptionsysdumpstreamtos3]
+  environment {
+    variables = {
+      APP_REGION  = var.region
+      CONSOLE_LOG_TRANSCRIPT_FLAG = "FALSE"
+      RECORDINGS_BUCKET_NAME = "transcription-call-audio"
+      RECORDINGS_KEY_PREFIX = "Transcript"
+      RECORDINGS_PUBLIC_READ_ACL  = "FALSE"
+      TRANSCRIBE_REGION = var.region
+    }
+  }
 }
 
 resource "aws_cloudwatch_log_group" "log_group-transcriptionsystem_transcriptionsysdumpstreamtos3" {

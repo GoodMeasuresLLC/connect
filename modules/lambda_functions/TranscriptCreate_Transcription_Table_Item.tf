@@ -11,6 +11,12 @@ resource "aws_lambda_function" "transcriptcreate_transcription_table_item"{
   filename     = "../../compiled/transcriptcreate_transcription_table_item.zip"
   source_code_hash = filebase64sha256("../../compiled/transcriptcreate_transcription_table_item.zip")
   depends_on = [aws_cloudwatch_log_group.log_group-transcriptcreate_transcription_table_item]
+  environment {
+    variables = {
+      DynamoDB_Region = var.region
+      Table_Name = "TranscriptionData"
+    }
+  }
 }
 
 resource "aws_cloudwatch_log_group" "log_group-transcriptcreate_transcription_table_item" {
