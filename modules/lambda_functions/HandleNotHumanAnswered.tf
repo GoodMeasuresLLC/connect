@@ -1,0 +1,26 @@
+resource "aws_lambda_function" "HandleNotHumanAnswered" {
+  function_name    = "HandleNotHumanAnswered-${var.tags["environment"]}"
+  description      = ""
+  tags             = var.tags
+  runtime          = "nodejs14.x"
+  role             = var.lambda_role_arn
+  handler          = "index.handleHumanNotAnswered"
+  timeout          = 3
+  memory_size      = 128
+  package_type     = "Zip"
+  filename         = "../../compiled/HandleNotHumanAnswered.zip"
+  source_code_hash = filebase64sha256("../../compiled/HandleNotHumanAnswered.zip")
+  depends_on       = [aws_cloudwatch_log_group.log_group-HandleNotHumanAnswered]
+  environment {
+    variables = {
+      codeHostname    = var.codeHostname
+      AMELIA_USERNAME = var.ameliaUsername
+      AMELIA_PASSWORD = var.ameliaPassword
+    }
+  }
+}
+
+resource "aws_cloudwatch_log_group" "log_group-HandleNotHumanAnswered" {
+  name              = "/aws/lambda/HandleNotHumanAnswered-${var.tags["environment"]}"
+  retention_in_days = var.log_retention_days
+}
