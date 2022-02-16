@@ -91,20 +91,8 @@ function authenticateUser() {
   };
 
   return new Promise((resolve, reject) => {
-    const req = http.request(options, res => {
-      let rawData = '';
-
-      res.on('data', chunk => {
-        rawData += chunk;
-      });
-
-      res.on('end', () => {
-        try {
-          resolve(JSON.parse(rawData));
-        } catch (err) {
-          reject(new Error(err));
-        }
-      });
+    const req = http.request(options, (res) => {
+      resolve(JSON.stringify(res.statusCode));
     });
 
     req.on('error', err => {
@@ -128,39 +116,24 @@ function gmPostRequest(data) {
   };
 
   return new Promise((resolve, reject) => {
-    const req = http.request(options, res => {
-      let rawData = '';
-
-      res.on('data', chunk => {
-        rawData += chunk;
-      });
-
-      res.on('end', () => {
-        try {
-          resolve(JSON.parse(rawData));
-        } catch (err) {
-          reject(new Error(err));
-        }
-      });
+    const req = http.request(options, (res) => {
+      resolve(JSON.stringify(res.statusCode));
     });
-
+    
     req.on('error', err => {
       reject(new Error(err));
     });
-console.log('data',data)
     req.write(JSON.stringify(data));
     req.end();
   });
 }
 
 exports.handleHumanNotAnswered = async (event, context, callback) => {
-    // const userData = await authenticateUser()
+    const userData = await authenticateUser()
     
     if (event.Details.ContactData.Attributes.CallCategory === 'voicemail') {
         try {
             const result = await gmPostRequest(exampleEvent.Details.Parameters);
-
-            console.log(result)
         
             return {
                 statusCode: 200,
@@ -177,4 +150,4 @@ exports.handleHumanNotAnswered = async (event, context, callback) => {
     }
 }
 
-console.log(this.handleHumanNotAnswered(exampleEvent))
+this.handleHumanNotAnswered(exampleEvent)
