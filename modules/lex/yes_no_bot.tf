@@ -19,7 +19,7 @@ resource "aws_lex_bot" "yes_no_bot" {
   clarification_prompt {
     max_attempts = 2
     message {
-      content      = "I didn't understand you, what would you like to do?"
+      content      = "Please say either yes or no"
       content_type = "PlainText"
     }
   }
