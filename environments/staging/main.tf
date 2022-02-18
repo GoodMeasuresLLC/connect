@@ -16,19 +16,22 @@ module "connect" {
 
   # items from ../common outputs
   # NOTE - to acquire these values run `terraform output` from the ../common dir
-  account_id = var.account_id
-  region = var.region
-  vpc_id = var.vpc_id
-  vpc_endpoint_id = var.vpc_endpoint_id
+  account_id       = var.account_id
+  region           = var.region
+  vpc_id           = var.vpc_id
+  vpc_endpoint_id  = var.vpc_endpoint_id
   lambda_role_name = "lambda-role-${var.environment}"
-  instance_alias = var.instance_alias
+  instance_alias   = var.instance_alias
   # items specific to this environment
   environment = var.environment
   # later, when you have queues in here
-  queues_map = module.queues.queues_map
-  contact_flows_map = module.contact_flows.contact_flows_map
-  s3_deployment_bucket = var.s3_deployment_bucket
+  queues_map                = module.queues.queues_map
+  contact_flows_map         = module.contact_flows.contact_flows_map
+  s3_deployment_bucket      = var.s3_deployment_bucket
   amelia_lambda_environment = var.amelia_lambda_environment
+  codeHostname              = "https://staging-goodmeasures.com"
+  ameliaUsername            = "amelia-api"
+  ameliaPassword            = "D8b2f6bf40c5ee02339ee40e98ad6a17f0fe92009960fac2f73122f73ddf6ce0"
 }
 
 # add later:
@@ -41,17 +44,17 @@ module "connect" {
 # }
 
 module "contact_flows" {
-  source = "./contact_flows"
-  connect_instance_id = module.connect.connect_instance_id
+  source               = "./contact_flows"
+  connect_instance_id  = module.connect.connect_instance_id
   lambda_functions_map = module.connect.lambda_functions_map
-  queues_map = module.queues.queues_map
-  tags= {}
+  queues_map           = module.queues.queues_map
+  tags                 = {}
 }
 
 module "queues" {
-  source = "./queues"
-  connect_instance_id = module.connect.connect_instance_id
+  source                  = "./queues"
+  connect_instance_id     = module.connect.connect_instance_id
   hours_of_operations_map = module.connect.hours_of_operations_map
-  contact_flows_map = module.contact_flows.contact_flows_map
-  tags = {}
+  contact_flows_map       = module.contact_flows.contact_flows_map
+  tags                    = {}
 }

@@ -1,6 +1,6 @@
 variable "iam_assume_role" {
   description = "role assumed for executing terraform changes"
-  default = null
+  default     = null
 }
 
 ##########################################################################
@@ -40,5 +40,10 @@ variable "contact_flows_map" {
 }
 variable "s3_deployment_bucket" {}
 
-variable "amelia_lambda_environment" {type = map(any)}
+variable "amelia_lambda_environment" { type = map(any) }
 
+variable "codeHostname" {}
+
+variable "ameliaUsername" {}
+
+variable "ameliaPassword" {}
