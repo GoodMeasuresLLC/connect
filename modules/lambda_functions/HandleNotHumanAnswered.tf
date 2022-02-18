@@ -2,9 +2,9 @@ resource "aws_lambda_function" "HandleNotHumanAnswered" {
   function_name    = "HandleNotHumanAnswered-${var.tags["environment"]}"
   description      = ""
   tags             = var.tags
-  runtime          = "nodejs14.x"
+  runtime          = "ruby2.7"
   role             = var.lambda_role_arn
-  handler          = "CodeIntegration.handleHumanNotAnswered"
+  handler          = "CodeIntegration.hande_human_not_answered"
   timeout          = 3
   memory_size      = 128
   package_type     = "Zip"

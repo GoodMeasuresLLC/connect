@@ -4,6 +4,8 @@ class CodeIntegration
     include HTTParty
 
     def self.handle_human_not_answered(event:, context:)
+        puts "hello world"
+        puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         post_body = {
             user_id: attributes["UserId"],
@@ -26,5 +28,3 @@ class CodeIntegration
         post("#{attributes["Hostname"]}/api/engagement.json", :body => post_body.to_json, basic_auth: auth)
     end
 end
-
-CodeIntegration.handle_human_not_answered
