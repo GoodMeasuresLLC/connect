@@ -14,8 +14,8 @@ resource "aws_lambda_function" "HandleNotHumanAnswered" {
   environment {
     variables = {
       codeHostname    = var.codeHostname
-      AMELIA_USERNAME = var.ameliaUsername
-      AMELIA_PASSWORD = var.ameliaPassword
+      username = var.ameliaUsername
+      password = var.ameliaPassword
     }
   }
 }
