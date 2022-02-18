@@ -19,8 +19,8 @@ class CodeIntegration
         }
 
         auth = {
-            username: ENV["ameliaUsername"],
-            password: ENV["ameliaPassword"]
+            username: ENV["username"],
+            password: ENV["password"]
         }
         
         post("#{attributes["Hostname"]}/api/engagement.json", :body => post_body.to_json, basic_auth: auth)

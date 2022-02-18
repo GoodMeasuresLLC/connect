@@ -13,7 +13,6 @@ resource "aws_lambda_function" "HandleNotHumanAnswered" {
   depends_on       = [aws_cloudwatch_log_group.log_group-HandleNotHumanAnswered]
   environment {
     variables = {
-      codeHostname    = var.codeHostname
       username = var.ameliaUsername
       password = var.ameliaPassword
     }
