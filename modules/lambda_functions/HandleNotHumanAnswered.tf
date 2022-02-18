@@ -4,12 +4,12 @@ resource "aws_lambda_function" "HandleNotHumanAnswered" {
   tags             = var.tags
   runtime          = "nodejs14.x"
   role             = var.lambda_role_arn
-  handler          = "index.handleHumanNotAnswered"
+  handler          = "code_integration.handleHumanNotAnswered"
   timeout          = 3
   memory_size      = 128
   package_type     = "Zip"
-  filename         = "../../compiled/HandleNotHumanAnswered.zip"
-  source_code_hash = filebase64sha256("../../compiled/HandleNotHumanAnswered.zip")
+  filename         = "../../compiled/code_integration.zip"
+  source_code_hash = filebase64sha256("../../compiled/code_integration.zip")
   depends_on       = [aws_cloudwatch_log_group.log_group-HandleNotHumanAnswered]
   environment {
     variables = {

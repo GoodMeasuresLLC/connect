@@ -29,8 +29,8 @@ module "lambda_functions" {
   lambda_role_arn           = module.roles.lambda_role_arn
   region                    = var.region
   codeHostname              = var.codeHostname
-  AMELIA_USERNAME           = var.ameliaUsername
-  AMELIA_PASSWORD           = var.ameliaPassword
+  ameliaUsername           = var.ameliaUsername
+  ameliaPassword           = var.ameliaPassword
 }
 
 module "lex" {
