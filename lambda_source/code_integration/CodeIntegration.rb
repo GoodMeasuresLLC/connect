@@ -90,6 +90,44 @@ class CodeIntegration
         free_slots = JSON.parse(attributes["FreeSlotsCached"])
         free_slots[parameters["SlotIndex"]&.to_i]
     end
+    def self.reschedule_appointment(event:, context:)
+        puts JSON.pretty_generate(event)
+        attributes = event["Details"]["ContactData"]["Attributes"]
+        parameters = event["Details"]["Parameters"]
+        body = {
+            appointment:
+            {
+                reason_code_id: attributes["ReasonCodeId"],
+                start_at: attributes["StartAt"],
+                assignee_id: attributes["AssigneeId"],
+                user_id: attributes["UserId"],
+                encounter_date: Date.today,
+                channel: "phone",
+                coach_id: attributes["CoachId"],
+            }
+        }
+        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/reschedule")
+        https = Net::HTTP.new(uri.host, uri.port)
+        https.use_ssl = true
+        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
+        request.body = body.to_json
+        request.basic_auth ENV["username"], ENV["password"]
+        response = https.request(request)
+    end
+
+    def self.confirm_appointment(event:, context:)
+         puts JSON.pretty_generate(event)
+        attributes = event["Details"]["ContactData"]["Attributes"]
+        parameters = event["Details"]["Parameters"]
+        body = {}
+        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/confirm")
+        https = Net::HTTP.new(uri.host, uri.port)
+        https.use_ssl = true
+        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
+        request.body = body.to_json
+        request.basic_auth ENV["username"], ENV["password"]
+        response = https.request(request)
+    end
 end
 
 # ENV["username"] = "user-1"

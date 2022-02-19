@@ -12,6 +12,9 @@ output "lambda_functions_map" {
     "RecordInteraction"    = aws_lambda_function.RecordInteraction.arn
     "GetSchedule"    = aws_lambda_function.GetSchedule.arn
     "GetScheduleCached"    = aws_lambda_function.GetScheduleCached.arn
+    "RescheduleAppointment"    = aws_lambda_function.RescheduleAppointment.arn
+    "ConfirmAppointment"    = aws_lambda_function.ConfirmAppointment.arn
+    "CancelAppointment"    = aws_lambda_function.CancelAppointment.arn
     "DumpEvent"    = aws_lambda_function.DumpEvent.arn
   }
 }
