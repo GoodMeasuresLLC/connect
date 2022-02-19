@@ -4,7 +4,7 @@
 # }
 
 resource "aws_lex_bot" "yes_no_bot" {
-  name = "yes_no_bot_${var.tags["environment"]}"
+  name = "yes_no_bot"
   child_directed   = false
   process_behavior = "BUILD"
   voice_id         = "Joanna"
@@ -38,7 +38,7 @@ resource "aws_lex_bot" "yes_no_bot" {
 }
 
 resource "aws_lex_intent" "yes_intent" {
-  name = "yes_intent_${var.tags["environment"]}"
+  name = "yes_intent"
   sample_utterances = [
     "YES",
     "YEAH",
@@ -69,7 +69,7 @@ resource "aws_lex_intent" "yes_intent" {
 }
 
 resource "aws_lex_intent" "no_intent" {
-  name = "no_intent_${var.tags["environment"]}"
+  name = "no_intent"
   sample_utterances = [
   "no",
   "nope",
