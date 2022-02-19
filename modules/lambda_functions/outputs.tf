@@ -9,6 +9,6 @@ output "lambda_functions_map" {
     "transcripttranscription_trigger" = aws_lambda_function.transcripttranscription_trigger.arn,
     "retrieve_contact_information" = aws_lambda_function.retrieve_contact_information.arn,
     "retrieve_development_contact_info" = aws_lambda_function.retrieve_development_contact_info.arn
-    "HandleNotHumanAnswered"    = aws_lambda_function.HandleNotHumanAnswered.arn
+    "RecordInteraction"    = aws_lambda_function.RecordInteraction.arn
   }
 }
