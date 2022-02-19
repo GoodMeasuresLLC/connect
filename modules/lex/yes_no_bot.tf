@@ -41,6 +41,8 @@ resource "aws_lex_intent" "yes_intent" {
   name = "yes_intent"
   sample_utterances = [
     "YES",
+    "yes please",
+    "yes I can",
     "YEAH",
     "YUP",
     "OKAY",
@@ -75,6 +77,10 @@ resource "aws_lex_intent" "no_intent" {
   "nope",
   "negatory",
   "I can't",
+  "no I can't",
+  "no I can't make that",
+  "I have another appointment",
+  "no I'm busy",
   "no thanks"
   ]
   fulfillment_activity {

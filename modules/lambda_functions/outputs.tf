@@ -10,5 +10,8 @@ output "lambda_functions_map" {
     "retrieve_contact_information" = aws_lambda_function.retrieve_contact_information.arn,
     "retrieve_development_contact_info" = aws_lambda_function.retrieve_development_contact_info.arn
     "RecordInteraction"    = aws_lambda_function.RecordInteraction.arn
+    "GetSchedule"    = aws_lambda_function.GetSchedule.arn
+    "GetScheduleCached"    = aws_lambda_function.GetScheduleCached.arn
+    "DumpEvent"    = aws_lambda_function.DumpEvent.arn
   }
 }
