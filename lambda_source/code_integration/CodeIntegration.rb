@@ -25,25 +25,28 @@ class CodeIntegration
         }
 
         uri = URI.parse("#{attributes["Hostname"]}/api/engagement.json")
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = true
-        request = Net::HTTP::Post.new(uri.request_uri)
+        https = Net::HTTP.new(uri.host, uri.port)
+        https.use_ssl = true
+        request = Net::HTTP::Post.new(uri.request_uri,'Content-Type' => 'application/json')
         request.body = body.to_json
         request.basic_auth ENV["username"], ENV["password"]
-        response = http.request(request)
+        response = https.request(request)
     end
 end
 
 # ENV["username"] = "user-1"
 # ENV["password"] = "stagingPassword123!"
 # CodeIntegration.record_interaction(event:
-#  {"Details" => {
-#     "ContactData" => {
-#         "Attributes" => {
-#             # "Hostname" => "http://localhost:3000"
-#             "Hostname" => "https://77d6-130-44-150-166.ngrok.io"
+# {"Details": {
+#     "ContactData": {
+#         "Attributes": {
+#             "Hostname": "http://localhost:3000"
 #         },
-#         "ContactId" => "123"
+#         "ContactId": "123"
+#     },
+#     "Parameters" : {
+#         "InteractionNotes": "Error",
+#         "Subject": "Error"
 #     }
 # }},
 # context: {}
