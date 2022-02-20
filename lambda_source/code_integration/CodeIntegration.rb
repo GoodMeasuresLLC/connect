@@ -36,9 +36,42 @@ class CodeIntegration
         request.body = body.to_json
         request.basic_auth ENV["username"], ENV["password"]
         response = https.request(request)
+        {}
     end
-    def self.get_schedule(event:, context:)
+
+    # rules:
+    # try to get the schedule at the same time of day
+    # fallback to any time of day for same coach
+    # fallback to same time of day for any coach
+    # fallback to any time of day for any coach
+    def self.get_schedule_with_fallback(event:, context:)
         puts JSON.pretty_generate(event)
+        attributes = event["Details"]["ContactData"]["Attributes"]
+        event["Details"]["Parameters"]||={}
+        event["Details"]["Parameters"]["PartOfDay"]="SamePartOfDay"
+        result = get_schedule(event: event, context: context)
+        if(result[:number_slots] == 0)
+            event["Details"]["Parameters"]["PartOfDay"]=nil
+            result = get_schedule(event: event, context: context)
+            result["Flavor"]="SameCoach" if(result[:number_slots] > 0)
+            # only retry if the coach was specified && it is allowed
+            if(result[:number_slots] == 0 && event["Details"]["Parameters"]["CoachId"] && attributes["CanOfferOtherAssignees"])
+                event["Details"]["Parameters"]["PartOfDay"]="SamePartOfDay"
+                event["Details"]["Parameters"]["CoachId"]=nil
+                result = get_schedule(event: event, context: context)
+                if(result[:number_slots] == 0)
+                    event["Details"]["Parameters"]["PartOfDay"]=nil
+                    result = get_schedule(event: event, context: context)
+                end
+                result["Flavor"]="DifferentCoach"
+            end
+        else
+            result["Flavor"]="SameCoach"
+        end
+        result
+    end
+
+    def self.get_schedule(event:, context:)
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
         body = {
@@ -113,10 +146,11 @@ class CodeIntegration
         request.body = body.to_json
         request.basic_auth ENV["username"], ENV["password"]
         response = https.request(request)
+        {}
     end
 
     def self.confirm_appointment(event:, context:)
-         puts JSON.pretty_generate(event)
+        puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
         body = {}
@@ -127,6 +161,21 @@ class CodeIntegration
         request.body = body.to_json
         request.basic_auth ENV["username"], ENV["password"]
         response = https.request(request)
+        {}
+    end
+    def self.cancel_appointment(event:, context:)
+        puts JSON.pretty_generate(event)
+        attributes = event["Details"]["ContactData"]["Attributes"]
+        parameters = event["Details"]["Parameters"]
+        body = {}
+        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/cancel")
+        https = Net::HTTP.new(uri.host, uri.port)
+        https.use_ssl = true
+        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
+        request.body = body.to_json
+        request.basic_auth ENV["username"], ENV["password"]
+        response = https.request(request)
+        {}
     end
 end
 

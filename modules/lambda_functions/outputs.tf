@@ -11,6 +11,7 @@ output "lambda_functions_map" {
     "retrieve_development_contact_info" = aws_lambda_function.retrieve_development_contact_info.arn
     "RecordInteraction"    = aws_lambda_function.RecordInteraction.arn
     "GetSchedule"    = aws_lambda_function.GetSchedule.arn
+    "GetScheduleWithFallback" = aws_lambda_function.GetScheduleWithFallback.arn
     "GetScheduleCached"    = aws_lambda_function.GetScheduleCached.arn
     "RescheduleAppointment"    = aws_lambda_function.RescheduleAppointment.arn
     "ConfirmAppointment"    = aws_lambda_function.ConfirmAppointment.arn
