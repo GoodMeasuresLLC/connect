@@ -134,9 +134,7 @@ class CodeIntegration
                 start_at: attributes["StartAt"],
                 assignee_id: attributes["AssigneeId"],
                 user_id: attributes["UserId"],
-                encounter_date: Date.today,
                 channel: "phone",
-                coach_id: attributes["CoachId"],
             }
         }
         uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/reschedule")
