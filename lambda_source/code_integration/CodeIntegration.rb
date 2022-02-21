@@ -3,6 +3,28 @@ require 'uri'
 require 'json'
 require 'date'
 require 'time'
+
+def http_request(clazz, url, body)
+    uri = URI.parse(url)
+    https = Net::HTTP.new(uri.host, uri.port)
+    https.use_ssl = true
+    request = clazz.new(uri.request_uri,'Content-Type' => 'application/json')
+    request.body = body.to_json
+    request.basic_auth ENV["username"], ENV["password"]
+    response = https.request(request)
+end
+
+def http_get(url, body)
+    http_request(Net::HTTP::Get, url, body)
+end
+
+def http_post(url, body)
+    http_request(Net::HTTP::Post, url, body)
+end
+def http_put(url, body)
+    http_request(Net::HTTP::Put, url, body)
+end
+
 class CodeIntegration
     def self.dump_event(event:, context:)
         puts JSON.pretty_generate(event)
@@ -28,14 +50,7 @@ class CodeIntegration
                 reference_number:event["Details"]["ContactData"]["ContactId"]
             }
         }
-
-        uri = URI.parse("#{attributes["Hostname"]}/api/engagement.json")
-        https = Net::HTTP.new(uri.host, uri.port)
-        https.use_ssl = true
-        request = Net::HTTP::Post.new(uri.request_uri,'Content-Type' => 'application/json')
-        request.body = body.to_json
-        request.basic_auth ENV["username"], ENV["password"]
-        response = https.request(request)
+        response=http_post("#{attributes["Hostname"]}/api/engagement.json", body)
         {}
     end
 
@@ -93,13 +108,7 @@ class CodeIntegration
             body[:part_of_day] = val
         end
 
-        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling")
-        https = Net::HTTP.new(uri.host, uri.port)
-        https.use_ssl = true
-        request = Net::HTTP::Get.new(uri.request_uri,'Content-Type' => 'application/json')
-        request.body = body.to_json
-        request.basic_auth ENV["username"], ENV["password"]
-        response = https.request(request)
+        response=http_get("#{attributes["Hostname"]}/api/scheduling",body)
         var = JSON.parse(response.body)
         var["appointments"].map {|hash|
             time = Time.parse(hash["free_time_slot"]["start_at_in_time_zone"])
@@ -137,13 +146,7 @@ class CodeIntegration
                 channel: "phone",
             }
         }
-        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/reschedule")
-        https = Net::HTTP.new(uri.host, uri.port)
-        https.use_ssl = true
-        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
-        request.body = body.to_json
-        request.basic_auth ENV["username"], ENV["password"]
-        response = https.request(request)
+        http_put("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/reschedule", body)
         {}
     end
 
@@ -151,28 +154,14 @@ class CodeIntegration
         puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
-        body = {}
-        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/confirm")
-        https = Net::HTTP.new(uri.host, uri.port)
-        https.use_ssl = true
-        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
-        request.body = body.to_json
-        request.basic_auth ENV["username"], ENV["password"]
-        response = https.request(request)
+        http_put("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/confirm", {})
         {}
     end
     def self.cancel_appointment(event:, context:)
         puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
-        body = {}
-        uri = URI.parse("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/cancel")
-        https = Net::HTTP.new(uri.host, uri.port)
-        https.use_ssl = true
-        request = Net::HTTP::Put.new(uri.request_uri,'Content-Type' => 'application/json')
-        request.body = body.to_json
-        request.basic_auth ENV["username"], ENV["password"]
-        response = https.request(request)
+        http_put("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/cancel",{})
         {}
     end
 end
