@@ -112,7 +112,7 @@ class CodeIntegration
         var = JSON.parse(response.body)
         var["appointments"].map {|hash|
             time = Time.parse(hash["free_time_slot"]["start_at_in_time_zone"])
-            hash["free_time_slot"]["start_at_friendly_format"] = time.strftime("%A, %B %e at %l %P")
+            hash["free_time_slot"]["start_at_friendly_format"] = time.strftime("%A, %B %e at %l:%M %P")
         }
         puts JSON.pretty_generate(var)
         if(var["appointments"].empty?)

@@ -11,13 +11,13 @@ resource "aws_lex_bot" "yes_no_bot" {
 
   abort_statement {
     message {
-      content      = "Sorry, I am not able to assist at this time."
+      content      = "I'm only a bot, let me transfer you to a human."
       content_type = "PlainText"
     }
   }
 
   clarification_prompt {
-    max_attempts = 2
+    max_attempts = 3
     message {
       content      = "Please say either yes or no"
       content_type = "PlainText"

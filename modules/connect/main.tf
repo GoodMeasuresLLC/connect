@@ -20,7 +20,7 @@ resource "aws_connect_instance" "connect" {
   outbound_calls_enabled   = true
   auto_resolve_best_voices_enabled = false
   contact_flow_logs_enabled = true
-  early_media_enabled = false
+  early_media_enabled = true
 }
 
 
