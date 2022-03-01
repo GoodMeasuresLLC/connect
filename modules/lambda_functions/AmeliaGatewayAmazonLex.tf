@@ -6,7 +6,7 @@ resource "aws_lambda_function" "AmeliaGatewayAmazonLex"{
   role         = var.lambda_role_arn
   handler      ="net.ipsoft.amelia.gateway.aws.lambda.lex.AmeliaGatewayApiLambdaLex::handleRequest"
   timeout      = 3
-  memory_size  = 128
+  memory_size  = 512
   package_type ="Zip"
   s3_bucket    =var.s3_deployment_bucket
   s3_key       ="amelia-lambda-lex-1.0.1.zip"
