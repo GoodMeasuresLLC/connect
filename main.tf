@@ -37,6 +37,7 @@ module "lex" {
   source               = "./modules/lex"
   lambda_functions_map = module.lambda_functions.lambda_functions_map
   tags                 = local.tags
+  lex_role_arn         = var.lex_role_arn
 }
 
 module "roles" {

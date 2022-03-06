@@ -23,6 +23,10 @@ variable "vpc_endpoint_id" {
 variable "lambda_role_name" {
   description = "name of default lambda function role"
 }
+variable "lex_role_arn" {
+  description = "name of default lex  role"
+}
+
 variable "instance_alias" {
   description = "Name for this instance"
 }

@@ -28,6 +28,11 @@ variable "lambda_role_arn" {
   description = "arn for the default lambda function role"
 }
 
+variable "lex_role_arn" {
+  description = "arn lex role"
+}
+
+
 variable "s3_deployment_bucket" {
   description = "S3 bucket where the .ZIP file for the Amelia integration resides"
 }

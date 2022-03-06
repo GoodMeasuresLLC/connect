@@ -60,4 +60,32 @@ resource "aws_lex_intent" "catchall_intent" {
       uri = var.lambda_functions_map["AmeliaGatewayAmazonLex"]
     }
   }
+  parent_intent_signature = "AMAZON.FallbackIntent"
 }
+
+
+resource "aws_lex_bot_alias" "amelia_lex_bot" {
+  bot_name    = aws_lex_bot.amelia_lex_bot.name
+  bot_version = "$LATEST"
+  name        = "amelia_lex_bot"
+  conversation_logs {
+    iam_role_arn = var.lex_role_arn
+    log_settings {
+      destination = "CLOUDWATCH_LOGS"
+      log_type    = "TEXT"
+      resource_arn = aws_cloudwatch_log_group.log_group-amelia_lex_bot.arn
+    }
+    # log_settings {
+    #   destination = "CLOUDWATCH_LOGS"
+    #   log_type    = "AUDIO"
+    #   resource_arn = aws_cloudwatch_log_group.log_group-amelia_lex_bot.arn
+    # }
+  }
+}
+
+
+resource "aws_cloudwatch_log_group" "log_group-amelia_lex_bot" {
+  name = "/aws/lex/amelia_lex_bot-${var.tags["environment"]}"
+  retention_in_days = 7
+}
+

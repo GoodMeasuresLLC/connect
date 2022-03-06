@@ -21,6 +21,7 @@ module "connect" {
   vpc_id           = var.vpc_id
   vpc_endpoint_id  = var.vpc_endpoint_id
   lambda_role_name = "lambda-role-${var.environment}"
+  lex_role_arn  = var.lex_role_arn
   instance_alias   = var.instance_alias
   # items specific to this environment
   environment = var.environment
