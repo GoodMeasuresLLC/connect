@@ -55,6 +55,7 @@ resource "aws_lex_intent" "patient_intent" {
   name = "patient_intent"
   sample_utterances = [
   "its me",
+  "patient",
   "the patient",
   "im the patient"
   ]
