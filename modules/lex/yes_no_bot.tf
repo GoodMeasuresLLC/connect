@@ -34,18 +34,28 @@ resource "aws_lex_bot" "yes_no_bot" {
     intent_version = "$LATEST"
   }
 
+  intent {
+    intent_name    = aws_lex_intent.repeat_intent.name
+    intent_version = "$LATEST"
+  }
+  intent {
+    intent_name    = aws_lex_intent.wait_intent.name
+    intent_version = "$LATEST"
+  }
 
 }
 
 resource "aws_lex_intent" "yes_intent" {
   name = "yes_intent"
   sample_utterances = [
+    "ah yes",
     "YES",
     "yes please",
     "yes I can",
     "yes that works",
     "that works",
     "sure fine",
+    "sure",
     "fine by me",
     "YEAH",
     "YUP",
@@ -67,7 +77,8 @@ resource "aws_lex_intent" "yes_intent" {
     "AYE AYE",
     "ROGER",
     "TOTALLY",
-    "DEFINITELY"
+    "DEFINITELY",
+    "yes you are"
   ]
   fulfillment_activity {
     type = "ReturnIntent"
@@ -86,6 +97,40 @@ resource "aws_lex_intent" "no_intent" {
   "I have another appointment",
   "no I'm busy",
   "no thanks"
+  ]
+  fulfillment_activity {
+    type = "ReturnIntent"
+  }
+}
+
+resource "aws_lex_intent" "repeat_intent" {
+  name = "repeat_intent"
+  sample_utterances = [
+  "repeat",
+  "can you repeat that",
+  "sorry i didn't hear you",
+  "what was that",
+  "what did you say",
+  "what"
+  ]
+  fulfillment_activity {
+    type = "ReturnIntent"
+  }
+}
+
+resource "aws_lex_intent" "wait_intent" {
+  name = "wait_intent"
+  sample_utterances = [
+  "just a sec",
+  "just a second",
+  "hold on",
+  "i'm looking",
+  "can you wait a second",
+  "can you wait a sec",
+  "can you please wait a second",
+  "can you please wait a sec",
+  "wait a minute",
+  "please wait a minute",
   ]
   fulfillment_activity {
     type = "ReturnIntent"
