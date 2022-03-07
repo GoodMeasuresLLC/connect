@@ -9,7 +9,7 @@ resource "aws_lambda_function" "AmeliaGatewayAmazonLex"{
   memory_size  = 512
   package_type ="Zip"
   s3_bucket    =var.s3_deployment_bucket
-  s3_key       ="amelia-lambda-lex-1.0.1.zip"
+  s3_key       ="amelia-lambda-lex-1.0.3.zip"
   depends_on = [aws_cloudwatch_log_group.log_group-AmeliaGatewayAmazonLex]
   environment {
     variables = var.amelia_lambda_environment
