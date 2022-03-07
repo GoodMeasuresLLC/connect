@@ -116,11 +116,11 @@ class CodeIntegration
         }
         puts JSON.pretty_generate(var)
         if(var["appointments"].empty?)
-            {number_slots: 0}
+            {number_slots: 0, slow_index: 0}
         else
             free_slots=var["appointments"].map {|hash|hash["free_time_slot"]}
-            slot_index = parameters["slotIndex"] || 0
-            final_answer = var["appointments"][slot_index]["free_time_slot"].merge({number_slots: var["appointments"].size, free_slots_cached: free_slots.to_json})
+            slot_index = parameters["SlotIndex"] || 0
+            final_answer = var["appointments"][slot_index]["free_time_slot"].merge({number_slots: var["appointments"].size, slot_index: 0, free_slots_cached: free_slots.to_json})
             puts JSON.pretty_generate(final_answer)
             final_answer
         end
@@ -130,7 +130,8 @@ class CodeIntegration
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
         free_slots = JSON.parse(attributes["FreeSlotsCached"])
-        free_slots[parameters["SlotIndex"]&.to_i]
+        slot_index = parameters["SlotIndex"]&.to_i
+        free_slots[slot_index].merge(slot_index: slot_index + 1)
     end
     def self.reschedule_appointment(event:, context:)
         puts JSON.pretty_generate(event)
