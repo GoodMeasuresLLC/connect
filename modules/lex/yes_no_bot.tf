@@ -129,6 +129,7 @@ resource "aws_lex_intent" "wait_intent" {
   "can you wait a sec",
   "can you please wait a second",
   "can you please wait a sec",
+  "can you hold for a second",
   "wait a minute",
   "please wait a minute",
   ]
