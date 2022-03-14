@@ -3,4 +3,10 @@ resource "aws_connect_security_profile" "qualityanalyst" {
   name         = "QualityAnalyst"
   description  = "A quality analyst works to improve the customer experience and keeps track of live service metrics."
   tags = var.tags
+  permissions = [
+        "AccessMetrics",
+        "AgentTimeCard.View",
+        "ContactAttributes.View",
+        "ContactSearch.View"
+    ]
 }
