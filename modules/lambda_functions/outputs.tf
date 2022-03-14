@@ -11,11 +11,11 @@ output "lambda_functions_map" {
     "retrieve_development_contact_info" = aws_lambda_function.retrieve_development_contact_info.arn
     "RecordInteraction"    = aws_lambda_function.RecordInteraction.arn
     "GetSchedule"    = aws_lambda_function.GetSchedule.arn
-    "GetScheduleWithFallback" = aws_lambda_function.GetScheduleWithFallback.arn
     "GetScheduleCached"    = aws_lambda_function.GetScheduleCached.arn
-    "RescheduleAppointment"    = aws_lambda_function.RescheduleAppointment.arn
+    "ScheduleAppointment"    = aws_lambda_function.ScheduleAppointment.arn
     "ConfirmAppointment"    = aws_lambda_function.ConfirmAppointment.arn
     "CancelAppointment"    = aws_lambda_function.CancelAppointment.arn
     "DumpEvent"    = aws_lambda_function.DumpEvent.arn
+    "NormalizeTimePeriods"    = aws_lambda_function.NormalizeTimePeriods.arn
   }
 }

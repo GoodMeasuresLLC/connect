@@ -53,6 +53,7 @@ resource "aws_lex_intent" "yes_intent" {
     "yes please",
     "yes I can",
     "yes that works",
+    "yes it does",
     "that works",
     "sure fine",
     "sure",
@@ -93,10 +94,13 @@ resource "aws_lex_intent" "no_intent" {
   "negatory",
   "I can't",
   "no I can't",
+  "no it doesn't",
+  "no it does not",
   "no I can't make that",
   "I have another appointment",
   "no I'm busy",
-  "no thanks"
+  "no thanks",
+  "no thank you"
   ]
   fulfillment_activity {
     type = "ReturnIntent"
