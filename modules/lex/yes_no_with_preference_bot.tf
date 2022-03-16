@@ -40,6 +40,10 @@ resource "aws_lex_bot" "yes_no_with_preference_bot" {
     intent_name    = aws_lex_intent.yes_intent.name
     intent_version = "$LATEST"
   }
+  intent {
+    intent_name    = aws_lex_intent.repeat_intent.name
+    intent_version = "$LATEST"
+  }
 }
 
 resource "aws_lex_intent" "indicate_preference_intent" {

@@ -4,6 +4,17 @@ require 'json'
 require 'date'
 require 'time'
 
+
+class Hash
+  def except!(*keys)
+    keys.each { |key| delete(key) }
+    self
+  end
+  def except(*keys)
+    dup.except!(*keys)
+  end
+end
+
 def http_request(clazz, url, body)
     uri = URI.parse(url)
     https = Net::HTTP.new(uri.host, uri.port)
@@ -31,17 +42,26 @@ end
 
 class CodeIntegration
     # normalize the wonky time times they give us
-    def self.normalize_time_periods(event:, content: )
+    def self.normalize_time_periods(event:, context: )
         value = case event["Details"]["Parameters"]["TimeOfDay"]
-        when "NI" then "evening"
         when "MO" then "morning"
         when "AF" then "afternoon"
+        when "NI" then "evening"
         when "EV" then "evening"
         else
             event["Details"]["Parameters"]["TimeOfDay"]
         end
+        if(value =~ /\d\d:\d\d/ )
+            (hour,min) = /(\d\d):(\d\d)/
+            if hour.to_i > 13
+                blerg = "#{hour.to_i - 12}:#{min} pm"
+            else
+                blerg = "#{hour}:#{min} am"
+            end
+        end
         {
-            TimeOfDay: value
+            TimeOfDay: value,
+            TimeOfDayFriendly: (blerg || value)
         }
     end
 
@@ -97,21 +117,28 @@ DOC
         puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         parameters = event["Details"]["Parameters"]
+        attributes["AssigneeId"] ||= attributes["CoachId"]
         limit = parameters["Limit"] || 5
         slots = []
-        if(attributes["AssigneeId"] && !attributes["CanOfferOtherAssignees"])
-            slots.push(get_schedule_helper(attributes["AssigneeId"], parameters["Preference"], event: event, context: context))
-            if(slots.size < limit)
-                slots.push(get_schedule_helper(attributes["AssigneeId"], "none", event: event, context: context))
+        preference = parameters["Preference"] || "none"
+        puts %Q(attributes["AssigneeId"]=#{attributes["AssigneeId"]}, attributes["CoachId"]=#{attributes["CoachId"]})
+        if attributes["AssigneeId"] # && !attributes["CanOfferOtherAssignees"])
+            puts "path A"
+            slots.push(*get_schedule_helper(attributes["AssigneeId"], preference, event: event, context: context))
+            if(slots.size < limit && preference != "none")
+                puts "path B"
+                slots.push(*get_schedule_helper(attributes["AssigneeId"], "none", event: event, context: context))
             end
         end
         if(slots.size < limit)
-            slots.push(get_schedule_helper(attributes["AssigneeId"], parameters["Preference"], event: event, context: context))
+            puts "path C"
+            slots.push(*get_schedule_helper(nil, preference, event: event, context: context))
         end
-        if(slots.size < limit)
-            slots.push(get_schedule_helper(attributes["AssigneeId"], "none", event: event, context: context))
+        if(slots.size < limit && preference != "none")
+            puts "path D"
+            slots.push(*get_schedule_helper(nil, "none", event: event, context: context))
         end
-        slots = sort_slots(slots, parameters, attributes)
+        slots = sort_slots(slots, preference, parameters, attributes)
         {
             number_slots: slots.size,
             slot_index: 0,
@@ -119,6 +146,52 @@ DOC
         }
     end
 
+    def self.calculate_preferences(preference, attributes, parameters)
+        case preference
+        when "same_time"
+            part_of_day = case attributes["StartAtTime"].to_i
+            when 0..12 then 'morning'
+            when 12..5 then  'afternxoon'
+            else 'evening'
+            end
+            {
+                part_of_day: part_of_day,
+                sort_time: attributes["StartAtTime"].to_i
+            }
+        when "around"
+            if parameters["TimeOfDay"] =~ /\w+/
+                convert = case parameters["TimeOfDay"]
+                when 'morning' then 0
+                when 'afternoon' then 1200
+                else 1700
+                end
+                {
+                    part_of_day: parameters["TimeOfDay"],
+                    sort_time: convert
+                }
+            else
+                # "22:00"
+                time = Time.parse(parameters["TimeOfDay"])
+                {
+                    start_time: (time - 1.hour).strftime("%H:%M"),
+                    end_time: (time + 1.hour).strftime("%H:%M"),
+                    sort_time: time.strftime("%H%M")
+                }
+            end
+        when "before"
+            {
+                end_time: Time.parse(parameters["TimeOfDay"]).strftime("%H:%M"),
+                sort_time: Time.parse(parameters["TimeOfDay"]).strftime("%H%M")
+            }
+        when "after"
+            {
+                start_time: Time.parse(parameters["TimeOfDay"]).strftime("%H:%M"),
+                sort_time: Time.parse(parameters["TimeOfDay"]).strftime("%H%M")
+            }
+        else
+            {}
+        end
+    end
         #     "free_time_slot": {
         #         "reason_code_id": 39,
         #         "user_id": 95,
@@ -143,20 +216,21 @@ DOC
         #     }
         # },
 
-    def self.sort_slots(slots, parameters, attributes)
-        slots.sort_by do |slot|
+    def self.sort_slots(slots, preference, parameters, attributes)
+        sort_time = calculate_preferences(preference, attributes, parameters)["sort_time"]
+        slots.map(&:values).flatten.sort_by do |slot|
             puts "slot=#{slot}"
-            slot_time = Time.parse(slot["free_time_slot"]["start_at_in_time_zone"]).strftime("%H%M").to_i
+            slot_time = Time.parse(slot["start_at_in_time_zone"]).strftime("%H%M").to_i
             case parameters["Preference"]
-            when %W(same_time before after) then time_of_day.to_i - slot_time
+            when %W(same_time before after) then sort_time - slot_time
             when "around"
-                if(time_of_day =~ /d+/)
-                    (time_of_day.to_i - slot_time).abs
+                if(sort_time =~ /d+/)
+                    (sort_time - slot_time).abs
                 else
                     slot_time
                 end
             when "between" then
-                slot_time - parameters["StartTime"].to_i
+                slot_time - Time.parse(slot["StartTime"]).strftime("%H%M").to_i
             else
                 slot_time
             end
@@ -170,42 +244,12 @@ DOC
             user_id: attributes["UserId"],
             assignee_id: coach_id,
             reason_code_id: attributes["ReasonCodeId"],
-            start_date: Date.today,
+            start_date: Time.now.utc + 60*60, # try an hour later after now.
             end_date: Date.today + 14, # 2.weeks.
             channel: "phone",
             limit: parameters["Limit"] || 5,
         }
-        case preference
-        when "same_time"
-            body[:part_of_day] = case attributes["StartAtTime"].to_i
-            when 0..12 then 'morning'
-            when 12..5 then  'afternoon'
-            else 'evening'
-            end
-        when "around"
-            if parameters["TimeOfDay"] =~ /\w+/
-                body[:part_of_day] = parameters["TimeOfDay"]
-            else
-                # "22:00"
-                time = time_for_api(parameters["TimeOfDay"], attributes["TimezoneName"])
-                body[:start_time]= time - 1.hour
-                body[:end_time] = time + 1.hour
-            end
-        when "before"
-            time = time_for_api(parameters["TimeOfDay"], attributes["TimezoneName"])
-            body[:end_time] = time
-        when "after"
-            time = time_for_api(parameters["TimeOfDay"], attributes["TimezoneName"])
-            body[:start_time] = time
-        when "between"
-            body[:start_time]= time_for_api(parameters["StartTime"], attributes["TimezoneName"])
-            body[:end_time] = time_for_api(parameters["EndTime"], attributes["TimezoneName"])
-        when "none"
-            # just in case
-            body.delete(:start_time)
-            body.delete(:end_time)
-            body.delete(:part_of_day)
-        end
+        body.merge(calculate_preferences(preference,attributes,parameters).slice(:part_of_day, :start_time, :end_time))
 
         response=http_get("#{attributes["Hostname"]}/api/scheduling",body)
         var = JSON.parse(response.body)
@@ -213,7 +257,7 @@ DOC
             time = Time.parse(hash["free_time_slot"]["start_at_in_time_zone"])
             hash["free_time_slot"]["start_at_friendly_format"] = time.strftime("%A, %B %e at %l:%M %P")
         }
-        puts JSON.pretty_generate(var)
+        puts "get_schedule_helper(coach_id=#{coach_id}, #{preference}, #{body})=#{JSON.pretty_generate(var)}"
         var["appointments"]
     end
     def self.get_schedule_cached(event:, context:)
@@ -221,17 +265,19 @@ DOC
         attributes = event["Details"]["ContactData"]["Attributes"]
         free_slots = JSON.parse(attributes["FreeSlotsCached"])
         slot_index = attributes["SlotIndex"]&.to_i
-        free_slots[slot_index].merge(slot_index: slot_index + 1)
+        result=free_slots[slot_index].except("assignee_ids").merge(slot_index: slot_index + 1)
+        puts JSON.pretty_generate(result)
+        result
     end
 
     def self.schedule_appointment(event:, context:)
         puts JSON.pretty_generate(event)
         attributes = event["Details"]["ContactData"]["Attributes"]
         free_slot = JSON.parse(attributes["FreeSlotsCached"])[attributes["SlotIndex"]&.to_i]
-        body = {
-            appointment: free_slot
-        }
         # if the appointment id exists, its a reschedule, otherwise we're making a new appointment
+        body = {
+            appointment: free_slot.slice(*%W(reason_code_id duration start_at channel user_id assignee_id assignee_ids))
+        }
         if(attributes["AppointmentId"])
             response = http_put("#{attributes["Hostname"]}/api/scheduling/#{attributes["AppointmentId"]}/reschedule", body)
         else
@@ -244,7 +290,7 @@ DOC
         else
             var = JSON.parse(response.body)
             {
-                Result: (response.code == '410' ? 'gone' : 'ok' ),
+                Result: 'ok',
                 assignee_name: var["appointments"]["assignee_name"]
             }
         end
