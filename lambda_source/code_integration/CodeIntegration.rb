@@ -120,7 +120,8 @@ DOC
         attributes["AssigneeId"] ||= attributes["CoachId"]
         limit = parameters["Limit"] || 5
         slots = []
-        preference = parameters["Preference"] || "none"
+
+        preference = parameters["Preference"] || (attributes["AppointmentId"] ? "same_time" : "none")
         puts %Q(attributes["AssigneeId"]=#{attributes["AssigneeId"]}, attributes["CoachId"]=#{attributes["CoachId"]})
         if attributes["AssigneeId"] # && !attributes["CanOfferOtherAssignees"])
             puts "path A"
@@ -221,7 +222,7 @@ DOC
         slots.map(&:values).flatten.sort_by do |slot|
             puts "slot=#{slot}"
             slot_time = Time.parse(slot["start_at_in_time_zone"]).strftime("%H%M").to_i
-            case parameters["Preference"]
+            case preference
             when %W(same_time before after) then sort_time - slot_time
             when "around"
                 if(sort_time =~ /d+/)
@@ -244,12 +245,14 @@ DOC
             user_id: attributes["UserId"],
             assignee_id: coach_id,
             reason_code_id: attributes["ReasonCodeId"],
-            start_date: Time.now.utc + 60*60, # try an hour later after now.
+            start_date: Date.today + 1, # try an hour later after now.
             end_date: Date.today + 14, # 2.weeks.
             channel: "phone",
             limit: parameters["Limit"] || 5,
         }
-        body.merge(calculate_preferences(preference,attributes,parameters).slice(:part_of_day, :start_time, :end_time))
+        blerg = calculate_preferences(preference,attributes,parameters).slice(:part_of_day, :start_time, :end_time)
+        puts "calculate_preferences=#{blerg.inspect}, #{calculate_preferences(preference,attributes,parameters)}"
+        body=body.merge(blerg)
 
         response=http_get("#{attributes["Hostname"]}/api/scheduling",body)
         var = JSON.parse(response.body)
@@ -289,9 +292,10 @@ DOC
             }
         else
             var = JSON.parse(response.body)
+            puts JSON.pretty_generate(var)
             {
                 Result: 'ok',
-                assignee_name: var["appointments"]["assignee_name"]
+                assignee_name: var["appointment"]["assignee_name"]
             }
         end
     end
