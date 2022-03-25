@@ -8,7 +8,7 @@ variable "environment" {
 
 variable "instance_alias" {
   description = "Name for this instance"
-  default = "gm-code-staging-cct"
+  default = "gm-code-cct"
 }
 variable "account_id" {
   description = "organization account id"
